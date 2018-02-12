@@ -14,11 +14,11 @@
       }
       function register(){
         $this->loadModel("Members");
+        $new=$this->Members->newEntity();
         if($this->request->is("post"))//Request post ou non ?
         {
           $e=$this->request->data("email");
           $p=$this->request->data("password");
-          $new=$this->Members->newEntity();
           $new->email=$e;
           $new->password=$p;
           $this->Members->save($new);
