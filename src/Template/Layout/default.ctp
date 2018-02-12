@@ -13,7 +13,6 @@
  * @license       https://opensource.org/licenses/mit-license.php MIT License
  */
 
-//$cakeDescription = 'CakePHP: the rapid development php framework';
 ?>
 <!DOCTYPE html>
 <html>
@@ -21,7 +20,7 @@
     <?= $this->Html->charset() ?>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>
-        <?= $this->fetch("title")?>
+        <?= $this->fetch('title') ?>
     </title>
     <?= $this->Html->meta('icon') ?>
 
@@ -34,9 +33,24 @@
 </head>
 <body>
     <nav class="top-bar expanded" data-topbar role="navigation">
-        <ul class="title-area large-3 medium-4 columns">
-            <li class="name">
-                <h1><a href=""><?= $this->fetch('title') ?></a></h1>
+        <ul class="title-area large-10 medium-12 columns">
+            <li class="name large-2 medium-4 columns">
+              <h1><a href="accueil"><?= "Accueil"?></a></h1>
+            </li>
+            <li class="name large-2 medium-4 columns">
+              <h1><a href="classements"><?= "Classements"?></a></h1>
+            </li>
+            <li class="name large-2 medium-4 columns">
+              <h1><a href="connexion"><?= "Connexion"?></a></h1>
+            </li>
+            <li class="name large-2 medium-4 columns">
+              <h1><a href="mon_compte"><?= "Mon compte"?></a></h1>
+            </li>
+            <li class="name large-2 medium-4 columns">
+              <h1><a href="objets_connectes"><?= "Objets connectés"?></a></h1>
+            </li>
+            <li class="name large-2 medium-4 columns">
+              <h1><a href="sceances"><?= "Scéances"?></a></h1>
             </li>
         </ul>
         <div class="top-bar-section">
