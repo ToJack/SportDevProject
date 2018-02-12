@@ -3,7 +3,7 @@ namespace App\Controller;
 
 use App\Controller\AppController;
 
-class SportdevprojectController  extends AppController
+class AccountsController  extends AppController
 {
 
     public function accueil()
