@@ -40,12 +40,16 @@ class AccountsController  extends AppController
         $this->Flash->success($this->request->data("ipassword"));
         $this->Flash->success($this->request->data("confirm ipassword"));
       }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 7fbc662394224d41ea4d2d19df69d3383227dad7
     }
     public function monCompte()
     {
       $this->loadModel("Members");
 
-      $membres = $this->Members->find()->all();
+      $membres = $this->Members->find();
 
       $this->set('membres',$membres->toArray() );
 
