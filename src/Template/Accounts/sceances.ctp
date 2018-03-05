@@ -1,9 +1,9 @@
-<table>
+<table >
   <tr>
     <th>Jour</th>
     <th>Heure</th>
     <th>Type</th>
-    <th>Lieu</th>  
+    <th>Lieu</th>
     <th>Détails</th>
   </tr>
   <?php
