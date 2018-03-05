@@ -47,6 +47,8 @@ class AccountsController  extends AppController
     }
     public function sceances()
     {
-
+      $this->loadModel("Workouts");
+      $sceances = $this->Workouts->find('all',array( 'order' => array('date')));
+      $this->set('sceances',$sceances->toArray() );
     }
 }
