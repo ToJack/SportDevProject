@@ -29,9 +29,17 @@ class AccountsController  extends AppController
     {
       if($this->request->is('POST')){
         $this->Flash->success($this->request->data("email"));
+        $this->Flash->success($this->request->data("password"));
       }
-
-
+      if($this->request->is('POST')){
+        $this->Flash->success($this->request->data("Pseudo"));
+        $this->Flash->success($this->request->data("Name"));
+        $this->Flash->success($this->request->data("Family Name"));
+        $this->Flash->success($this->request->data("imail"));
+        $this->Flash->success($this->request->data("confirm imail"));
+        $this->Flash->success($this->request->data("ipassword"));
+        $this->Flash->success($this->request->data("confirm ipassword"));
+      }
     }
     public function monCompte()
     {
