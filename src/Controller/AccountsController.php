@@ -27,10 +27,19 @@ class AccountsController  extends AppController
     }
     public function connexion()
     {
+      if($this->request->is('POST')){
+        $this->Flash->success($this->request->data("email"));
+      }
+
 
     }
     public function monCompte()
     {
+      $this->loadModel("Members");
+
+      $membres = $this->Members->find()->all();
+
+      $this->set('membres',$membres->toArray() );
 
     }
     public function objetsConnectes()
