@@ -36,7 +36,7 @@ class AccountsController  extends AppController
     {
       $this->loadModel("Members");
 
-      $membres = $this->Members->find();
+      $membres = $this->Members->find()->toArray(all);
 
       $this->set('membres',$membres->toArray() );
 
