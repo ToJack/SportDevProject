@@ -36,9 +36,13 @@ class AccountsController  extends AppController
     {
       $this->loadModel("Members");
 
-      $membres = $this->Members->find()->select(['id','name'])->where(['id !='=>1])->order(['created'=>'DESC']);
-      $this->set('membres',$membres->toArray() );
-
+      $membres = $this->Members->find()
+      ->where(['id'=> "56eb38b4-04b0-4667-ba54-0796b38f37ff"]);
+      $this->set("membres",$membres->toArray());
+      foreach ($membres as $membres)
+    {
+        //debug($membres->id);
+      }
     }
     public function objetsConnectes()
     {
