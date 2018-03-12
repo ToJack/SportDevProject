@@ -25,11 +25,8 @@
     </title>
     <?= $this->Html->meta('icon') ?>
 
+
     <?= $this->Html->css('bootstrap.min.css') ?>
-    <?= $this->Html->css('base.css') ?>
-    <?= $this->Html->css('cake.css') ?>
-
-
     <?= $this->Html->css('bootstrap-theme.min.css') ?>
 
     <?= $this->Html->script('bootstrap.min.js') ?>
@@ -45,12 +42,12 @@
           <a class="navbar-brand">Spo'tato</a>
         </div>
         <ul class="nav navbar-nav">
-          <li ><a href="accueil"><?= "Accueil"?></a></li>
-          <li ><a href="classements"><?= "Classements"?></a></li>
-          <li ><a href="connexion"><?= "Connexion"?></a></li>
-          <li ><a href="mon_compte"><?= "Mon compte"?></a></li>
-          <li ><a href="objets_connectes"><?= "Objets connectés"?></a></li>
-          <li ><a href="sceances"><?= "Scéances"?></a></li>
+          <li <?=($this->request->here=="/SportDevProject/accounts/accueil"?'class="active"':'')?>><?= $this->html->link("Accueil",['controller' => 'Accounts','action' => 'Accueil'])?> </li>
+          <li <?=($this->request->here=="/SportDevProject/accounts/classements"?'class="active"':'')?>><?= $this->html->link("Classements",['controller' => 'Accounts','action' => 'Classements'])?></li>
+          <li <?=($this->request->here=="/SportDevProject/accounts/connexion"?'class="active"':'')?>><?= $this->html->link("Connexion",['controller' => 'Accounts','action' => 'Connexion'])?></li>
+          <li <?=($this->request->here=="/SportDevProject/accounts/mon-compte"?'class="active"':'')?>><?= $this->html->link("Mon compte",['controller' => 'Accounts','action' => 'MonCompte'])?></li>
+          <li <?=($this->request->here=="/SportDevProject/accounts/objets-connectes"?'class="active"':'')?>><?= $this->html->link("Objets connectés",['controller' => 'Accounts','action' => 'ObjetsConnectes'])?></li>
+          <li <?=($this->request->here=="/SportDevProject/accounts/sceances"?'class="active"':'')?>><?= $this->html->link("Scéances",['controller' => 'Accounts','action' => 'Sceances'])?></li>
         </ul>
       </div>
     </nav>
