@@ -29,24 +29,14 @@ class AccountsController  extends AppController
     {
       if($this->request->is('POST')){
         $this->Flash->success($this->request->data("email"));
-        $this->Flash->success($this->request->data("password"));
       }
-      if($this->request->is('POST')){
-        $this->Flash->success($this->request->data("Pseudo"));
-        $this->Flash->success($this->request->data("Name"));
-        $this->Flash->success($this->request->data("Family Name"));
-        $this->Flash->success($this->request->data("imail"));
-        $this->Flash->success($this->request->data("confirm imail"));
-        $this->Flash->success($this->request->data("ipassword"));
-        $this->Flash->success($this->request->data("confirm ipassword"));
-      }
+
     }
     public function monCompte()
     {
       $this->loadModel("Members");
 
-      $membres = $this->Members->find()->toArray(all);
-
+      $membres = $this->Members->find()->select(['id','name'])->where(['id !='=>1])->order(['created'=>'DESC']);
       $this->set('membres',$membres->toArray() );
 
     }
@@ -56,8 +46,6 @@ class AccountsController  extends AppController
     }
     public function sceances()
     {
-      $this->loadModel("Workouts");
-      $sceances = $this->Workouts->find('all',array( 'order' => array('date')));
-      $this->set('sceances',$sceances->toArray() );
+
     }
 }
