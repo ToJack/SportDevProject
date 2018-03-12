@@ -2,6 +2,7 @@
 namespace App\Controller;
 
 use App\Controller\AppController;
+use Cake\I18n\Time;
 
 class AccountsController  extends AppController
 {
@@ -57,8 +58,17 @@ class AccountsController  extends AppController
     }
     public function sceances()
     {
+      $actual_time=Time::now();
+      $actual_time->timezone = 'Europe/Paris';
+      //$actual_time->modify('+5 years');
       $this->loadModel("Workouts");
-      $sceances = $this->Workouts->find('all',array( 'order' => array('date')));
-      $this->set('sceances',$sceances->toArray() );
+      $sceancesFuturs = $this->Workouts->find()->where(["date >"=>$actual_time])->order(['date'=>'DESC']);
+      $sceancesActuelles = $this->Workouts->find()->where(["date <"=>$actual_time])->andWhere(["end_date >"=>$actual_time])->order(['date'=>'DESC']);
+      $sceancesPassees = $this->Workouts->find()->where(["date <"=>$actual_time])->andWhere(["end_date <"=>$actual_time])->order(['date'=>'DESC']);
+      $this->set('sceancesFuturs',$sceancesFuturs->toArray() );
+      $this->set('sceancesActuelles',$sceancesActuelles->toArray() );
+      $this->set('sceancesPassees',$sceancesPassees->toArray() );
+      //$this->set('actual_time',$actual_time );
+
     }
 }
