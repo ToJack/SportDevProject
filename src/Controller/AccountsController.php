@@ -2,6 +2,9 @@
 namespace App\Controller;
 
 use App\Controller\AppController;
+use Cake\I18n\Time;
+use Cake\Datasource\ConnectionManager;
+
 
 class AccountsController  extends AppController
 {
@@ -55,10 +58,52 @@ class AccountsController  extends AppController
     {
 
     }
-    public function sceances()
+    public function seances()
     {
+      $actual_time=Time::now();
+      $actual_time->timezone = 'Europe/Paris';
+      //$actual_time->modify('+5 years');
       $this->loadModel("Workouts");
-      $sceances = $this->Workouts->find('all',array( 'order' => array('date')));
-      $this->set('sceances',$sceances->toArray() );
+      $seancesFuturs = $this->Workouts->find()->where(["date >"=>$actual_time])->order(['date'=>'DESC']);
+      $seancesActuelles = $this->Workouts->find()->where(["date <"=>$actual_time])->andWhere(["end_date >"=>$actual_time])->order(['date'=>'DESC']);
+      $seancesPassees = $this->Workouts->find()->where(["date <"=>$actual_time])->andWhere(["end_date <"=>$actual_time])->order(['date'=>'DESC']);
+      $this->set('seancesFuturs',$seancesFuturs->toArray() );
+      $this->set('seancesActuelles',$seancesActuelles->toArray() );
+      $this->set('seancesPassees',$seancesPassees->toArray() );
+      $this->set('actual_time',$actual_time );
+
+      //Formulaire Nouvelle séance
+      $new=$this->Workouts->newEntity();
+      if($this->request->is("post"))//Request post ou non ?
+      {
+        $date=$this->request->data("date");
+        $heure=$this->request->data("heure");
+        $duree=$this->request->data("duree");
+        $sport=$this->request->data("sport");
+        $lieu=$this->request->data("lieu");
+        $details=$this->request->data("details");
+
+        //preparation pour end-date
+        $dateTamp=$date['year']."-".$date['month']."-".$date['day']." ".$heure['hour'].":".$heure["minute"];
+        $dateDepartTimestamp = strtotime($dateTamp);
+        $dateFin = date('Y-m-d H:i:s', strtotime('+'.$duree.'minutes', $dateDepartTimestamp ));
+
+        $new->location_name=$lieu;
+        $new->description=$details;
+        $new->sport=$sport;
+        $new->member_id="54546854564";
+        $new->date=$dateTamp;
+        $new->end_date=$dateFin;
+        $this->Workouts->save($new);
+      /*$connection = ConnectionManager::get('default');
+      $connection->insert('workouts', [
+        'location_name' => $lieu,
+        'description' => $details,
+        'sport' => $sport,
+        'member_id' => "56",
+          'date' => "2015-12-30",
+          'end_date'=>"2015-12-30"
+      ]);*/
+      }
     }
 }
