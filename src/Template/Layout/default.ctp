@@ -31,7 +31,7 @@
 
     <?= $this->Html->script('jquery-3.3.1.min') ?>
     <?= $this->Html->script('bootstrap.min') ?>
-    <?= $this->Html->script('basic_script') ?>
+    <?= $this->Html->script('fonctions') ?>
 
 
     <?= $this->fetch('meta') ?>
@@ -44,7 +44,7 @@
     <nav class="navbar navbar-inverse" >
       <div clas="container-fluid">
       <div class="navbar-header">
-        <a class="navbar-brand">Spo'tato</a>
+        <a class="navbar-brand">App Sport</a>
       </div>
       <ul class="nav navbar-nav">
         <li <?=($this->request->params['action']=="accueil"?'class="active"':'')?>><?= $this->html->link("Accueil",['controller' => 'Accounts','action' => 'Accueil'])?> </li>
@@ -59,7 +59,7 @@
     <nav class="navbar navbar-inverse navbar-fixed-top" >
       <div clas="container-fluid">
         <div class="navbar-header">
-          <a class="navbar-brand">Spo'tato</a>
+          <a class="navbar-brand">App Sport</a>
         </div>
         <ul class="nav navbar-nav">
           <li <?=($this->request->params['action']=="accueil"?'class="active"':'')?>><?= $this->html->link("Accueil",['controller' => 'Accounts','action' => 'Accueil'])?> </li>
