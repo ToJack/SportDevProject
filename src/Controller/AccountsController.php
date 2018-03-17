@@ -27,20 +27,18 @@ class AccountsController  extends AppController
     }
     public function connexion()
     {
-      if($this->request->is('POST')){
+      if($this->request->is('POST') && !empty($this->request->data("email"))){
         $this->Flash->success($this->request->data("email"));
         $this->Flash->success($this->request->data("password"));
       }
-      if($this->request->is('POST')){
-        $this->Flash->success($this->request->data("Pseudo"));
-        $this->Flash->success($this->request->data("Name"));
-        $this->Flash->success($this->request->data("Family Name"));
+      if($this->request->is('POST') && !empty($this->request->data("imail")) ){
         $this->Flash->success($this->request->data("imail"));
-        $this->Flash->success($this->request->data("confirm imail"));
-        $this->Flash->success($this->request->data("ipassword"));
-        $this->Flash->success($this->request->data("confirm ipassword"));
+        $this->Flash->success($this->request->data("confirmE"));
+        $this->Flash->success($this->request->data("pswd"));
+        $this->Flash->success($this->request->data("confirmP"));
       }
     }
+
     public function monCompte()
     {
       $this->loadModel("Members");
