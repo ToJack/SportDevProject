@@ -32,11 +32,11 @@
       <td>".$seance->description."</td>";
       foreach($logs as $log){
         if(($log->workout_id==$seance->id)&&($premier_releve!=1)){
-          echo "</tr><tr><td></td><td></td><td></td><td></td><td></td><td>".$log->log_type." : ".$log->log_value."</td>";
+          echo "</td></tr><tr><td></td><td></td><td></td><td></td><td></td><td>".$log->log_type." : ".$log->log_value."</td><td>";
           $premier_releve=0;
         }
         if(($log->workout_id==$seance->id)&&($premier_releve==1)){
-          echo "<td>".$log->log_type." : ".$log->log_value."</td>";
+          echo "<td>".$log->log_type." : ".$log->log_value."</td><td>";
           $premier_releve=0;
         }
       }
@@ -46,7 +46,7 @@
       $sport=$seance->sport;
       $lieu=$seance->location_name;
       if($premier_releve==1)echo "<td></td><td><i class='glyphicon glyphicon-plus' onclick='AfficherForm($seance, $heure_start,$minute_start,$heure_end,$minute_end);'></i></td>";
-      else echo "<td><i class='glyphicon glyphicon-plus' onclick='AfficherForm($seance, $heure_start,$minute_start,$heure_end,$minute_end);'></i></td>";
+      else echo " <i class='glyphicon glyphicon-plus' onclick='AfficherForm($seance, $heure_start,$minute_start,$heure_end,$minute_end);'></i></td>";
     echo "</tr>";
   }
 
@@ -76,8 +76,8 @@ echo "<div class='col-xs-12'>
             "<div id='seanceReleve'></div>",
             $this->Form->create(),
             $this->Form->control('workoutId', ['type' => 'number','style' => 'display:none',"id"=>'idSeance','label'=>false]),
-            $this->Form->control('latitude', ['type' => 'number',"label"=>"Latitude : ",'required' => true]),
-            $this->Form->control('longitude', ['type' => 'number',"label"=>"Longitude : ",'required' => true]),
+            $this->Form->control('latitude', ['type' => 'decimal',"label"=>"Latitude : ",'required' => true]),
+            $this->Form->control('longitude', ['type' => 'decimal',"label"=>"Longitude : ",'required' => true]),
             $this->Form->control('releve', ['type' => 'text',"label"=>"Relevé : ",'required' => true]),
             $this->Form->control('value', ['type' => 'number',"label"=>"Valeur : ",'required' => true]),
             $this->Form->submit("Ajouter relevé",array('name' => 'AddReleve')),
@@ -142,6 +142,7 @@ if($seancesFuturs!=null)echo "</table>"?>
     <th>Lieu</th>
     <th>Détails</th>
     <th>Relevé</th>
+    <th></th>
   </tr>";
   foreach($seancesPassees as $seance){
     //rajoute un 0 devant les heures et minutes <10 pour unifier l'affichage
@@ -160,11 +161,11 @@ if($seancesFuturs!=null)echo "</table>"?>
       <td>".$seance->description."</td>";
       foreach($logs as $log){
         if(($log->workout_id==$seance->id)&&($premier_releve!=1)){
-          echo "</tr><tr><td></td><td></td><td></td><td></td><td></td><td>".$log->log_type." : ".$log->log_value."</td>";
+          echo "</td></tr><tr><td></td><td></td><td></td><td></td><td></td><td>".$log->log_type." : ".$log->log_value."</td><td>";
           $premier_releve=0;
         }
         if(($log->workout_id==$seance->id)&&($premier_releve==1)){
-          echo "<td>".$log->log_type." : ".$log->log_value."</td>";
+          echo "<td>".$log->log_type." : ".$log->log_value."</td><td>";
           $premier_releve=0;
         }
       }
@@ -174,7 +175,7 @@ if($seancesFuturs!=null)echo "</table>"?>
       $sport=$seance->sport;
       $lieu=$seance->location_name;
       if($premier_releve==1)echo "<td></td><td><i class='glyphicon glyphicon-plus' onclick='AfficherForm($seance, $heure_start,$minute_start,$heure_end,$minute_end);'></i></td>";
-      else echo "<td><i class='glyphicon glyphicon-plus' onclick='AfficherForm($seance, $heure_start,$minute_start,$heure_end,$minute_end);'></i></td>";
+      else echo " <i class='glyphicon glyphicon-plus' onclick='AfficherForm($seance, $heure_start,$minute_start,$heure_end,$minute_end);'></i></td>";
     echo "</tr>";
   }
 
