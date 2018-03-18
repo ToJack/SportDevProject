@@ -9,15 +9,11 @@
   <li>Theo JACQUIN</li>
 </ul>
 
-<?= $this->Html->image('franchementtabuses.png', array('alt' => 'tamer')); ?>
-
 <p>Retrouvez le 1er club intersportif de France, et venez profité des differentes séances d'entrainements a un couts défiants toutes concurences </p>
+<?= $this->Html->image('brahimfrance1.png', array('alt' => 'france'));?>
 
-<?php
-echo $this->Html->image('brahimfrance1.png.png', ['alt' => 'CakePHP']);
-?>
-<img src="/img/cake_logo.png" alt="CakePHP" />
-<img src="brahimfrance1.png">
 
-<p>Retrouvez le 1er club intersportif de France, et venez profiter des différentes séances d'entrainements à un coût défiant toutes concurrences </p>
-<p>"Nous ne sommmes pas expert pour rien"</p>
+<p>Retrouvez le 1er club intersportif de France dans les grandes villes, et venez profiter des différentes séances d'entrainements à un coût défiant toutes concurrences </p>
+<footer>
+  <center>"Nous ne sommmes pas expert pour rien"</center>
+</footer>
