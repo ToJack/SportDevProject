@@ -1,21 +1,25 @@
-<?php $this->assign("title","nouveau titre"); ?>
+<h1>Classements</h1>
 
-<?= $this -> Html -> link("click me", ["controller"=>"Accounts","action"=>"accueil"]);?>
-
-
-<!--<?php pr($m);?>-->
-
-<table>
-  <?php
-  foreach($m as $user){
-    echo "<tr><td>".$user->email."</td><td>".$user->password."</td><tr>";
-  }
-  ?>
-</table>
 <?php
-echo $this->Form->create($m);
-echo $this->Form->input("email");
-echo $this->Form->input("password");
-echo $this->Form->submit("creer");
-echo $this->Form->end();
-?>
+
+foreach ($seances as $seance) {
+    echo "<table class='table'>";
+    echo "<tr>
+        <th > Rang</th >
+        <th > E - mail</th >
+        <th > Date</th >
+        <th > Performance </th >
+        <th > Contests</th >
+        <th ></th > ";
+    echo "<h2>" . $seance->sport . "</h2>";
+
+    foreach ($membres as $membre) {
+        if ($seance->member_id == $membre->id) {
+            foreach ($logs as $log) {
+                if (($log->member_id == $membre->id) && ($seance->id == $log->workout_id)) {
+                    echo " <tr><td > " . $log->id . "</td ><td > " . $membre->email . "</td ><td > " . $log->date . "</td><td>" . $log->log_type . " : " . $log->log_value . "</td><td>" . "X" . "</td></tr> ";
+                }
+            }
+        }
+    }
+}

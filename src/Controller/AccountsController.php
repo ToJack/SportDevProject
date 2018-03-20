@@ -1,33 +1,33 @@
 <?php
+
 namespace App\Controller;
 
-use App\Controller\AppController;
 use Cake\I18n\Time;
-use Cake\Datasource\ConnectionManager;
 
 
-class AccountsController  extends AppController
+class AccountsController extends AppController
 {
 
     public function accueil()
     {
 
     }
+
     public function classements()
     {
-      $this->loadModel("Members");
-      $m=$this->Members->find();
+        $this->loadModel("Members");
+        $this->loadModel("Logs");
+        $this->loadModel("Workouts");
 
-      $this->loadModel("Logs");
-      $l=$this->Logs->find();
+        $membres = $this->Members->find();
+        $seances = $this->Workouts->find();
+        $logs = $this->Logs->find();
 
-      $this->loadModel("Workouts");
-      $w=$this->Workouts->find();
-
-      $this->set("m",$m->toArray());
-      $this->set("l",$l->toArray());
-      $this->set("w",$w->toArray());
+        $this->set('membres', $membres->toArray());
+        $this->set('seances', $seances->toArray());
+        $this->set('logs', $logs->toArray());
     }
+
     public function connexion()
     {
       if($this->request->is('POST') && !empty($this->request->data("email"))){
@@ -50,18 +50,20 @@ class AccountsController  extends AppController
 
     public function monCompte()
     {
-      $this->loadModel("Members");
+        $this->loadModel("Members");
 
-      $membres = $this->Members->find()
-      ->where(['id'=> "56eb38b4-04b0-4667-ba54-0796b38f37ff"]);
-      $this->set("membres",$membres->toArray());
-      foreach ($membres as $membres)
-      {}
+        $membres = $this->Members->find()
+            ->where(['id' => "56eb38b4-04b0-4667-ba54-0796b38f37ff"]);
+        $this->set("membres", $membres->toArray());
+        foreach ($membres as $membres) {
+        }
     }
+
     public function objetsConnectes()
     {
 
     }
+
     public function seances()
     {
       //Date et heure actuelles
