@@ -30,7 +30,7 @@ class AccountsController extends AppController
 
     public function connexion()
     {
-      if($this->request->is('POST') && !empty($this->request->data("email"))){
+      /*if($this->request->is('POST') && !empty($this->request->data("email"))){
 
         $this->Flash->success($this->request->data("email"));
         $this->Flash->success($this->request->data("password"));
@@ -45,7 +45,7 @@ class AccountsController extends AppController
         }
         $this->Flash->success($this->request->data("email_inscription"));
         $this->Flash->success($this->request->data("password_inscription"));
-      }
+      }*/
     }
 
     public function monCompte()
