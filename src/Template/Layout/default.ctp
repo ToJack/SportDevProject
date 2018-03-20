@@ -53,6 +53,9 @@
         <li <?=($this->request->params['action']=="monCompte"?'class="active"':'')?>><?= $this->html->link("Mon compte",['controller' => 'Accounts','action' => 'MonCompte'])?></li>
         <li <?=($this->request->params['action']=="objetsConnectes"?'class="active"':'')?>><?= $this->html->link("Objets connectés",['controller' => 'Accounts','action' => 'ObjetsConnectes'])?></li>
         <li <?=($this->request->params['action']=="seances"?'class="active"':'')?>><?= $this->html->link("Séances",['controller' => 'Accounts','action' => 'seances'])?></li>
+        <li <?=($this->request->params['action']=="Contact"?'class="active"':'')?>><?= $this->html->link("Contact",['controller' => 'Accounts','action' => 'contact'])?></li>
+        <li <?=($this->request->params['action']=="Equipe"?'class="active"':'')?>><?= $this->html->link("Equipe",['controller' => 'Accounts','action' => 'equipe'])?></li>
+        <li <?=($this->request->params['action']=="faq"?'class="active"':'')?>><?= $this->html->link("FAQ",['controller' => 'Accounts','action' => 'faq'])?></li>
       </ul>
     </div></nav>
     <!---navbar fixed--->
@@ -68,7 +71,9 @@
           <li <?=($this->request->params['action']=="monCompte"?'class="active"':'')?>><?= $this->html->link("Mon compte",['controller' => 'Accounts','action' => 'MonCompte'])?></li>
           <li <?=($this->request->params['action']=="objetsConnectes"?'class="active"':'')?>><?= $this->html->link("Objets connectés",['controller' => 'Accounts','action' => 'ObjetsConnectes'])?></li>
           <li <?=($this->request->params['action']=="seances"?'class="active"':'')?>><?= $this->html->link("Séances",['controller' => 'Accounts','action' => 'seances'])?></li>
-        </ul>
+          <li <?=($this->request->params['action']=="Contact"?'class="active"':'')?>><?= $this->html->link("Contact",['controller' => 'Accounts','action' => 'Contact'])?></li>
+          <li <?=($this->request->params['action']=="Equipe"?'class="active"':'')?>><?= $this->html->link("Equipe",['controller' => 'Accounts','action' => 'Equipe'])?></li>
+          <li <?=($this->request->params['action']=="faq"?'class="active"':'')?>><?= $this->html->link("FAQ",['controller' => 'Accounts','action' => 'faq'])?></li>
       </div>
     </nav>
     <?= $this->Flash->render() ?>
