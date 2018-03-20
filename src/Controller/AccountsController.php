@@ -46,12 +46,29 @@ class AccountsController extends AppController
         $this->Flash->success($this->request->data("email_inscription"));
         $this->Flash->success($this->request->data("password_inscription"));
       }*/
+      $this->loadModel("Members");
+      $members=$this->Members->find();
+
+      //Formulaire nouveau membre
+      $newMember=$this->Members->newEntity();
+      if(isset($this->request->data["AddMember"]))
+      {
+        //attribution des valeurs
+        $email_inscription=$this->request->data("email_inscription");
+        $password_inscription=$this->request->data("password_inscription");
+
+        //envoie à la bdd
+        $newMember->email=$email_inscription;
+        $newMember->password=$password_inscription;
+        $this->Members->save($newMember);
+      return $this->redirect($this->here);
+      }
+
     }
 
     public function monCompte()
     {
         $this->loadModel("Members");
-
         $membres = $this->Members->find()
             ->where(['id' => "56eb38b4-04b0-4667-ba54-0796b38f37ff"]);
         $this->set("membres", $membres->toArray());
