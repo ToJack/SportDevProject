@@ -51,12 +51,23 @@ class AccountsController extends AppController
     public function monCompte()
     {
         $this->loadModel("Members");
-
         $membres = $this->Members->find()
             ->where(['id' => "56eb38b4-04b0-4667-ba54-0796b38f37ff"]);
-        $this->set("membres", $membres->toArray());
-        foreach ($membres as $membres) {
+
+        //verifie si l'utilisateur a une photo
+        if(file_exists($this->webroot.'img/PhotoProfil/56eb38b4-04b0-4667-ba54-0796b38f37ff.jpg')){$adressePhoto='PhotoProfil/56eb38b4-04b0-4667-ba54-0796b38f37ff.jpg';}
+        else {$adressePhoto='PhotoProfil/default.jpg';}
+
+        if(isset($this->request->data['changePicture']))
+        {
+          
         }
+
+        //renvoie l'adresse de l'image et les infos utilisateurs
+        $this->set("adressePhoto", $adressePhoto);
+        $this->set("membres", $membres->toArray());
+
+
     }
 
     public function objetsConnectes()
