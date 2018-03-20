@@ -31,14 +31,20 @@ class AccountsController  extends AppController
     public function connexion()
     {
       if($this->request->is('POST') && !empty($this->request->data("email"))){
+
         $this->Flash->success($this->request->data("email"));
         $this->Flash->success($this->request->data("password"));
       }
-      if($this->request->is('POST') && !empty($this->request->data("imail")) ){
-        $this->Flash->success($this->request->data("imail"));
-        $this->Flash->success($this->request->data("confirmE"));
-        $this->Flash->success($this->request->data("pswd"));
-        $this->Flash->success($this->request->data("confirmP"));
+      if($this->request->is('POST') && isset($this->request->data("submit_inscription")) ){
+        $this->Form->submit("S'inscrire", array('name' => 'submit_inscription'))
+        $d = $this->request->data;
+        if($this->User->save($d, true, array('email_inscription','password_inscription'))){
+          $this->Session->setFlash("Votre compte a bien été crée", "notif");
+        }else {
+          $this->Session->setFlash("Merci de vérifier les informations", "notif", array('type'=>'error'));
+        }
+        $this->Flash->success($this->request->data("email_inscription"));
+        $this->Flash->success($this->request->data("password_inscription"));
       }
     }
 
@@ -65,7 +71,7 @@ class AccountsController  extends AppController
 
       //liste des sports
       $listSport=["Jogging", "Entraînement", "Football", "Tennis", "Squash", "Ping-Pong", "Fitness", "Voleyball",
-      "Handball", "Piscine", "Boxe", "Gymnastique", "Badmington", "Golf","Basketball", "Waterpolo", "Aquagym", "Equitation"];
+      "Handball", "Piscine", "Boxe", "Gymnastique", "Badminton", "Golf","Basketball", "Waterpolo", "Aquagym", "Equitation"];
 
       $this->loadModel("Workouts");
       $seancesFuturs = $this->Workouts->find()->where(["date >"=>$actual_time])->order(['date'=>'DESC']);
