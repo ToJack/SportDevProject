@@ -139,4 +139,17 @@ class AccountsController extends AppController
         $this->Logs->save($newLog);
       }
     }
+    public function faq()
+    {
+
+    }
+    public function contact()
+    {
+
+    }
+    public function equipe()
+    {
+
+    }
+
 }
