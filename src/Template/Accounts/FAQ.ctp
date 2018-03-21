@@ -33,3 +33,11 @@
 <h2>Combien de fois par semaine dois-je pratiquer une activité à l'app sport  ? </h2>
 <p>Nous vous recommandons de pratiquer le fitness dans l’un de nos clubs l'app sport deux à trois fois par semaine pour voir de réels résultats. Si vous voulez constater des changements rapides, il est recommandé d’alterner vos séances de fitness en salle avec des activités outdoor.</p>
 <p>En revanche, une séance par semaine vaut mieux que rien ! Cela vous apportera déjà des résultats probants… le mieux étant l’ennemi du bien, ne vous découragez pas et persévérez ! La Fitness Attitude à l'app sport vous invite aussi à marcher le plus souvent possible (descendre une station de métro avant votre destination), à prendre les escaliers plutôt que l’ascenseur et à aller chercher le pain ou le journal à pieds plutôt qu’en voiture!</p>
+
+
+
+<h2>Tutoriel</h2>
+
+<p> Le site internet de l'app sport est la pour gérer les competions entre membres pour indiquer les séances que vous projeter d'organiser tout est vraiment possible</p>
+<p> Pour commencer, aller à la page connexion si vous n'avez pas de compte, créez en un </p>
+<p> 
