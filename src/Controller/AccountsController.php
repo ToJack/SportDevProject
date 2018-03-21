@@ -48,6 +48,24 @@ class AccountsController extends AppController
         $this->Flash->success($this->request->data("email_inscription"));
         $this->Flash->success($this->request->data("password_inscription"));
       }*/
+      $this->loadModel("Members");
+      $members=$this->Members->find();
+
+      //Formulaire nouveau membre
+      $newMember=$this->Members->newEntity();
+      if(isset($this->request->data["AddMember"]))
+      {
+        //attribution des valeurs
+        $email_inscription=$this->request->data("email_inscription");
+        $password_inscription=$this->request->data("password_inscription");
+
+        //envoie à la bdd
+        $newMember->email=$email_inscription;
+        $newMember->password=$password_inscription;
+        $this->Members->save($newMember);
+      return $this->redirect($this->here);
+      }
+
     }
 
     public function monCompte()
@@ -170,7 +188,6 @@ class AccountsController extends AppController
         $this->Logs->save($newLog);
       }
     }
-
     public function competitions()
     {
       //Date et heure actuelles
@@ -267,4 +284,18 @@ class AccountsController extends AppController
       $this->set('ListMembre',$ListMembre);
 
     }
+
+    public function faq()
+    {
+
+    }
+    public function contact()
+    {
+
+    }
+    public function equipe()
+    {
+
+    }
+
 }

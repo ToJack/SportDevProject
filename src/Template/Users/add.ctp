@@ -6,8 +6,3 @@ echo $this->Form->create(),
      $this->Form->submit("S'inscrire", array('name' => 'AddMember')),
      $this->Form->end();
 ?>
-echo $this->Form->create();
-echo $this->Form->input("email_connexion", ['label' => 'Login : ']);
-echo $this->Form->input("password_connexion", ['label' => 'Mot de passe : ']);
-echo $this->Form->submit("Valider");
-echo $this->Form->end();
