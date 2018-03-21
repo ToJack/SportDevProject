@@ -10,3 +10,9 @@ function AfficherForm(seance, heure_start, minute_start, heure_end, minute_end)
    document.getElementById('seanceReleve').innerHTML="Séance du "+date.getDate()+"/"+mois+"/"+date.getFullYear()+" : "+heure_start+"h"+minute_start+"-"+heure_end+"h"+minute_end+", "+seance.sport+" à "+seance.location_name;
    document.getElementById('idSeance').value=seance.id;
  }
+
+
+ function AfficherContest()
+ {
+   
+ }
