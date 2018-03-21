@@ -5,7 +5,7 @@
 
 
 <h2>Puis-je changer de formule d’abonnement si je me rends compte qu’elle ne correspond pas à mes besoins ?</h2>
-<p>Oui. Vous pouvez changer de formule d’abonnement en demandant à l’accueil d’un club l'app sport Fitness le document “Changement d’abonnement”. Cette opération, si elle est effectuée avant le 20 du mois en cours, entraînera le changement de votre abonnement à compter du 1er du mois suivant votre demande. Cette opération, si elle est effectuée après le 20 du mois en cours, entraînera le changement de votre abonnement à partir du 1er du second mois.</p>
+<p>Oui. Vous pouvez changer de formule d’abonnement en demandant à l’accueil d’un club l'app sport  le document “Changement d’abonnement”. Cette opération, si elle est effectuée avant le 20 du mois en cours, entraînera le changement de votre abonnement à compter du 1er du mois suivant votre demande. Cette opération, si elle est effectuée après le 20 du mois en cours, entraînera le changement de votre abonnement à partir du 1er du second mois.</p>
 
 <h2>Comment résilier mon abonnement ?</h2>
 <p>Envoyez simplement une lettre recommandée avec accusé de réception à l’adresse de votre club en précisant le motif de l’arrêt de vos entrainements. Toute réception par le club, de votre courrier, avant le 10 du mois, prendra en compte ce mois en cours comme premier mois de préavis ; En cas de réception le 10 du mois en cours, ou après, le préavis des deux mois débutera le mois suivant.</p>
@@ -19,7 +19,7 @@
 
 <h2>Des coachs spécialisés pour un suivi personnalisé : </h2>
 
-<p>Vous êtes entre de bonnes mains : nos coachs sportifs sont des professeurs diplômés d’État. Ces professionnels vous plongeront dans une ambiance entraînante lors de cours collectifs variés. Avec un panel de plus de 50 activités, dont des activités outdoor, vous n’aurez que l’embarras du choix pour pratiquer le fitness qui vous va ! Vous retrouverez parmi ces activités un grand nombre de cours collectifs Les Mills (Body Attack, Body Combat, RPM…). À l'app sport Fitness, il y en a pour tous les goûts ! Chaque adhérent bénéficie d’un bilan sportif gratuit. Et pour ceux qui veulent un suivi plus poussé, vous pouvez opter pour un coaching personnalisé : une véritable préparation physique guidée et suivie de A à Z.</p>
+<p>Vous êtes entre de bonnes mains : nos coachs sportifs sont des professeurs diplômés d’État. Ces professionnels vous plongeront dans une ambiance entraînante lors de cours collectifs variés. Avec un panel de plus de 50 activités, dont des activités outdoor, vous n’aurez que l’embarras du choix pour pratiquer le fitness qui vous va ! Vous retrouverez parmi ces activités un grand nombre de cours collectifs Les Mills (Body Attack, Body Combat, RPM…). À l'app sport, il y en a pour tous les goûts ! Chaque adhérent bénéficie d’un bilan sportif gratuit. Et pour ceux qui veulent un suivi plus poussé, vous pouvez opter pour un coaching personnalisé : une véritable préparation physique guidée et suivie de A à Z.</p>
 
 <h2>Des salles bien équipées et des services dédiés à votre confort :</h2>
 <p>Tous les clubs l'app sport sont à la pointe des tendances en matière de matériel sportif. Vous pouvez notamment vous entraîner sur les appareils haut de gamme Matrix. Vous disposez aussi de votre espace personnel dans les vestiaires : cabine de change et douche individuelle et casier à votre disposition.</p>
