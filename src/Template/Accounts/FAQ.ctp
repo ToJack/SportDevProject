@@ -42,7 +42,7 @@
 <p> Le site internet de l'app sport est la pour gérer les competions entre membres pour indiquer les séances que vous projeter d'organiser tout est vraiment possible</p>
 <p> Pour commencer, aller à la page connexion si vous n'avez pas de compte, créez en un </p>
 
-<h2>mentions légale <h2>
+<h2>Mentions légales<h2>
   <h3>1. Mentions légales</h3>
 
  <p>Conformément à l'article 6 de la loi n° 2004-575 du 21 juin 2004 pour la confiance dans l'économie numérique modifié par l’article 1er de la Loi n°2016-444 du 13 avril 2016, il est précisé aux utilisateurs du site appsport.com l'identité des différents intervenants dans le cadre de sa réalisation et de son suivi :
