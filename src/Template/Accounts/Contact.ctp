@@ -1,8 +1,1 @@
-
-<?php
-echo $this->Form->create();
-echo $this->Form->input("email", ['label' => 'Email :  ']);
-echo $this->Form->input("comments", ['label' => 'Commentaire :']);
-echo $this->Form->submit("Valider");
-echo $this->Form->end();
-?>
+<h2>En cas de problème, merci de contacter: adrien.kourganoff@edu.ece.fr </h2>
