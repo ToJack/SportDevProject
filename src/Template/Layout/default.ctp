@@ -49,6 +49,7 @@
       <ul class="nav navbar-nav">
         <li <?=($this->request->params['action']=="accueil"?'class="active"':'')?>><?= $this->html->link("Accueil",['controller' => 'Accounts','action' => 'Accueil'])?> </li>
         <li <?=($this->request->params['action']=="classements"?'class="active"':'')?>><?= $this->html->link("Classements",['controller' => 'Accounts','action' => 'Classements'])?></li>
+        <li <?=($this->request->params['action']=="competitions"?'class="active"':'')?>><?= $this->html->link("Compétitions",['controller' => 'Accounts','action' => 'competitions'])?></li>
         <li <?=($this->request->params['action']=="connexion"?'class="active"':'')?>><?= $this->html->link("Connexion",['controller' => 'Accounts','action' => 'Connexion'])?></li>
         <li <?=($this->request->params['action']=="monCompte"?'class="active"':'')?>><?= $this->html->link("Mon compte",['controller' => 'Accounts','action' => 'MonCompte'])?></li>
         <li <?=($this->request->params['action']=="objetsConnectes"?'class="active"':'')?>><?= $this->html->link("Objets connectés",['controller' => 'Accounts','action' => 'ObjetsConnectes'])?></li>
@@ -67,6 +68,7 @@
         <ul class="nav navbar-nav">
           <li <?=($this->request->params['action']=="accueil"?'class="active"':'')?>><?= $this->html->link("Accueil",['controller' => 'Accounts','action' => 'Accueil'])?> </li>
           <li <?=($this->request->params['action']=="classements"?'class="active"':'')?>><?= $this->html->link("Classements",['controller' => 'Accounts','action' => 'Classements'])?></li>
+          <li <?=($this->request->params['action']=="competitions"?'class="active"':'')?>><?= $this->html->link("Compétitions",['controller' => 'Accounts','action' => 'competitions'])?></li>
           <li <?=($this->request->params['action']=="connexion"?'class="active"':'')?>><?= $this->html->link("Connexion",['controller' => 'Accounts','action' => 'Connexion'])?></li>
           <li <?=($this->request->params['action']=="monCompte"?'class="active"':'')?>><?= $this->html->link("Mon compte",['controller' => 'Accounts','action' => 'MonCompte'])?></li>
           <li <?=($this->request->params['action']=="objetsConnectes"?'class="active"':'')?>><?= $this->html->link("Objets connectés",['controller' => 'Accounts','action' => 'ObjetsConnectes'])?></li>
