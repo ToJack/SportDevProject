@@ -3,7 +3,7 @@
 <!---Premier tableau--->
 <?php if($contests!=null)
 {
-  echo "<div class='col-xs-12'>
+  echo "
     <div class='col-xs-6'>
       <table class='table'>
         <tr>

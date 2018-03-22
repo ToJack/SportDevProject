@@ -28,6 +28,7 @@
 
     <?= $this->Html->css('bootstrap.min') ?>
     <?= $this->Html->css('bootstrap-theme.min') ?>
+    <?= $this->Html->css('perso') ?>
 
     <?= $this->Html->script('jquery-3.3.1.min') ?>
     <?= $this->Html->script('bootstrap.min') ?>
@@ -78,11 +79,15 @@
           <li <?=($this->request->params['action']=="faq"?'class="active"':'')?>><?= $this->html->link("FAQ",['controller' => 'Accounts','action' => 'faq'])?></li>
       </div>
     </nav>
+
+
     <?= $this->Flash->render() ?>
     <div class="container clearfix col-xs-12">
         <?= $this->fetch('content') ?>
     </div>
-    <footer>
+    <div class="margeFooter col-xs-12"></div>
+    <footer class="footer text-center">
+      <p>App Sport - Kourganoff/Jacquin/Bonifacio/Akherraz - Options : CE</p>
     </footer>
 </body>
 </html>
