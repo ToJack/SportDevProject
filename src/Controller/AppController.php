@@ -43,7 +43,28 @@ class AppController extends Controller
 
         $this->loadComponent('RequestHandler');
         $this->loadComponent('Flash');
-        $this->loadComponent('Auth');
+        $this->loadComponent('Auth', [
+            'loginAction' => [
+                'controller' => 'Sports',
+                'action' => 'login'
+            ],
+            'authError' => 'Veuillez vous identifier pour accÈder ‡ cette page',
+            'authenticate' => [
+                'Form' => [
+                    'fields' => ['username' => 'email', 'password' => 'password'],
+                    'userModel' => 'Members'
+                ]
+            ],
+            'storage' => 'Session',
+            'loginRedirect' => [
+                'controller' => 'Sports',
+                'action' => 'index'
+            ],
+            'logoutRedirect' => [
+                'controller' => 'Sports',
+                'action' => 'login'
+            ],
+        ]);
 
         /*
          * Enable the following components for recommended CakePHP security settings.
