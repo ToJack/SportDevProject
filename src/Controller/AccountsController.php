@@ -66,8 +66,12 @@ class AccountsController extends AppController
         $newMember->password=$password_inscription;
         $this->Members->save($newMember);
       return $this->redirect($this->here);
+<<<<<<< HEAD
     }*/
 
+=======
+      }
+>>>>>>> 6845ff94021e24e8fd1a1e3b095ba21c65971819
     }
 
     public function monCompte()
@@ -229,7 +233,7 @@ class AccountsController extends AppController
 //Fonctions pour singleCompetition
     public function ScoreMatch($id,$joueur)
     {
-      $condition=$this->Logs->find()->where(["workout_id ="=>$id, "log_type"=>"Points"]);
+      $condition=$this->Logs->find()->where(["workout_id ="=>$id, 'OR'=>["log_type"=>"Points","log_type"=>"points"]]);
       if($condition->toArray()!=null)
       {$score="J".$joueur."(".$condition->first()->log_value.")";}
       else {$score="J".$joueur."(-)";}
@@ -237,7 +241,7 @@ class AccountsController extends AppController
     }
     public function StatutMatch($score,$id)
     {
-      $condition=$this->Logs->find()->where(["workout_id ="=>$id, "log_type"=>"Points"]);
+      $condition=$this->Logs->find()->where(["workout_id ="=>$id, 'OR'=>["log_type"=>"Points","log_type"=>"points"]]);
       if(($score!="J1(-)")&&($condition->toArray()!=null))
       {$statut="Match Terminé";}
       else {$statut="Match en Cours";}
