@@ -53,38 +53,63 @@ body {
 }
 #waitForMargin{
   display:none;
+
 }
 
 .contacth2{
-      background-color: lightblue;
-      padding-top: 50px;
-      padding-bottom: 50px;
+      background:#5F6791 ;
       text-align: center;
-      margin:0 ;
-
+      margin-left: -1.5%;
+      margin-right: -1.5%;
+      padding-left: -1.5%;
+      padding-right: -1.5%;
+      color: #ffffff;
+      padding-top:5% ;
+      padding-bottom:5% ;
   }
-  #mainview{
-    margin:0;
-  }
-.faqh1{
-
+h2{
+text-align: center;
 }
-.faqh2{
-
-}
-.faqp {
-
+.faqw h2, .faqb h2, .faqb{
+  text-align: center;
 }
 
-.accueilp{
+.faqb{
+  background: #5F6791;
+  margin-left: -1.5%;
+  margin-right: -1.5%;
+  padding-left: 1.5%;
+  padding-right: 1.5%;
+  color: #ffffff;
+text-align: justify;
+}
+.faqw {
+  text-align: justify;
+
+}
+.ap{
   text-align: center;
 }
 .accueilp2{
   text-align: center;
 }
-.accueili{
+
+.ai img{
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 100%;
 }
+#listMembre{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  margin-top: auto;
+
+}
+ #listMembre li {
+   list-style-type: none;
+ }
+ #listMembre ul {
+     margin-top: 5%;
+ }
