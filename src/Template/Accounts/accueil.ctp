@@ -9,5 +9,6 @@
 <id class="accueilp2">
 <p>Retrouvez le 1er club intersportif de France dans les grandes villes, et venez profiter des différentes séances d'entrainements à un coût défiant toutes concurrences </p>
 
-<p>"Nous ne sommmes pas expert pour rien"</p>
-</id>
+"Nous ne sommmes pas expert pour rien"
+
+<?php echo $test ?>
