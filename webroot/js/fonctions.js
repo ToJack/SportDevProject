@@ -11,8 +11,8 @@ function AfficherForm(seance, heure_start, minute_start, heure_end, minute_end)
    document.getElementById('idSeance').value=seance.id;
  }
 
- function changeImg()	{
-      var url ='../img/BackgroundMargin/';
+ function changeImg(webroot)	{
+      var url =webroot+'img/BackgroundMargin/';
  			var newImgNumber =Math.floor(Math.random()*25)+1;
  			document.getElementById('imgMarginLeft').style.backgroundImage = 'url("'+url+newImgNumber+'.jpg")';
       document.getElementById('imgMarginRight').style.backgroundImage = 'url("'+url+newImgNumber+'")';
@@ -20,4 +20,3 @@ function AfficherForm(seance, heure_start, minute_start, heure_end, minute_end)
 
 
  		}
-window.onload=changeImg;

@@ -32,12 +32,15 @@
       <?= $this->Html->script('jquery-3.3.1.min'); ?>
       <?= $this->Html->script('bootstrap.min'); ?>
       <?= $this->Html->script('fonctions'); ?>
-      <script src="/SportDevProject/webroot/js/fonctions.js"></script>
+
       <?= $this->fetch('meta'); ?>
       <?= $this->fetch('css'); ?>
       <?= $this->fetch('script'); ?>
+      <?php $adresse=$this->request->webroot;
+      $adresse=str_replace('\\', "/",$adresse);
+      ?>
   </head>
-  <body>
+  <body onload=<?="\"changeImg('".$adresse."')\""?> >
       <!---navbar fixed--->
       <nav class="navbar navbar-inverse navbar-fixed-top" >
         <div clas="container-fluid">
