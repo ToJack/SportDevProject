@@ -79,12 +79,12 @@
           <li <?=($this->request->params['action']=="faq"?'class="active"':'')?>><?= $this->html->link("FAQ",['controller' => 'Accounts','action' => 'faq'])?></li>
       </div>
     </nav>
-
-
     <?= $this->Flash->render() ?>
-    <div class="container clearfix col-xs-12">
+    <div class="col-xs-1"></div>
+    <div class="container clearfix col-xs-10">
         <?= $this->fetch('content') ?>
     </div>
+    <div class="col-xs-1"></div>
     <div class="margeFooter col-xs-12"></div>
     <footer class="footer text-center">
       <p>App Sport - Kourganoff/Jacquin/Bonifacio/Akherraz - Options : CE</p>
