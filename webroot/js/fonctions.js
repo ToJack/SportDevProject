@@ -11,8 +11,13 @@ function AfficherForm(seance, heure_start, minute_start, heure_end, minute_end)
    document.getElementById('idSeance').value=seance.id;
  }
 
+ function changeImg()	{
+      var url ='../img/BackgroundMargin/';
+ 			var newImgNumber =Math.floor(Math.random()*25)+1;
+ 			document.getElementById('imgMarginLeft').style.backgroundImage = 'url("'+url+newImgNumber+'.jpg")';
+      document.getElementById('imgMarginRight').style.backgroundImage = 'url("'+url+newImgNumber+'")';
+      document.getElementById('waitForMargin').style.display = 'block';
 
- function AfficherContest()
- {
-   
- }
+
+ 		}
+window.onload=changeImg;
