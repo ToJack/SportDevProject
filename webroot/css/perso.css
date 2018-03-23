@@ -17,5 +17,40 @@ html {
 }
 
 .contacth2{
-color: #152587;
+      background-color: lightblue;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      text-align: center;
+      margin:0 ;
+
+  }
+  #mainview{
+    margin:0;
+  }
+.faqh1{
+
+}
+.faqh2{
+
+}
+.faqp {
+
+}
+body{
+  background: url('../img/munkhsaran-otgonbayar-554708-unsplash(1).jpg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.accueilp{
+  text-align: center;
+}
+.accueilp2{
+  text-align: center;
+}
+.accueili{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
 }
