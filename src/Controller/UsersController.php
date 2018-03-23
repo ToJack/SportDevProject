@@ -36,13 +36,17 @@
     }
     public function login()
     {
+      $this->loadModel("Members");
       if($this->request->is('post')){
           $user = $this->Auth->identify();
           if($user){
             $this->Auth->setUser($user);
-            return $this->redirect(['Controller'=>'Users','action'=>'index']);
+            return $this->redirect($this->Auth->redirectUrl());
+            //return $this->redirect(['Controller'=>'Users','action'=>'index']);
           }
-          $this->Flash->error(__('Invalid username or password, try again'));
+          else {
+            $this->Flash->error(__('Invalid username or password, try again'));
+          }
       }
     }
 

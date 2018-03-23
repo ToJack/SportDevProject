@@ -12,7 +12,9 @@ class AccountsController extends AppController
 
     public function accueil()
     {
+      $memberId=$this->Auth->user('id');
 
+      $this->set("test", $memberId);
     }
 
     public function classements()
@@ -47,7 +49,7 @@ class AccountsController extends AppController
         }
         $this->Flash->success($this->request->data("email_inscription"));
         $this->Flash->success($this->request->data("password_inscription"));
-      }*/
+      }
       $this->loadModel("Members");
       $members=$this->Members->find();
 
@@ -64,7 +66,7 @@ class AccountsController extends AppController
         $newMember->password=$password_inscription;
         $this->Members->save($newMember);
       return $this->redirect($this->here);
-      }
+    }*/
 
     }
 
@@ -398,7 +400,7 @@ class AccountsController extends AppController
           }
         }
       }
-      //On classe les participants du meilleur au moins bon 
+      //On classe les participants du meilleur au moins bon
       usort($participants, $this->build_sorter(1));
 
       //on envoie les données
