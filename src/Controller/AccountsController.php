@@ -66,12 +66,8 @@ class AccountsController extends AppController
         $newMember->password=$password_inscription;
         $this->Members->save($newMember);
       return $this->redirect($this->here);
-<<<<<<< HEAD
     }*/
 
-=======
-      }
->>>>>>> 6845ff94021e24e8fd1a1e3b095ba21c65971819
     }
 
     public function monCompte()
