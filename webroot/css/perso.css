@@ -84,9 +84,10 @@ margin:auto;
 .ap{
   text-align: center;
 }
-.accueilp2{
+.pageaccueil{
   text-align: center;
 }
+
 .rep {
   text-align: right;
 }
@@ -95,21 +96,16 @@ margin:auto;
   margin-left: auto;
   margin-right: auto;
 }
-.contenu img {
-  box-shadow: 1px 1px 12px #555;
-  margin-bottom: 2%;
-}
-
 
  .contenu {
    position: relative;
-   width: 70%;
-
+   max-width: 70%;
  }
 
  .photodev {
-  width: 25%;
-  height: 25%;
+  width: 75%;
+  height: 75%;
+  box-shadow: 1px 1px 12px #555;
  }
 
  .couche {
@@ -118,8 +114,8 @@ margin:auto;
   bottom: 0;
   left: 0;
   right: 0;
-  height:25%;
-  width: 25%;
+  height:50%;
+  width: 50%;
   opacity: 0;
   transition: .5s ease;
   background-color: #5F6791;
@@ -131,7 +127,7 @@ margin:auto;
 
  .texte {
   color: white;
-  font-size: 15px;
+  font-size: 20px;
   position: absolute;
   top: 50%;
   left: 50%;
