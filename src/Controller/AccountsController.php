@@ -216,14 +216,51 @@ class AccountsController extends AppController
                 $newMember->password = $hashedpassword;
                 $this->Members->save($newMember);
                 //return $this->redirect($this->here);
-                return $this->redirect(['Controller' => 'Accounts', 'action' => 'connexion']);
+                return $this->redirect(['Controller' => 'Accounts', 'action' => 'login']);
             }
         }
     }
 
-    public function connexion()
+    public function login()
     {
-        $this->loadModel("Members");
+      $this->loadModel("Members");
+      if(isset($this->request->data["LogIn"]))
+      {
+        if($this->request->is('post')) {
+          $user = $this->Auth->identify();
+          if ($user) {
+              $this->Auth->setUser($user);
+              return $this->redirect($this->Auth->redirectUrl());
+              //return $this->redirect(['Controller'=>'Users','action'=>'index']);
+          } else {
+              $this->Flash->error(__('Invalid username or password, try again'));
+          }
+        }
+      }
+
+      //Formulaire nouveau membre
+      if(isset($this->request->data["AddMember"]))
+      {
+        $members = $this->Members->find();
+        $newMember = $this->Members->newEntity();
+        //attribution des valeurs
+        $email_inscription = $this->request->data("email_inscription");
+        $password_inscription = $this->request->data("password_inscription");
+
+        //blindage de l'email
+        $check = $this->Members->find()->where(["email =" => $email_inscription])->toArray();
+        if (count($check) > 0) {
+        } //envoie à la bdd
+        else {
+          $newMember->email = $email_inscription;
+          $hashedpassword = (new DefaultPasswordHasher)->hash($password_inscription);
+          $newMember->password = $hashedpassword;
+          $this->Members->save($newMember);
+          //return $this->redirect($this->here);
+          return $this->redirect(['Controller' => 'Accounts', 'action' => 'login']);
+        }
+      }
+        /*$this->loadModel("Members");
         if ($this->request->is('post')) {
             $user = $this->Auth->identify();
             if ($user) {
@@ -233,7 +270,7 @@ class AccountsController extends AppController
             } else {
                 $this->Flash->error(__('Invalid username or password, try again'));
             }
-        }
+        }*/
         /*if($this->request->is('POST') && !empty($this->request->data("email"))){
 
           $this->Flash->success($this->request->data("email"));
