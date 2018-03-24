@@ -1,4 +1,4 @@
-
+<h1>S'inscrire</h1>
 <?php
 echo $this->Form->create(),
      $this->Form->input("email_inscription", ['type'=>'email', 'label' => 'Email : ']),

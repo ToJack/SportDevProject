@@ -56,7 +56,8 @@ class AccountsController extends AppController
           $hashedpassword= (new DefaultPasswordHasher)->hash($password_inscription);
           $newMember->password=$hashedpassword;
           $this->Members->save($newMember);
-        return $this->redirect($this->here);
+        //return $this->redirect($this->here);
+        return $this->redirect(['Controller'=>'Accounts','action'=>'connexion']);
         }
       }
     }
