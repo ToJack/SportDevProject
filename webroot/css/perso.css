@@ -64,12 +64,9 @@ body {
   margin-bottom: 30px;
 }
 
-<<<<<<< HEAD
-=======
 .margin-auto{
 margin:auto;
 }
->>>>>>> 7ce67f6fe30c393b4305244295749c6f27391526
 
 .faqb, .faqw{
   min-height:190px;
@@ -83,15 +80,11 @@ margin:auto;
   border-radius:5px;
 }
 
-<<<<<<< HEAD
-.pageaccueil{
-=======
 
 .ap{
   text-align: center;
 }
-.accueilp2{
->>>>>>> 7ce67f6fe30c393b4305244295749c6f27391526
+.pageaccueil{
   text-align: center;
 }
 
