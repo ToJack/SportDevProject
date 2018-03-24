@@ -112,7 +112,8 @@ class AccountsController extends AppController
 
     public function objetsConnectes()
     {
-
+      $this->loadModel("devices");
+        $this->devices->find();
     }
 
     public function seances()
