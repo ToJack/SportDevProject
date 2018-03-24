@@ -60,9 +60,7 @@ body {
 h2 {
   text-align: center;
 }
-.faqw h2, .faqb h2, .faqb{
-  text-align: center;
-}
+
 
 .faqb{
   background: #5F6791;
@@ -75,12 +73,10 @@ h2 {
   text-align: justify;
 }
 
-.ap{
+.pageaccueil{
   text-align: center;
 }
-.accueilp2{
-  text-align: center;
-}
+
 .rep {
   text-align: right;
 }
@@ -89,21 +85,16 @@ h2 {
   margin-left: auto;
   margin-right: auto;
 }
-.contenu img {
-  box-shadow: 1px 1px 12px #555;
-  margin-bottom: 2%;
-}
-
 
  .contenu {
    position: relative;
-   width: 70%;
-
+   max-width: 70%;
  }
 
  .photodev {
-  width: 25%;
-  height: 25%;
+  width: 75%;
+  height: 75%;
+  box-shadow: 1px 1px 12px #555;
  }
 
  .couche {
@@ -112,8 +103,8 @@ h2 {
   bottom: 0;
   left: 0;
   right: 0;
-  height:25%;
-  width: 25%;
+  height:50%;
+  width: 50%;
   opacity: 0;
   transition: .5s ease;
   background-color: #5F6791;
@@ -125,7 +116,7 @@ h2 {
 
  .texte {
   color: white;
-  font-size: 15px;
+  font-size: 20px;
   position: absolute;
   top: 50%;
   left: 50%;
