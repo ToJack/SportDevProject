@@ -68,34 +68,6 @@ class AccountsController extends AppController
 
     }
 
-
-    public function register()
-    {
-        $this->loadModel("Members");
-        $members = $this->Members->find();
-
-        //Formulaire nouveau membre
-        $newMember = $this->Members->newEntity();
-        if (isset($this->request->data["AddMember"])) {
-            //attribution des valeurs
-            $email_inscription = $this->request->data("email_inscription");
-            $password_inscription = $this->request->data("password_inscription");
-
-            //blindage de l'email
-            $check = $this->Members->find()->where(["email =" => $email_inscription])->toArray();
-            if (count($check) > 0) {
-            } //envoie à la bdd
-            else {
-                $newMember->email = $email_inscription;
-                $hashedpassword = (new DefaultPasswordHasher)->hash($password_inscription);
-                $newMember->password = $hashedpassword;
-                $this->Members->save($newMember);
-                //return $this->redirect($this->here);
-                return $this->redirect(['Controller' => 'Accounts', 'action' => 'login']);
-            }
-        }
-    }
-
     public function login()
     {
         $this->loadModel("Members");
