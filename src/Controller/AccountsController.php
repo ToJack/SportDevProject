@@ -157,8 +157,13 @@ class AccountsController extends AppController
 
     public function objetsConnectes()
     {
-      $this->loadModel("devices");
-      $this->devices->find();
+      $this->loadModel("Devices");
+      $this->Devices->find();
+      $memberId=$this->Auth->user('id');
+      $check=$this->Devices->find()->where(["member_id =" => $memberId])->toArray();
+      if(count($check)>0){
+        //$deviceSerial=$this->Devices->find()->where(["serial"]);
+      }
     }
 
     public function seances()
