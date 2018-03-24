@@ -68,7 +68,7 @@ body {
   right:0;
   position: fixed;
 }
-#waitForMargin{
+#waitForMarginContenu, #waitForMarginFooter {
   display:none;
 }
 

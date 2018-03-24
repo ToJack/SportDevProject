@@ -16,9 +16,8 @@ function changeImg(webroot)	{
 			var newImgNumber =Math.floor(Math.random()*44)+1;
 			document.getElementById('imgMarginLeft').style.backgroundImage = 'url("'+url+newImgNumber+'.jpg")';
     document.getElementById('imgMarginRight').style.backgroundImage = 'url("'+url+newImgNumber+'")';
-    document.getElementById('waitForMargin').style.display = 'block';
-
-
+    document.getElementById('waitForMarginContenu').style.display = 'block';
+    document.getElementById('waitForMarginFooter').style.display = 'block';
 }
 
 function SwapInscriptionConnexion()
