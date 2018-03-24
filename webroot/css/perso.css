@@ -31,7 +31,7 @@ body {
 }
 
 .margeFooter{
-  height:30px;
+  height:45px;
 }
 
 #imgMarginLeft{
@@ -53,27 +53,45 @@ body {
 }
 #waitForMargin{
   display:none;
-
 }
+
+.titre{
+  background: #78A1BF;
+  color: #ffffff;
+  border-radius:5px;
+  box-shadow: 5px 5px 13px #777;
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+
 <<<<<<< HEAD
 =======
-h2 {
-  text-align: center;
+.margin-auto{
+margin:auto;
 }
+>>>>>>> 7ce67f6fe30c393b4305244295749c6f27391526
 
-
+.faqb, .faqw{
+  min-height:190px;
+  display:flex;
+  flex-direction: column;
+}
 .faqb{
   background: #5F6791;
-  margin-left: -1%;
-  margin-right: -1%;
   color: #ffffff;
- box-shadow: 1px 1px 12px #555;
-}
-.faqw {
-  text-align: justify;
+  box-shadow: 5px 5px 13px #555;
+  border-radius:5px;
 }
 
+<<<<<<< HEAD
 .pageaccueil{
+=======
+
+.ap{
+  text-align: center;
+}
+.accueilp2{
+>>>>>>> 7ce67f6fe30c393b4305244295749c6f27391526
   text-align: center;
 }
 
@@ -124,4 +142,3 @@ h2 {
   -ms-transform: translate(-50%, -50%);
   text-align: center;
 }
->>>>>>> ffd85a8190adb8d586afd1118e787205d6174816

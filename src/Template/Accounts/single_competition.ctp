@@ -1,7 +1,10 @@
 <?php if($matchs!=null)
 {
-  echo "<h2>".$name_contest."</h2>";
-
+  echo "<h2></h2>
+  <section class='col-xs-4 col-xs-offset-4 titre'>
+    <h1 class='text-center'>".$name_contest."</h1>
+  </section>
+  <div class='col-xs-12'>";
   echo "<h2>Listes des matchs</h2>
 
   <table class='table'>
@@ -76,4 +79,6 @@ echo "<div class='col-xs-12'>
       $rang++;
     }
 }
-if($classements!=null)echo "</table>"?>
+if($classements!=null)echo "</table>";
+
+if($matchs!=null) echo '</div>';?>

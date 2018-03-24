@@ -1,10 +1,14 @@
-<h1>Les compétitions</h1>
+<h2></h2>
+<section class="col-xs-4 col-xs-offset-4 titre">
+  <h1 class='text-center'>Les compétitions</h1>
+</section>
+<div class='col-xs-12'>
 
 <!---Premier tableau--->
 <?php if($contests!=null)
 {
   echo "
-    <div class='col-xs-6'>
+    <div class='col-xs-12'>
       <table class='table'>
         <tr>
           <th>Nom</th>
@@ -56,3 +60,4 @@ echo "<div class='col-xs-12'>",
         "</div>";
 
 ?>
+</div>
