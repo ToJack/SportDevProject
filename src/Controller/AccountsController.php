@@ -20,17 +20,180 @@ class AccountsController extends AppController
 
     public function classements()
     {
-        $this->loadModel("Members");
+        $actual_time = Time::now();
+        $actual_time->timezone = 'Europe/Paris';
+
+        $listSport = ["Jogging", "Entrainement", "Football", "Tennis", "Squash", "Ping-Pong", "Fitness", "Voleyball",
+            "Handball", "Piscine", "Boxe", "Gymnastique", "Badminton", "Golf", "Basketball", "Waterpolo", "Aquagym", "Equitation"];
+
+
         $this->loadModel("Logs");
+
         $this->loadModel("Workouts");
+        $matchs = $this->Workouts->find()->order(['id' => 'ASC']);
 
+        $this->loadModel("Members");
         $membres = $this->Members->find();
-        $seances = $this->Workouts->find();
-        $logs = $this->Logs->find();
 
-        $this->set('membres', $membres->toArray());
-        $this->set('seances', $seances->toArray());
-        $this->set('logs', $logs->toArray());
+        $ListMembre = array();
+        foreach ($membres as $membre) {
+            array_push($ListMembre, $membre->email);
+        }
+
+        $ListMatchs = array();
+        $i = 1;
+
+        foreach ($matchs->toArray() as $match) {
+            if ($this->ScoreClass($match->id)) {
+                $email = $this->Members->find()->where(['id =' => $match->member_id])->first()->email;
+
+                if (!($i % 1)) {
+
+
+                    $score = $this->ScoreClass($match->id);
+                    array_push($ListMatchs, array(
+                        $email,
+                        $match->sport,
+                        $score
+                    ));
+                } else {
+                    $ListMatchs[(($i)) - 1][1] = $email;
+                    $ListMatchs[(($i)) - 1][5] = $ListMatchs[(($i) / 2) - 1][5] . " / " . $this->ScoreClass($match->id);
+                }
+                $i += 1;
+            }
+        }
+
+
+
+        $this->set('actual_time', $actual_time);
+        $this->set('ListMembre', $ListMembre);
+
+        $this->set('matchs', $ListMatchs);
+
+        $listSport = ["Jogging", "Entrainement", "Football", "Tennis", "Squash", "Ping-Pong", "Fitness", "Voleyball",
+            "Handball", "Piscine", "Boxe", "Gymnastique", "Badminton", "Golf", "Basketball", "Waterpolo", "Aquagym", "Equitation"];
+
+        $jogging = array();
+        $entrainement = array();
+        $football = array();
+        $tennis = array();
+        $squash = array();
+        $ping_pong = array();
+        $fitness = array();
+        $voleyball = array();
+        $handball = array();
+        $piscine = array();
+        $boxe = array();
+        $gym = array();
+        $badminton = array();
+        $golf = array();
+        $basketball = array();
+        $waterpolo = array();
+        $aquagym = array();
+        $equitation = array();
+
+
+        foreach ($ListMatchs as $match) {
+            switch ($match[1]) {
+                case $listSport[0]:
+                    array_push($jogging, $match);
+                    break;
+                case $listSport[1]:
+                    array_push($entrainement, $match);
+                    break;
+                case $listSport[2]:
+                    array_push($football, $match);
+                    break;
+                case $listSport[3]:
+                    array_push($tennis, $match);
+                    break;
+                case $listSport[4]:
+                    array_push($squash, $match);
+                    break;
+                case $listSport[5]:
+                    array_push($ping_pong, $match);
+                    break;
+                case $listSport[6]:
+                    array_push($fitness, $match);
+                    break;
+                case $listSport[7]:
+                    array_push($voleyball, $match);
+                    break;
+                case $listSport[8]:
+                    array_push($handball, $match);
+                    break;
+                case $listSport[9]:
+                    array_push($piscine, $match);
+                    break;
+                case $listSport[10]:
+                    array_push($boxe, $match);
+                    break;
+                case $listSport[11]:
+                    array_push($gym, $match);
+                    break;
+                case $listSport[12]:
+                    array_push($badminton, $match);
+                    break;
+                case $listSport[13]:
+                    array_push($golf, $match);
+                    break;
+                case $listSport[14]:
+                    array_push($basketball, $match);
+                    break;
+                case $listSport[15]:
+                    array_push($waterpolo, $match);
+                    break;
+                case $listSport[16]:
+                    array_push($aquagym, $match);
+                    break;
+                case $listSport[17]:
+                    array_push($equitation, $match);
+                    break;
+            }
+        }
+        $allArrays = array();
+        array_push($allArrays, $jogging);
+        array_push($allArrays, $entrainement);
+        array_push($allArrays, $football);
+        array_push($allArrays, $tennis);
+        array_push($allArrays, $squash);
+        array_push($allArrays, $ping_pong);
+        array_push($allArrays, $fitness);
+        array_push($allArrays, $voleyball);
+        array_push($allArrays, $handball);
+        array_push($allArrays, $piscine);
+        array_push($allArrays, $boxe);
+        array_push($allArrays, $gym);
+        array_push($allArrays, $badminton);
+        array_push($allArrays, $golf);
+        array_push($allArrays, $basketball);
+        array_push($allArrays, $waterpolo);
+        array_push($allArrays, $aquagym);
+        array_push($allArrays, $equitation);
+        $this->sortArray($allArrays);
+        #debug($allArrays);
+        $this->set('allArrays', $allArrays);
+        $this->set('membres', $membres);
+    }
+
+    public function sortArray($array)
+    {
+        foreach ($array as $a) {
+            if ($array != null) {
+                usort($a, $this->build_sorter(1));
+            }
+        }
+    }
+
+    public function ScoreClass($id)
+    {
+        $condition = $this->Logs->find()->where(["workout_id =" => $id, "log_type" => "Points"]);
+        $score = "";
+        if ($condition->toArray() != null) {
+            $score = $condition->first()->log_value;
+        }
+        return $score;
     }
 
     public function register()
