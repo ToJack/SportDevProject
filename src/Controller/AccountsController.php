@@ -68,8 +68,6 @@ class AccountsController extends AppController
         $this->set('ListMembre', $ListMembre);
 
         $this->set('matchs', $ListMatchs);
-        #TODO debug($ListMatchs[12]);
-
 
         $listSport = ["Jogging", "Entrainement", "Football", "Tennis", "Squash", "Ping-Pong", "Fitness", "Voleyball",
             "Handball", "Piscine", "Boxe", "Gymnastique", "Badminton", "Golf", "Basketball", "Waterpolo", "Aquagym", "Equitation"];
