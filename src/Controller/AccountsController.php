@@ -260,51 +260,6 @@ class AccountsController extends AppController
           return $this->redirect(['Controller' => 'Accounts', 'action' => 'login']);
         }
       }
-        /*$this->loadModel("Members");
-        if ($this->request->is('post')) {
-            $user = $this->Auth->identify();
-            if ($user) {
-                $this->Auth->setUser($user);
-                return $this->redirect($this->Auth->redirectUrl());
-                //return $this->redirect(['Controller'=>'Users','action'=>'index']);
-            } else {
-                $this->Flash->error(__('Invalid username or password, try again'));
-            }
-        }*/
-        /*if($this->request->is('POST') && !empty($this->request->data("email"))){
-
-          $this->Flash->success($this->request->data("email"));
-          $this->Flash->success($this->request->data("password"));
-        }
-        if($this->request->is('POST') && isset($this->request->data("submit_inscription")) ){
-          $this->Form->submit("S'inscrire", array('name' => 'submit_inscription'))
-          $d = $this->request->data;
-          if($this->User->save($d, true, array('email_inscription','password_inscription'))){
-            $this->Session->setFlash("Votre compte a bien été crée", "notif");
-          }else {
-            $this->Session->setFlash("Merci de vérifier les informations", "notif", array('type'=>'error'));
-          }
-          $this->Flash->success($this->request->data("email_inscription"));
-          $this->Flash->success($this->request->data("password_inscription"));
-        }
-        $this->loadModel("Members");
-        $members=$this->Members->find();
-
-        //Formulaire nouveau membre
-        $newMember=$this->Members->newEntity();
-        if(isset($this->request->data["AddMember"]))
-        {
-          //attribution des valeurs
-          $email_inscription=$this->request->data("email_inscription");
-          $password_inscription=$this->request->data("password_inscription");
-
-          //envoie à la bdd
-          $newMember->email=$email_inscription;
-          $newMember->password=$password_inscription;
-          $this->Members->save($newMember);
-        return $this->redirect($this->here);
-      }*/
-
     }
 
     public function logout()
@@ -356,9 +311,13 @@ class AccountsController extends AppController
         $this->Devices->find();
         $memberId = $this->Auth->user('id');
         $check = $this->Devices->find()->where(["member_id =" => $memberId])->toArray();
-        if (count($check) > 0) {
+        $this->set('check', $check);
+        $trustedDevices = $this->Devices->find()->where(['member_id'=>$memberId]);
+
+        $this->set('trustedDevices', $trustedDevices->toArray());
+        /*if (count($check) > 0) {
             //$deviceSerial=$this->Devices->find()->where(["serial"]);
-        }
+        }*/
     }
 
     public function seances()
