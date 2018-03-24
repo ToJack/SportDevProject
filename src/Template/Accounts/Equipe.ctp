@@ -26,6 +26,6 @@
     <div class="contenu">
     <?= $this->Html->image('29425948_10213375991686966_5708281801496068096_n.png', array('alt' => 'Mr.JACQUIN', 'height'=> '150', 'class'=>'photodev'));?>
     <div class="couche">
-      <div class="texte">Theo jacquin</div>
+      <div class="texte">Theo Jacquin</div>
     </div>
 </div>
