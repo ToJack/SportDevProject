@@ -51,16 +51,9 @@
             <!---accueil --->
             <li <?=($this->request->params['action']=="accueil"?'class="active"':'')?>><?= $this->html->link("Accueil",['controller' => 'Accounts','action' => 'Accueil'])?> </li>
             <!---connexion --->
-            <?php if(!$authUser) echo"<li ".($this->request->params['action']=="connexion"?'class="active"':'').">".$this->html->link("Connexion",['controller' => 'Accounts','action' => 'Connexion'])." </li>";?>
+            <?php if(!$authUser) echo"<li ".($this->request->params['action']=="connexion"?'class="active"':'').">".$this->html->link("Connexion",['controller' => 'Accounts','action' => 'login'])." </li>";?>
             <!---classements --->
             <li <?=($this->request->params['action']=="classements"?'class="active"':'')?>><?= $this->html->link("Classements",['controller' => 'Accounts','action' => 'Classements'])?></li>
-<<<<<<< HEAD
-            <li <?=($this->request->params['action']=="competitions"?'class="active"':'')?>><?= $this->html->link("Compétitions",['controller' => 'Accounts','action' => 'competitions'])?></li>
-            <li <?=($this->request->params['action']=="connexion"?'class="active"':'')?>><?= $this->html->link("Connexion",['controller' => 'Accounts','action' => 'login'])?></li>
-            <li <?=($this->request->params['action']=="monCompte"?'class="active"':'')?>><?= $this->html->link("Mon compte",['controller' => 'Accounts','action' => 'MonCompte'])?></li>
-            <li <?=($this->request->params['action']=="objetsConnectes"?'class="active"':'')?>><?= $this->html->link("Objets connectés",['controller' => 'Accounts','action' => 'ObjetsConnectes'])?></li>
-            <li <?=($this->request->params['action']=="seances"?'class="active"':'')?>><?= $this->html->link("Séances",['controller' => 'Accounts','action' => 'seances'])?></li>
-=======
             <!---competitions --->
             <?php if($authUser) echo"<li ".($this->request->params['action']=="competitions"?'class="active"':'').">".$this->html->link("Compétitions",['controller' => 'Accounts','action' => 'competitions'])." </li>";?>
             <!---Mon compte --->
@@ -70,7 +63,6 @@
             <!---Mes seances --->
             <?php if($authUser) echo"<li ".($this->request->params['action']=="seances"?'class="active"':'').">".$this->html->link("Séances",['controller' => 'Accounts','action' => 'seances'])." </li>";?>
 
->>>>>>> cada04414e8f01458f4face090c29dda8ba69747
             <li <?=($this->request->params['action']=="Contact"?'class="active"':'')?>><?= $this->html->link("Contact",['controller' => 'Accounts','action' => 'Contact'])?></li>
             <li <?=($this->request->params['action']=="Equipe"?'class="active"':'')?>><?= $this->html->link("Equipe",['controller' => 'Accounts','action' => 'Equipe'])?></li>
             <li <?=($this->request->params['action']=="faq"?'class="active"':'')?>><?= $this->html->link("FAQ",['controller' => 'Accounts','action' => 'faq'])?></li>
