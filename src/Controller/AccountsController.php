@@ -642,5 +642,9 @@ class AccountsController extends AppController
     {
 
     }
+    public function mentionsLegales()
+    {
+
+    }
 
 }

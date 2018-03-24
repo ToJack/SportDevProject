@@ -25,13 +25,26 @@ body {
 .footer {
     position: absolute;
     bottom: 0;
-    height: 30px;
-    background: #09202F;
-    color: #B5BCC0;
-}
+    min-height: 110px;
+    background: #D4A59A;
+
+  }
 
 .margeFooter{
-  height:45px;
+  min-height: 125px;
+}
+.titre-footer{
+  font-weight: bold;
+  font-size: small;
+  color:inherit: #090808;
+}
+.text-footer{
+  font-size:x-small;
+  color: #5B5757;
+}
+.border-right{
+  border-right-style:dashed;
+  border-color: #96766f;
 }
 
 #imgMarginLeft{
