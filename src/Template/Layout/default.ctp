@@ -70,7 +70,7 @@
 
       <div id="imgMarginLeft" class="col-xs-1 col-sm-2 affix"></div>
       <div class="col-xs-1 col-sm-2"></div>
-      <div id="waitForMargin" class="container clearfix col-xs-10 col-sm-8">
+      <div id="waitForMarginContenu" class="container clearfix col-xs-10 col-sm-8">
           <h3><?= $this->Flash->render() ?></h3>
           <?= $this->fetch('content') ?>
       </div>
@@ -79,7 +79,7 @@
 
       <div class="margeFooter col-xs-10 col-xs-offset-1"></div>
       <!--Footer-->
-      <footer class="footer col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2">
+      <footer id='waitForMarginFooter' class="footer col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2">
           <!--Footer Links-->
           <div class="container-fluid text-center">
               <div class="row">

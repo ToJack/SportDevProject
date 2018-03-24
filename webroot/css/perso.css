@@ -47,6 +47,10 @@ body {
   border-color: #96766f;
 }
 
+.text-right{
+  text-align:right;
+}
+
 #imgMarginLeft{
   background-repeat: no-repeat;
   background-position:left;
@@ -64,7 +68,7 @@ body {
   right:0;
   position: fixed;
 }
-#waitForMargin{
+#waitForMarginContenu, #waitForMarginFooter {
   display:none;
 }
 
@@ -80,7 +84,11 @@ body {
 .margin-auto{
 margin:auto;
 }
-
+.mentionb, .mentionw{
+  min-height:190px;
+  display:flex;
+  flex-direction: column;
+}
 .faqb, .faqw{
   min-height:190px;
   display:flex;
@@ -92,12 +100,14 @@ margin:auto;
   box-shadow: 5px 5px 13px #555;
   border-radius:5px;
 }
-
-
-.ap{
-  text-align: center;
+.mentionb{
+  background: #5F6791;
+  color: #ffffff;
+  box-shadow: 5px 5px 13px #555;
+  border-radius:5px;
 }
-.pageaccueil{
+
+.pageaccueil, .ap{
   text-align: center;
 }
 
