@@ -7,11 +7,16 @@ use Cake\Auth\DefaultPasswordHasher;
 use Cake\I18n\Time;
 use Cake\Filesystem\Folder;
 use Cake\Filesystem\File;
+use Cake\Event\Event;
+
 
 
 class AccountsController extends AppController
 {
-
+    //On set la variable pour savoir si on est co dans les views
+    public function beforeRender(Event $event) {
+        $this->set('authUser', $this->Auth->user('id'));
+    }
     public function accueil()
     {
         $memberId = $this->Auth->user('id');

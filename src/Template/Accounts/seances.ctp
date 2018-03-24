@@ -1,4 +1,8 @@
-<h1>Mes séances</h1>
+<h2></h2>
+<section class="col-xs-4 col-xs-offset-4 titre">
+  <h1 class='text-center'>Mes séances</h1>
+</section>
+<div class='col-xs-12'>
 
 <?php if($seancesFuturs==null && $seancesPassees==null && $seancesActuelles==null) echo "<h2>Aucune séance</h2>"?>
 
@@ -180,3 +184,5 @@ if($seancesFuturs!=null)echo "</table>"?>
   }
 
 if($seancesPassees!=null)echo "</table>"?>
+
+</div>
