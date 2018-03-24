@@ -2,10 +2,11 @@
 <h1>Des questions ?</h1>
 
 
-<section class='faqw'>
+<section class="rep">
 <h2>L'App sport vous apporte des réponses.</h2>
+</section>
 
-
+<section class='faqw'>
 <h2>Puis-je changer de formule d’abonnement si je me rends compte qu’elle ne correspond pas à mes besoins ?</h2>
 <p>Oui. Vous pouvez changer de formule d’abonnement en demandant à l’accueil d’un club l'app sport  le document “Changement d’abonnement”. Cette opération, si elle est effectuée avant le 20 du mois en cours, entraînera le changement de votre abonnement à compter du 1er du mois suivant votre demande. Cette opération, si elle est effectuée après le 20 du mois en cours, entraînera le changement de votre abonnement à partir du 1er du second mois.</p>
 </section>
