@@ -1,7 +1,9 @@
 <?php if($matchs!=null)
 {
-  echo "<h2>".$name_contest."</h2>";
-
+  echo "  <section class='col-xs-4 col-xs-offset-4 titre'>
+    <h1 class='text-center'>".$name_contest."</h1>
+  </section>
+  <div class='col-xs-12'>";
   echo "<h2>Listes des matchs</h2>
 
   <table class='table'>
@@ -41,9 +43,9 @@ echo "<div class='col-xs-12'>
         <div class='col-xs-12 col-sm-6 col-sm-offset-3'>
           <h2>Ajouter un match</h2>",
              $this->Form->create('match', array('inputDefaults' => array('div' => 'form-group','wrapInput' => false,'class' => 'form-control'),'class' => 'well')),
-             $date=$this->Form->control('J1',['type' => 'select',"label"=>"Joueur 1 : ","options"=>$ListMembre,'empty' => 'Choisissez','required' => true, 'class'=>"form-control"]),
-             $date=$this->Form->control('J2',['type' => 'select',"label"=>"Joueur 2 : ","options"=>$ListMembre,'empty' => 'Choisissez','required' => true, 'class'=>"form-control"]),
-             $date=$this->Form->control('date', ['type' => 'date','minYear'=>$actual_time->year,"label"=>"Date :",'required' => true , 'class'=>"form-control"]),
+             $this->Form->control('J1',['type' => 'select',"label"=>"Joueur 1 : ","options"=>$ListMembre,'empty' => 'Choisissez','required' => true, 'class'=>"form-control"]),
+             $this->Form->control('J2',['type' => 'select',"label"=>"Joueur 2 : ","options"=>$ListMembre,'empty' => 'Choisissez','required' => true, 'class'=>"form-control"]),
+             $this->Form->control('date', ['type' => 'date','minYear'=>$actual_time->year,"label"=>"Date :",'required' => true , 'class'=>"form-control"]),
              $this->Form->control('heure', ['type' => 'time',"label"=>"Heure : ",'default'=>$actual_time->hour.":".$actual_time->minute,'required' => true, 'class'=>"form-control"]),
              $this->Form->control('duree', ['type' => 'number','min'=>0,'max'=>1439,'default'=>'60',"label"=>"Durée (en min) : ",'required' => true, 'class'=>"form-control"]),
              $this->Form->control('lieu', ['type' => 'text',"label"=>"Lieu : ",'required' => true, 'class'=>"form-control"]),
@@ -76,4 +78,6 @@ echo "<div class='col-xs-12'>
       $rang++;
     }
 }
-if($classements!=null)echo "</table>"?>
+if($classements!=null)echo "</table>";
+
+if($matchs!=null) echo '</div>';?>
