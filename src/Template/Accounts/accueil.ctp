@@ -11,4 +11,3 @@
 
 <p>"Nous ne sommmes pas expert pour rien"</p>
 </id>
-<?php echo $test ?>

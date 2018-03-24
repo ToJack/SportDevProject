@@ -19,9 +19,7 @@ class AccountsController extends AppController
     }
     public function accueil()
     {
-        $memberId = $this->Auth->user('id');
 
-        $this->set("test", $memberId);
     }
 
     public function classements()
@@ -318,13 +316,13 @@ class AccountsController extends AppController
     {
         $this->loadModel("Members");
         $membres = $this->Members->find()
-            ->where(['id' => "56eb38b4-04b0-4667-ba54-0796b38f37ff"]);
+            ->where(['id' => $this->Auth->user('id')]);
         $dir = new Folder(WWW_ROOT . 'img/PhotoProfil');
 
         if (isset($this->request->data['changePicture'])) {
             $extension = strtolower(pathinfo($this->request->data['photo']['name'], PATHINFO_EXTENSION));
             if (!empty($this->request->data['photo']['tmp_name']) && in_array($extension, array('jpg', 'jpeg', 'png'))) {
-                $files = $dir->find('56eb38b4-04b0-4667-ba54-0796b38f37ff' . '\.(?:jpg|jpeg|png)$');
+                $files = $dir->find($this->Auth->user('id') . '\.(?:jpg|jpeg|png)$');
                 if (!empty($files)) {
                     foreach ($files as $file) {
                         $file = new File($dir->pwd() . DS . $file);
@@ -332,18 +330,18 @@ class AccountsController extends AppController
                         $file->close();
                     }
                 }
-                move_uploaded_file($this->request->data['photo']['tmp_name'], 'img/PhotoProfil/' . DS . '56eb38b4-04b0-4667-ba54-0796b38f37ff' . '.' . $extension);
+                move_uploaded_file($this->request->data['photo']['tmp_name'], 'img/PhotoProfil/' . DS . $this->Auth->user('id') . '.' . $extension);
             } else {
                 $this->Flash->error(__("Erreur lors de la modification"));
             }
         }
-        $files = $dir->find('56eb38b4-04b0-4667-ba54-0796b38f37ff' . '\.(?:jpg|jpeg|png)$');
+        $files = $dir->find($this->Auth->user('id') . '\.(?:jpg|jpeg|png)$');
         if (empty($files)) $user_image_extension = "none";
         else $user_image_extension = strtolower(pathinfo($files[0], PATHINFO_EXTENSION));
 
         //verifie si l'utilisateur a une photo
-        if (file_exists(WWW_ROOT . 'img/PhotoProfil/56eb38b4-04b0-4667-ba54-0796b38f37ff' . '.' . $user_image_extension)) {
-            $adressePhoto = 'PhotoProfil/56eb38b4-04b0-4667-ba54-0796b38f37ff' . '.' . $user_image_extension;
+        if (file_exists(WWW_ROOT . 'img/PhotoProfil/'.$this->Auth->user('id'). '.' . $user_image_extension)) {
+            $adressePhoto = 'PhotoProfil/'.$this->Auth->user('id') . '.' . $user_image_extension;
         } else {
             $adressePhoto = 'PhotoProfil/default.jpg';
         }
@@ -375,12 +373,12 @@ class AccountsController extends AppController
             "Handball", "Piscine", "Boxe", "Gymnastique", "Badminton", "Golf", "Basketball", "Waterpolo", "Aquagym", "Equitation"];
 
         $this->loadModel("Workouts");
-        $seancesFuturs = $this->Workouts->find()->where(["date >" => $actual_time])->order(['date' => 'DESC']);
-        $seancesActuelles = $this->Workouts->find()->where(["date <" => $actual_time])->andWhere(["end_date >" => $actual_time])->order(['date' => 'DESC']);
-        $seancesPassees = $this->Workouts->find()->where(["date <" => $actual_time])->andWhere(["end_date <" => $actual_time])->order(['date' => 'DESC']);
+        $seancesFuturs = $this->Workouts->find()->where(['member_id'=>$this->Auth->user('id')])->where(["date >" => $actual_time])->order(['date' => 'DESC']);
+        $seancesActuelles = $this->Workouts->find()->where(['member_id'=>$this->Auth->user('id')])->where(["date <" => $actual_time])->andWhere(["end_date >" => $actual_time])->order(['date' => 'DESC']);
+        $seancesPassees = $this->Workouts->find()->where(['member_id'=>$this->Auth->user('id')])->where(["date <" => $actual_time])->andWhere(["end_date <" => $actual_time])->order(['date' => 'DESC']);
 
         $this->loadModel("Logs");
-        $logs = $this->Logs->find();
+        $logs = $this->Logs->find()->where(['member_id'=>$this->Auth->user('id')]);
         //envoie variable au ctp
         $this->set('seancesFuturs', $seancesFuturs->toArray());
         $this->set('seancesActuelles', $seancesActuelles->toArray());
@@ -409,7 +407,7 @@ class AccountsController extends AppController
             $newWorkout->location_name = $lieu;
             $newWorkout->description = $details;
             $newWorkout->sport = $listSport[$sport];
-            $newWorkout->member_id = "54546854564";
+            $newWorkout->member_id = $this->Auth->user('id');
             $newWorkout->date = $dateTamp;
             $newWorkout->end_date = $dateFin;
             $this->Workouts->save($newWorkout);
@@ -427,7 +425,7 @@ class AccountsController extends AppController
             $longitude = $this->request->data("longitude");
 
             //envoie à la bdd
-            $newLog->member_id = "54546854564";
+            $newLog->member_id = $this->Auth->user('id');
             $newLog->workout_id = $idSeance;
             $newLog->device_id = "33333";
             $newLog->date = $actual_time;
