@@ -51,7 +51,7 @@
             <!---accueil --->
             <li <?=($this->request->params['action']=="accueil"?'class="active"':'')?>><?= $this->html->link("Accueil",['controller' => 'Accounts','action' => 'Accueil'])?> </li>
             <!---connexion --->
-            <?php if(!$authUser) echo"<li ".($this->request->params['action']=="connexion"?'class="active"':'').">".$this->html->link("Connexion",['controller' => 'Accounts','action' => 'login'])." </li>";?>
+            <?php if(!$authUser) echo"<li ".($this->request->params['action']=="login"?'class="active"':'').">".$this->html->link("Connexion",['controller' => 'Accounts','action' => 'login'])." </li>";?>
             <!---classements --->
             <li <?=($this->request->params['action']=="classements"?'class="active"':'')?>><?= $this->html->link("Classements",['controller' => 'Accounts','action' => 'Classements'])?></li>
             <!---competitions --->
@@ -62,10 +62,6 @@
             <?php if($authUser) echo"<li ".($this->request->params['action']=="objetsConnectes"?'class="active"':'').">".$this->html->link("Mes objets connectés",['controller' => 'Accounts','action' => 'ObjetsConnectes'])." </li>";?>
             <!---Mes seances --->
             <?php if($authUser) echo"<li ".($this->request->params['action']=="seances"?'class="active"':'').">".$this->html->link("Séances",['controller' => 'Accounts','action' => 'seances'])." </li>";?>
-
-            <li <?=($this->request->params['action']=="Contact"?'class="active"':'')?>><?= $this->html->link("Contact",['controller' => 'Accounts','action' => 'Contact'])?></li>
-            <li <?=($this->request->params['action']=="Equipe"?'class="active"':'')?>><?= $this->html->link("Equipe",['controller' => 'Accounts','action' => 'Equipe'])?></li>
-            <li <?=($this->request->params['action']=="faq"?'class="active"':'')?>><?= $this->html->link("FAQ",['controller' => 'Accounts','action' => 'faq'])?></li>
             <!---Déconnexion --->
             <?php if($authUser) echo"<li class='pull-right'>".$this->html->link("Déconnexion",['controller' => 'Accounts','action' => 'logout'])." </li>";?>
         </div>
@@ -82,8 +78,31 @@
       <div class="col-xs-1 col-sm-2"></div>
 
       <div class="margeFooter col-xs-10 col-xs-offset-1"></div>
-      <footer class="footer text-center col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2">
-        <p>App Sport - Kourganoff/Jacquin/Bonifacio/Akherraz - Options : CE</p>
+      <!--Footer-->
+      <footer class="footer col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2">
+          <!--Footer Links-->
+          <div class="container-fluid text-center">
+              <div class="row">
+                  <!--First column-->
+                  <div class="col-xs-8 border-right">
+                      <h5 class="text-uppercase titre-footer">APP Sport</h5>
+                      <p class='text-footer'>Ce site à été crée dans le cadre d'un projet de 4ème année de la majeure OCRES à l'ECE Paris.</p>
+                      <p class='text-footer'>Développeurs Web : Kourganoff/Jacquin/Bonifacio/Akherraz</p>
+                      <p class='text-footer'>Options : CE</p>
+                  </div>
+                  <!--Second column-->
+                  <div class="col-xs-4">
+                      <h5 class="text-uppercase titre-footer">Liens</h5>
+                      <ul class="list-unstyled text-footer">
+                          <li <?=($this->request->params['action']=="contact"?'class="active"':'')?>><?= $this->html->link("Contact",['controller' => 'Accounts','action' => 'contact'])?></li>
+                          <li <?=($this->request->params['action']=="equipe"?'class="active"':'')?>><?= $this->html->link("Equipe",['controller' => 'Accounts','action' => 'equipe'])?></li>
+                          <li <?=($this->request->params['action']=="faq"?'class="active"':'')?>><?= $this->html->link("FAQ",['controller' => 'Accounts','action' => 'faq'])?></li>
+                          <li <?=($this->request->params['action']=="mentionsLegales"?'class="active"':'')?>><?= $this->html->link("Mentions légales",['controller' => 'Accounts','action' => 'mentionsLegales'])?></li>
+                      </ul>
+                  </div>
+              </div>
+          </div>
       </footer>
+      <!--/.Footer-->
   </body>
 </html>
