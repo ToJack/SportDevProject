@@ -1,4 +1,7 @@
- <h2>Mentions légales<h2>
+<section class="col-xs-4 col-xs-offset-4 titre">
+  <h1 class='text-center'>Mentions Légales</h1>
+</section>
+<div class='col-xs-12'>
   <h3>1. Mentions légales</h3>
 
  <p>Conformément à l'article 6 de la loi n° 2004-575 du 21 juin 2004 pour la confiance dans l'économie numérique modifié par l’article 1er de la Loi n°2016-444 du 13 avril 2016, il est précisé aux utilisateurs du site appsport.com l'identité des différents intervenants dans le cadre de sa réalisation et de son suivi :
@@ -47,3 +50,4 @@ Toute exploitation non autorisée du site ou de l’un des éléments qu’il co
   L’attention de l’internaute est portée sur le fait que chaque club est géré par un Licencié indépendant. Ainsi la Société Appsport, n’est pour les contenus spécifiques aux clubs que l’hébergeur d’un contenu produit par un tiers et qu’il ne contrôle pas. La société ne saurait être tenue responsable du contenu et des éventuelles modifications ultérieures publiées directement par ces tiers.
   Si des contenus illégaux, erronés ou incomplets sont proposés lors de l’utilisation de ces pages, seule la responsabilité de l'auteur de la page incriminée pourra être engagée et non celle de la société Appsport.
   La responsabilité de la Société Appsport. pourra être engagée uniquement dans le cas où elle avait connaissance des contenus et qu'il lui était techniquement possible d'empêcher l'utilisation de ce site si les contenus sont contraires à la loi.</p>
+</div>

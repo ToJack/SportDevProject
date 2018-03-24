@@ -47,6 +47,10 @@ body {
   border-color: #96766f;
 }
 
+.text-right{
+  text-align:right;
+}
+
 #imgMarginLeft{
   background-repeat: no-repeat;
   background-position:left;

@@ -1,4 +1,3 @@
-<h2></h2>
 <section class="col-xs-4 col-xs-offset-4 titre">
   <h1 class='text-center'>Les compétitions</h1>
 </section>

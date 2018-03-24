@@ -1,4 +1,3 @@
-<h2></h2>
 <section class="col-xs-8 col-xs-offset-2 titre">
 <h2 class='text-center'>Des questions ? L'App sport vous apporte des réponses !</h2>
 </section>

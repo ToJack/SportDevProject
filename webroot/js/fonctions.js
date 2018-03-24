@@ -11,12 +11,26 @@ function AfficherForm(seance, heure_start, minute_start, heure_end, minute_end)
    document.getElementById('idSeance').value=seance.id;
  }
 
- function changeImg(webroot)	{
-      var url =webroot+'img/BackgroundMargin/';
- 			var newImgNumber =Math.floor(Math.random()*44)+1;
- 			document.getElementById('imgMarginLeft').style.backgroundImage = 'url("'+url+newImgNumber+'.jpg")';
-      document.getElementById('imgMarginRight').style.backgroundImage = 'url("'+url+newImgNumber+'")';
-      document.getElementById('waitForMargin').style.display = 'block';
+function changeImg(webroot)	{
+    var url =webroot+'img/BackgroundMargin/';
+			var newImgNumber =Math.floor(Math.random()*44)+1;
+			document.getElementById('imgMarginLeft').style.backgroundImage = 'url("'+url+newImgNumber+'.jpg")';
+    document.getElementById('imgMarginRight').style.backgroundImage = 'url("'+url+newImgNumber+'")';
+    document.getElementById('waitForMargin').style.display = 'block';
 
 
- 		}
+}
+
+function SwapInscriptionConnexion()
+ {
+   if(document.getElementById('inscription').style.display=="none"){
+     document.getElementById('connexion').style.display="none";
+     document.getElementById('inscription').style.display="block";
+     document.getElementById('titreConnexion').innerHTML="Inscription";
+   }
+   else{
+     document.getElementById('connexion').style.display="block";
+     document.getElementById('inscription').style.display="none";
+     document.getElementById('titreConnexion').innerHTML="Connexion";
+   }
+ }
