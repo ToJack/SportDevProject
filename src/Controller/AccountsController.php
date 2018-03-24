@@ -68,6 +68,8 @@ class AccountsController extends AppController
         $this->set('ListMembre', $ListMembre);
 
         $this->set('matchs', $ListMatchs);
+        #TODO debug($ListMatchs[12]);
+
 
         $listSport = ["Jogging", "Entrainement", "Football", "Tennis", "Squash", "Ping-Pong", "Fitness", "Voleyball",
             "Handball", "Piscine", "Boxe", "Gymnastique", "Badminton", "Golf", "Basketball", "Waterpolo", "Aquagym", "Equitation"];
@@ -91,61 +93,68 @@ class AccountsController extends AppController
         $aquagym = array();
         $equitation = array();
 
-        foreach ($ListMatchs as $match) {
-            switch ($match[1]) {
+        for ($j = 0; $j < sizeof($ListMatchs); $j++) {
+            switch ($ListMatchs[$j][1]) {
                 case $listSport[0]:
-                    array_push($jogging, $match);
+                    array_push($jogging, $ListMatchs[$j]);
                     break;
                 case $listSport[1]:
-                    array_push($entrainement, $match);
+                    if ($entrainement != null) {
+                        for ($i = 0; $i < sizeof($entrainement); $i++) {
+                            if (($ListMatchs[$j][0] == $entrainement[$i][0]) && ($ListMatchs[$j] != $entrainement[$i])) {
+                                $entrainement[$i][2] += $ListMatchs[$j][2];
+                            }
+                        }
+                    }
+                    array_push($entrainement, $ListMatchs[$j]);
                     break;
                 case $listSport[2]:
-                    array_push($football, $match);
+                    array_push($football, $ListMatchs[$j]);
                     break;
                 case $listSport[3]:
-                    array_push($tennis, $match);
+                    array_push($tennis, $ListMatchs[$j]);
                     break;
                 case $listSport[4]:
-                    array_push($squash, $match);
+                    array_push($squash, $ListMatchs[$j]);
                     break;
                 case $listSport[5]:
-                    array_push($ping_pong, $match);
+                    array_push($ping_pong, $ListMatchs[$j]);
                     break;
                 case $listSport[6]:
-                    array_push($fitness, $match);
+                    array_push($fitness, $ListMatchs[$j]);
                     break;
                 case $listSport[7]:
-                    array_push($voleyball, $match);
+                    array_push($voleyball, $ListMatchs[$j]);
                     break;
                 case $listSport[8]:
-                    array_push($handball, $match);
+                    array_push($handball, $ListMatchs[$j]);
                     break;
                 case $listSport[9]:
-                    array_push($piscine, $match);
+                    array_push($piscine, $ListMatchs[$j]);
                     break;
                 case $listSport[10]:
-                    array_push($boxe, $match);
+                    array_push($boxe, $ListMatchs[$j]);
                     break;
                 case $listSport[11]:
-                    array_push($gym, $match);
+                    array_push($gym, $ListMatchs[$j]);
                     break;
                 case $listSport[12]:
-                    array_push($badminton, $match);
+                    array_push($badminton, $ListMatchs[$j]);
                     break;
                 case $listSport[13]:
-                    array_push($golf, $match);
+                    array_push($golf, $ListMatchs[$j]);
                     break;
                 case $listSport[14]:
-                    array_push($basketball, $match);
+                    array_push($basketball, $ListMatchs[$j]);
                     break;
                 case $listSport[15]:
-                    array_push($waterpolo, $match);
+                    array_push($waterpolo, $ListMatchs[$j]);
                     break;
                 case $listSport[16]:
-                    array_push($aquagym, $match);
+                    array_push($aquagym, $ListMatchs[$j]);
                     break;
                 case $listSport[17]:
-                    array_push($equitation, $match);
+                    array_push($equitation, $ListMatchs[$j]);
                     break;
             }
         }
@@ -170,7 +179,9 @@ class AccountsController extends AppController
         array_push($allArrays, $aquagym);
         array_push($allArrays, $equitation);
 
-        for ($i = 0; $i < sizeof($allArrays); $i++) {
+        for ($i = 0;
+             $i < sizeof($allArrays);
+             $i++) {
             if ($allArrays[$i] != null) {
                 usort($allArrays[$i], $this->build_sorter(2));
             }
@@ -180,8 +191,27 @@ class AccountsController extends AppController
         $this->set('membres', $membres);
     }
 
+    public
+    function isNotPresent($membreClasse, $match)
+    {
+        if ($membreClasse != null) {
+            foreach ($membreClasse as $m) {
+                debug("m =" . $m);
+                debug("match[0] =" . $match[0]);
+                if ($m == $match[0]) {
+                    return false;
+                } else {
+                    return true;
+                }
+            }
+        } else {
+            return true;
+        }
+    }
 
-    public function ScoreClass($id)
+
+    public
+    function ScoreClass($id)
     {
         $condition = $this->Logs->find()->where(["workout_id =" => $id, "log_type" => "Points"]);
         $score = "";
@@ -191,7 +221,8 @@ class AccountsController extends AppController
         return $score;
     }
 
-    public function register()
+    public
+    function register()
     {
         $this->loadModel("Members");
         $members = $this->Members->find();
@@ -218,7 +249,8 @@ class AccountsController extends AppController
         }
     }
 
-    public function connexion()
+    public
+    function connexion()
     {
         $this->loadModel("Members");
         if ($this->request->is('post')) {
@@ -267,12 +299,14 @@ class AccountsController extends AppController
 
     }
 
-    public function logout()
+    public
+    function logout()
     {
         return $this->redirect($this->Auth->logout());
     }
 
-    public function monCompte()
+    public
+    function monCompte()
     {
         $this->loadModel("Members");
         $membres = $this->Members->find()
@@ -310,7 +344,8 @@ class AccountsController extends AppController
         $this->set("membres", $membres->toArray());
     }
 
-    public function objetsConnectes()
+    public
+    function objetsConnectes()
     {
         $this->loadModel("Devices");
         $this->Devices->find();
@@ -321,7 +356,8 @@ class AccountsController extends AppController
         }
     }
 
-    public function seances()
+    public
+    function seances()
     {
         //Date et heure actuelles
         $actual_time = Time::now();
@@ -397,7 +433,8 @@ class AccountsController extends AppController
         }
     }
 
-    public function competitions()
+    public
+    function competitions()
     {
         //Date et heure actuelles
         $actual_time = Time::now();
@@ -434,7 +471,8 @@ class AccountsController extends AppController
     }
 
 //Fonctions pour singleCompetition
-    public function ScoreMatch($id, $joueur)
+    public
+    function ScoreMatch($id, $joueur)
     {
         $condition = $this->Logs->find()->where(["workout_id =" => $id, 'OR' => ["log_type" => "Points", "log_type" => "points"]]);
         if ($condition->toArray() != null) {
@@ -445,7 +483,8 @@ class AccountsController extends AppController
         return $score;
     }
 
-    public function StatutMatch($score, $id)
+    public
+    function StatutMatch($score, $id)
     {
         $condition = $this->Logs->find()->where(["workout_id =" => $id, 'OR' => ["log_type" => "Points", "log_type" => "points"]]);
         if (($score != "J1(-)") && ($condition->toArray() != null)) {
@@ -456,7 +495,8 @@ class AccountsController extends AppController
         return $statut;
     }
 
-    public function PointsMatch($score, $joueur, $point)
+    public
+    function PointsMatch($score, $joueur, $point)
     {
         //Point Joueur 1
         $pointJoueur1 = strstr($score, '(');
@@ -489,7 +529,8 @@ class AccountsController extends AppController
         };
     }
 
-    public function singleCompetition($id_contest)
+    public
+    function singleCompetition($id_contest)
     {
         //Date et heure actuelles
         $actual_time = Time::now();
@@ -629,17 +670,20 @@ class AccountsController extends AppController
     }
 
 
-    public function faq()
+    public
+    function faq()
     {
 
     }
 
-    public function contact()
+    public
+    function contact()
     {
 
     }
 
-    public function equipe()
+    public
+    function equipe()
     {
 
     }
