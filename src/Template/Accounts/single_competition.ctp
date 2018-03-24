@@ -5,6 +5,7 @@
   echo "<h2>Listes des matchs</h2>
 
   <table class='table'>
+  <thead>
     <tr>
       <th>Joueur 1</th>
       <th>Joueur 2</th>
@@ -13,7 +14,9 @@
       <th>Lieu</th>
       <th>Score</th>
       <th>Statut</th>
-    </tr>";
+    </tr>
+  </thead>";
+
     foreach($matchs as $match){
       //affichage
       echo "<tr>
@@ -35,16 +38,16 @@ if($matchs!=null)echo "</table> Pour ajouter un score à un match ajouter un rel
 
 <?php
 echo "<div class='col-xs-12'>
-        <div class='col-xs-12 col-sm-6'>",
-          "<h2>Ajouter un match</h2>",
-             $this->Form->create(),
-             $date=$this->Form->control('J1',['type' => 'select',"label"=>"Joueur 1 : ","options"=>$ListMembre,'empty' => 'Choisissez','required' => true]),
-             $date=$this->Form->control('J2',['type' => 'select',"label"=>"Joueur 2 : ","options"=>$ListMembre,'empty' => 'Choisissez','required' => true]),
-             $date=$this->Form->control('date', ['type' => 'date','minYear'=>$actual_time->year,"label"=>"Date :",'required' => true  ]),
-             $this->Form->control('heure', ['type' => 'time',"label"=>"Heure : ",'default'=>$actual_time->hour.":".$actual_time->minute,'required' => true]),
-             $this->Form->control('duree', ['type' => 'number','min'=>0,'max'=>1439,'default'=>'60',"label"=>"Durée (en min) : ",'required' => true]),
-             $this->Form->control('lieu', ['type' => 'text',"label"=>"Lieu : ",'required' => true]),
-             $this->Form->submit("Créer nouveau match",array('name' => 'AddMatch')),
+        <div class='col-xs-12 col-sm-6 col-sm-offset-3'>
+          <h2>Ajouter un match</h2>",
+             $this->Form->create('match', array('inputDefaults' => array('div' => 'form-group','wrapInput' => false,'class' => 'form-control'),'class' => 'well')),
+             $date=$this->Form->control('J1',['type' => 'select',"label"=>"Joueur 1 : ","options"=>$ListMembre,'empty' => 'Choisissez','required' => true, 'class'=>"form-control"]),
+             $date=$this->Form->control('J2',['type' => 'select',"label"=>"Joueur 2 : ","options"=>$ListMembre,'empty' => 'Choisissez','required' => true, 'class'=>"form-control"]),
+             $date=$this->Form->control('date', ['type' => 'date','minYear'=>$actual_time->year,"label"=>"Date :",'required' => true , 'class'=>"form-control"]),
+             $this->Form->control('heure', ['type' => 'time',"label"=>"Heure : ",'default'=>$actual_time->hour.":".$actual_time->minute,'required' => true, 'class'=>"form-control"]),
+             $this->Form->control('duree', ['type' => 'number','min'=>0,'max'=>1439,'default'=>'60',"label"=>"Durée (en min) : ",'required' => true, 'class'=>"form-control"]),
+             $this->Form->control('lieu', ['type' => 'text',"label"=>"Lieu : ",'required' => true, 'class'=>"form-control"]),
+             $this->Form->submit("Créer nouveau match",array('name' => 'AddMatch', 'class'=>"btn btn-primary")),
              $this->Form->end(),
          "</div>",
     "</div>";
