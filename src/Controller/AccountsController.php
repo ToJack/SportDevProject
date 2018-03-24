@@ -10,13 +10,14 @@ use Cake\Filesystem\File;
 use Cake\Event\Event;
 
 
-
 class AccountsController extends AppController
 {
     //On set la variable pour savoir si on est co dans les views
-    public function beforeRender(Event $event) {
+    public function beforeRender(Event $event)
+    {
         $this->set('authUser', $this->Auth->user('id'));
     }
+
     public function accueil()
     {
 
@@ -94,61 +95,68 @@ class AccountsController extends AppController
         $aquagym = array();
         $equitation = array();
 
-        foreach ($ListMatchs as $match) {
-            switch ($match[1]) {
+        for ($j = 0; $j < sizeof($ListMatchs); $j++) {
+            switch ($ListMatchs[$j][1]) {
                 case $listSport[0]:
-                    array_push($jogging, $match);
+                    array_push($jogging, $ListMatchs[$j]);
                     break;
                 case $listSport[1]:
-                    array_push($entrainement, $match);
+                    if ($entrainement != null) {
+                        for ($i = 0; $i < sizeof($entrainement); $i++) {
+                            if (($ListMatchs[$j][0] == $entrainement[$i][0]) && ($ListMatchs[$j] != $entrainement[$i])) {
+                                $entrainement[$i][2] += $ListMatchs[$j][2];
+                            }
+                        }
+                    }
+                    array_push($entrainement, $ListMatchs[$j]);
                     break;
                 case $listSport[2]:
-                    array_push($football, $match);
+                    array_push($football, $ListMatchs[$j]);
                     break;
                 case $listSport[3]:
-                    array_push($tennis, $match);
+                    array_push($tennis, $ListMatchs[$j]);
                     break;
                 case $listSport[4]:
-                    array_push($squash, $match);
+                    array_push($squash, $ListMatchs[$j]);
                     break;
                 case $listSport[5]:
-                    array_push($ping_pong, $match);
+                    array_push($ping_pong, $ListMatchs[$j]);
                     break;
                 case $listSport[6]:
-                    array_push($fitness, $match);
+                    array_push($fitness, $ListMatchs[$j]);
                     break;
                 case $listSport[7]:
-                    array_push($voleyball, $match);
+                    array_push($voleyball, $ListMatchs[$j]);
                     break;
                 case $listSport[8]:
-                    array_push($handball, $match);
+                    array_push($handball, $ListMatchs[$j]);
                     break;
                 case $listSport[9]:
-                    array_push($piscine, $match);
+                    array_push($piscine, $ListMatchs[$j]);
                     break;
                 case $listSport[10]:
-                    array_push($boxe, $match);
+                    array_push($boxe, $ListMatchs[$j]);
                     break;
                 case $listSport[11]:
-                    array_push($gym, $match);
+                    array_push($gym, $ListMatchs[$j]);
                     break;
                 case $listSport[12]:
-                    array_push($badminton, $match);
+                    array_push($badminton, $ListMatchs[$j]);
                     break;
                 case $listSport[13]:
-                    array_push($golf, $match);
+                    array_push($golf, $ListMatchs[$j]);
                     break;
                 case $listSport[14]:
-                    array_push($basketball, $match);
+                    array_push($basketball, $ListMatchs[$j]);
                     break;
                 case $listSport[15]:
-                    array_push($waterpolo, $match);
+                    array_push($waterpolo, $ListMatchs[$j]);
                     break;
                 case $listSport[16]:
-                    array_push($aquagym, $match);
+                    array_push($aquagym, $ListMatchs[$j]);
                     break;
                 case $listSport[17]:
-                    array_push($equitation, $match);
+                    array_push($equitation, $ListMatchs[$j]);
                     break;
             }
         }
@@ -173,7 +181,9 @@ class AccountsController extends AppController
         array_push($allArrays, $aquagym);
         array_push($allArrays, $equitation);
 
-        for ($i = 0; $i < sizeof($allArrays); $i++) {
+        for ($i = 0;
+             $i < sizeof($allArrays);
+             $i++) {
             if ($allArrays[$i] != null) {
                 usort($allArrays[$i], $this->build_sorter(2));
             }
@@ -181,6 +191,24 @@ class AccountsController extends AppController
 
         $this->set('allArrays', $allArrays);
         $this->set('membres', $membres);
+    }
+
+    public
+    function isNotPresent($membreClasse, $match)
+    {
+        if ($membreClasse != null) {
+            foreach ($membreClasse as $m) {
+                debug("m =" . $m);
+                debug("match[0] =" . $match[0]);
+                if ($m == $match[0]) {
+                    return false;
+                } else {
+                    return true;
+                }
+            }
+        } else {
+            return true;
+        }
     }
 
 
@@ -223,43 +251,41 @@ class AccountsController extends AppController
 
     public function login()
     {
-      $this->loadModel("Members");
-      if(isset($this->request->data["LogIn"]))
-      {
-        if($this->request->is('post')) {
-          $user = $this->Auth->identify();
-          if ($user) {
-              $this->Auth->setUser($user);
-              return $this->redirect($this->Auth->redirectUrl());
-              //return $this->redirect(['Controller'=>'Users','action'=>'index']);
-          } else {
-              $this->Flash->error(__('Invalid username or password, try again'));
-          }
+        $this->loadModel("Members");
+        if (isset($this->request->data["LogIn"])) {
+            if ($this->request->is('post')) {
+                $user = $this->Auth->identify();
+                if ($user) {
+                    $this->Auth->setUser($user);
+                    return $this->redirect($this->Auth->redirectUrl());
+                    //return $this->redirect(['Controller'=>'Users','action'=>'index']);
+                } else {
+                    $this->Flash->error(__('Invalid username or password, try again'));
+                }
+            }
         }
-      }
 
-      //Formulaire nouveau membre
-      if(isset($this->request->data["AddMember"]))
-      {
-        $members = $this->Members->find();
-        $newMember = $this->Members->newEntity();
-        //attribution des valeurs
-        $email_inscription = $this->request->data("email_inscription");
-        $password_inscription = $this->request->data("password_inscription");
+        //Formulaire nouveau membre
+        if (isset($this->request->data["AddMember"])) {
+            $members = $this->Members->find();
+            $newMember = $this->Members->newEntity();
+            //attribution des valeurs
+            $email_inscription = $this->request->data("email_inscription");
+            $password_inscription = $this->request->data("password_inscription");
 
-        //blindage de l'email
-        $check = $this->Members->find()->where(["email =" => $email_inscription])->toArray();
-        if (count($check) > 0) {
-        } //envoie à la bdd
-        else {
-          $newMember->email = $email_inscription;
-          $hashedpassword = (new DefaultPasswordHasher)->hash($password_inscription);
-          $newMember->password = $hashedpassword;
-          $this->Members->save($newMember);
-          //return $this->redirect($this->here);
-          return $this->redirect(['Controller' => 'Accounts', 'action' => 'login']);
+            //blindage de l'email
+            $check = $this->Members->find()->where(["email =" => $email_inscription])->toArray();
+            if (count($check) > 0) {
+            } //envoie à la bdd
+            else {
+                $newMember->email = $email_inscription;
+                $hashedpassword = (new DefaultPasswordHasher)->hash($password_inscription);
+                $newMember->password = $hashedpassword;
+                $this->Members->save($newMember);
+                //return $this->redirect($this->here);
+                return $this->redirect(['Controller' => 'Accounts', 'action' => 'login']);
+            }
         }
-      }
     }
 
     public function logout()
@@ -295,8 +321,8 @@ class AccountsController extends AppController
         else $user_image_extension = strtolower(pathinfo($files[0], PATHINFO_EXTENSION));
 
         //verifie si l'utilisateur a une photo
-        if (file_exists(WWW_ROOT . 'img/PhotoProfil/'.$this->Auth->user('id'). '.' . $user_image_extension)) {
-            $adressePhoto = 'PhotoProfil/'.$this->Auth->user('id') . '.' . $user_image_extension;
+        if (file_exists(WWW_ROOT . 'img/PhotoProfil/' . $this->Auth->user('id') . '.' . $user_image_extension)) {
+            $adressePhoto = 'PhotoProfil/' . $this->Auth->user('id') . '.' . $user_image_extension;
         } else {
             $adressePhoto = 'PhotoProfil/default.jpg';
         }
@@ -312,7 +338,7 @@ class AccountsController extends AppController
         $memberId = $this->Auth->user('id');
         $check = $this->Devices->find()->where(["member_id =" => $memberId])->toArray();
         $this->set('check', $check);
-        $trustedDevices = $this->Devices->find()->where(['member_id'=>$memberId]);
+        $trustedDevices = $this->Devices->find()->where(['member_id' => $memberId]);
 
         $this->set('trustedDevices', $trustedDevices->toArray());
         /*if (count($check) > 0) {
@@ -332,12 +358,12 @@ class AccountsController extends AppController
             "Handball", "Piscine", "Boxe", "Gymnastique", "Badminton", "Golf", "Basketball", "Waterpolo", "Aquagym", "Equitation"];
 
         $this->loadModel("Workouts");
-        $seancesFuturs = $this->Workouts->find()->where(['member_id'=>$this->Auth->user('id')])->where(["date >" => $actual_time])->order(['date' => 'DESC']);
-        $seancesActuelles = $this->Workouts->find()->where(['member_id'=>$this->Auth->user('id')])->where(["date <" => $actual_time])->andWhere(["end_date >" => $actual_time])->order(['date' => 'DESC']);
-        $seancesPassees = $this->Workouts->find()->where(['member_id'=>$this->Auth->user('id')])->where(["date <" => $actual_time])->andWhere(["end_date <" => $actual_time])->order(['date' => 'DESC']);
+        $seancesFuturs = $this->Workouts->find()->where(['member_id' => $this->Auth->user('id')])->where(["date >" => $actual_time])->order(['date' => 'DESC']);
+        $seancesActuelles = $this->Workouts->find()->where(['member_id' => $this->Auth->user('id')])->where(["date <" => $actual_time])->andWhere(["end_date >" => $actual_time])->order(['date' => 'DESC']);
+        $seancesPassees = $this->Workouts->find()->where(['member_id' => $this->Auth->user('id')])->where(["date <" => $actual_time])->andWhere(["end_date <" => $actual_time])->order(['date' => 'DESC']);
 
         $this->loadModel("Logs");
-        $logs = $this->Logs->find()->where(['member_id'=>$this->Auth->user('id')]);
+        $logs = $this->Logs->find()->where(['member_id' => $this->Auth->user('id')]);
         //envoie variable au ctp
         $this->set('seancesFuturs', $seancesFuturs->toArray());
         $this->set('seancesActuelles', $seancesActuelles->toArray());
@@ -642,6 +668,7 @@ class AccountsController extends AppController
     {
 
     }
+
     public function mentionsLegales()
     {
 
