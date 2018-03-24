@@ -87,7 +87,7 @@
                   <div class="col-xs-8 border-right">
                       <h5 class="text-uppercase titre-footer">APP Sport</h5>
                       <p class='text-footer'>Ce site à été crée dans le cadre d'un projet de 4ème année de la majeure OCRES à l'ECE Paris.</p>
-                      <p class='text-footer'>Développeurs Web : Kourganoff/Jacquin/Bonifacio/Akherraz</p>
+                      <p class='text-footer'>Développeurs Web : Kourganoff / Jacquin / Bonifacio / Akherraz</p>
                       <p class='text-footer'>Options : CE</p>
                   </div>
                   <!--Second column-->

@@ -6,17 +6,17 @@ html {
 body {
   padding-top: 39px;
 }
-@media (max-width: 1062px) {
+@media (max-width: 893px) {
   body {
     padding-top: 89px;
   }
-  @media (max-width: 952px) {
+  @media (max-width: 783px) {
     body {
       padding-top: 139px;
     }
     @media (max-width: 767px) {
       body {
-        padding-top: 462px;
+        padding-top: 346px;
       }
     }
   }
