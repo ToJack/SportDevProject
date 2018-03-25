@@ -322,13 +322,15 @@ class AccountsController extends AppController
         return $score;
     }
 
-    public function StatutMatch($score, $id)
+    public function StatutMatch($score, $id,$actual_time)
     {
         $condition = $this->Logs->find()->where(["workout_id =" => $id, 'OR' => ["log_type" => "Points", "log_type" => "points"]]);
         if (($score != "J1(-)") && ($condition->toArray() != null)) {
             $statut = "Match Terminé";
         } else {
-            $statut = "Match en Cours";
+            $matchDate = $this->Workouts->find()->where(["id =" => $id])->first()->date;
+            if($actual_time>$matchDate)$statut = "Match a venir";
+            if($actual_time<$matchDate)$statut = "Match en Cours";
         }
         return $statut;
     }
@@ -475,7 +477,7 @@ class AccountsController extends AppController
             } else {
                 $ListMatchs[(($i) / 2) - 1][1] = $email;
                 $ListMatchs[(($i) / 2) - 1][5] = $ListMatchs[(($i) / 2) - 1][5] . " / " . $this->ScoreMatch($match->id, 2);
-                $ListMatchs[(($i) / 2) - 1][6] = $this->StatutMatch($score, $match->id);
+                $ListMatchs[(($i) / 2) - 1][6] = $this->StatutMatch($score, $match->id,$actual_time);
             }
             $i += 1;
         }

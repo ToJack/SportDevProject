@@ -48,7 +48,7 @@ class AppController extends Controller
                 'controller' => 'Accounts',
                 'action' => 'login'
             ],
-            'authError' => 'Veuillez vous identifier pour accÈder ‡ cette page',
+            'authError' => 'Veuillez vous identifier pour acceder à cette page',
             'authenticate' => [
                 'Form' => [
                     'fields' => ['username' => 'email', 'password' => 'password'],
