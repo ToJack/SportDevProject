@@ -75,6 +75,6 @@ class AppController extends Controller
     }
 
     public function beforeFilter(Event $event){
-    $this->Auth->allow(['accueil','classements','connexion','contact','equipe','faq', 'version', 'registerdevice','workoutparameters','getsummary','addlog']);
+    $this->Auth->allow(['accueil','classements','connexion','contact', 'mentionsLegales', 'equipe','faq', 'version', 'registerdevice','workoutparameters','getsummary','addlog']);
     }
 }
