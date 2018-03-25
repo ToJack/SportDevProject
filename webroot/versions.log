@@ -1,0 +1,1454 @@
+commit bbea58d9e9fceb5cbbdb8b595baea80773212577
+Author: Théo Jacquin <>
+Date:   Sun Mar 25 14:53:33 2018 +0200
+
+    mise à jour Objets Connectés : Aucuns objets co -> message différent
+
+src/Template/Accounts/objets_connectes.ctp
+
+commit aed20bd15af99b09f309f31ae6ddcefc046f073a
+Merge: 2346ce4 ecdf582
+Author: Théo Jacquin <>
+Date:   Sun Mar 25 14:51:09 2018 +0200
+
+    Merge branch 'master' of https://github.com/ToJack/SportDevProject
+
+commit 2346ce43bbe554c86520a7ea046a0e2f21f5fa9d
+Author: Théo Jacquin <>
+Date:   Sun Mar 25 14:51:04 2018 +0200
+
+    Objets connectés : Valider et supprimer
+
+src/Controller/AccountsController.php
+src/Model/Table/DevicesTable.php
+src/Template/Accounts/objets_connectes.ctp
+
+commit ecdf58268aba42b93d95355c075025f053387fb4
+Author: DESKTOP-6HNIM9S\Victor <vbonifacio50@gmail.com>
+Date:   Sun Mar 25 14:19:51 2018 +0200
+
+    Ajout bouton Version dans footer
+
+src/Template/Layout/default.ctp
+
+commit 5a21aa1a7427237172a39a966f56557b3af47a31
+Author: DESKTOP-6HNIM9S\Victor <vbonifacio50@gmail.com>
+Date:   Sun Mar 25 14:19:19 2018 +0200
+
+    Controller version
+
+src/Controller/AppController.php
+
+commit 0b614b6647391a3b3acd77d11f47fe8cde55fae7
+Author: DESKTOP-6HNIM9S\Victor <vbonifacio50@gmail.com>
+Date:   Sun Mar 25 14:18:22 2018 +0200
+
+    Ajout controller version
+
+src/Controller/AccountsController.php
+
+commit de3a6d635e6cd1005c29de4cc1a4c8205d3f3f13
+Author: DESKTOP-6HNIM9S\Victor <vbonifacio50@gmail.com>
+Date:   Sun Mar 25 14:18:01 2018 +0200
+
+    Ajout version.log
+
+src/Template/Accounts/version.ctp
+
+commit 3df96125cadc17860cf6e4492a532ba52a5d464b
+Author: Adrien_Kourganoff <adridri@kourganoff.com>
+Date:   Sun Mar 25 13:45:45 2018 +0200
+
+    Finition css forms, classements et enleve css inutile
+
+src/Template/Accounts/Equipe.ctp
+src/Template/Accounts/classements.ctp
+src/Template/Accounts/competitions.ctp
+src/Template/Accounts/mentions_legales.ctp
+src/Template/Accounts/mon_compte.ctp
+src/Template/Accounts/seances.ctp
+src/Template/Accounts/single_competition.ctp
+webroot/css/perso.css
+
+commit d9565d078ab2f52a3dc054f233d57791c12a03d1
+Merge: efc9856 f678c0f
+Author: Adrien_Kourganoff <adridri@kourganoff.com>
+Date:   Sat Mar 24 23:57:54 2018 +0100
+
+    Merge branch 'master' of https://github.com/ToJack/SportDevProject
+
+commit efc9856ba476b2a769c61c61f4a1dcfd37b3c6a5
+Author: Adrien_Kourganoff <adridri@kourganoff.com>
+Date:   Sat Mar 24 23:56:21 2018 +0100
+
+    Classements
+
+src/Controller/AccountsController.php
+src/Template/Accounts/classements.ctp
+
+commit f678c0f7f37c740549d64a3991dcb5a6e716d74d
+Author: Théo Jacquin <>
+Date:   Sat Mar 24 22:42:11 2018 +0100
+
+    delete de la fonction register
+
+src/Controller/AccountsController.php
+
+commit 03af58c30a9ca8ec8da8f970ebdb678a1707094f
+Merge: 29964a6 0e132a6
+Author: Théo Jacquin <>
+Date:   Sat Mar 24 22:40:49 2018 +0100
+
+    Merge branch 'master' of https://github.com/ToJack/SportDevProject
+
+commit 29964a6cc68a823163137725a71bba7b7fd7c860
+Author: Théo Jacquin <>
+Date:   Sat Mar 24 22:40:45 2018 +0100
+
+    objet co mise à jour
+
+src/Template/Accounts/objets_connectes.ctp
+
+commit a45915db282227ef11d352dc4ff4f3b9d0554a6e
+Merge: 49258d6 0e132a6
+Author: Adrien_Kourganoff <adridri@kourganoff.com>
+Date:   Sat Mar 24 22:18:23 2018 +0100
+
+    Merge branch 'master' of https://github.com/ToJack/SportDevProject
+
+commit 49258d6f01689e299bf85f4304fbb0061c846b99
+Author: Adrien_Kourganoff <adridri@kourganoff.com>
+Date:   Sat Mar 24 22:18:18 2018 +0100
+
+    Changement footer etnavbar
+
+src/Template/Layout/default.ctp
+webroot/css/perso.css
+
+commit 0e132a616d76721205044468db25f2f401715a77
+Author: DESKTOP-6HNIM9S\Victor <vbonifacio50@gmail.com>
+Date:   Sat Mar 24 22:12:52 2018 +0100
+
+    Ajout tri par score pour classement
+
+src/Controller/AccountsController.php
+
+commit 5a64f67ad68b9058527ea228b5e5577c86ecfebf
+Merge: 371dd73 4b98651
+Author: DESKTOP-6HNIM9S\Victor <vbonifacio50@gmail.com>
+Date:   Sat Mar 24 22:12:20 2018 +0100
+
+    Merge remote-tracking branch 'origin/master'
+    
+    # Conflicts:
+    #       src/Controller/AccountsController.php
+
+commit 371dd73becbb4705d94caa46abeed568bc1b64b5
+Author: DESKTOP-6HNIM9S\Victor <vbonifacio50@gmail.com>
+Date:   Sat Mar 24 22:10:37 2018 +0100
+
+    Ajout tri par score pour classement
+
+src/Controller/AccountsController.php
+
+commit c8e404fbf635ce161f011e7334d65720bb2e6dbb
+Author: DESKTOP-6HNIM9S\Victor <vbonifacio50@gmail.com>
+Date:   Sat Mar 24 22:07:58 2018 +0100
+
+    Draft Addition score classement
+
+src/Controller/AccountsController.php
+
+commit 4b9865192b9d2d430d2048f37917b69703cf79b0
+Author: Adrien_Kourganoff <adridri@kourganoff.com>
+Date:   Sat Mar 24 20:35:15 2018 +0100
+
+    Changement footer chargement avec les bordures
+
+src/Template/Layout/default.ctp
+webroot/css/perso.css
+webroot/js/fonctions.js
+
+commit e2e3bf6625c283cd95f5162da7c18f00d2b65d65
+Merge: 18ef8c5 a946ae1
+Author: Adrien_Kourganoff <adridri@kourganoff.com>
+Date:   Sat Mar 24 20:20:02 2018 +0100
+
+    Merge branch 'master' of https://github.com/ToJack/SportDevProject
+
+commit 18ef8c55789bd5f3e80197fadf41f3c069e0cac9
+Author: Adrien_Kourganoff <adridri@kourganoff.com>
+Date:   Sat Mar 24 20:18:51 2018 +0100
+
+    Changement login et titres
+
+src/Template/Accounts/Contact.ctp
+src/Template/Accounts/Equipe.ctp
+src/Template/Accounts/FAQ.ctp
+src/Template/Accounts/accueil.ctp
+src/Template/Accounts/competitions.ctp
+src/Template/Accounts/login.ctp
+src/Template/Accounts/mentions_legales.ctp
+src/Template/Accounts/mon_compte.ctp
+src/Template/Accounts/seances.ctp
+src/Template/Accounts/single_competition.ctp
+webroot/css/perso.css
+webroot/js/fonctions.js
+
+commit a946ae1892cf090f44e633fb20e3925633d12f21
+Merge: 2a639df 740b024
+Author: brahimakh <akherraz.brahim75@gmail.com>
+Date:   Sat Mar 24 20:17:24 2018 +0100
+
+    Merge branch 'master' of https://github.com/ToJack/SportDevProject
+
+commit 2a639dff5171fc471cf2adf5066b83a32b75d130
+Author: brahimakh <akherraz.brahim75@gmail.com>
+Date:   Sat Mar 24 20:17:18 2018 +0100
+
+    CSS des pages statiques fini
+
+src/Template/Accounts/competitions.ctp
+src/Template/Accounts/mentions_legales.ctp
+webroot/css/perso.css
+
+commit 740b0241ff45e576e6bbd5cf2c124df7fae90c7b
+Merge: 38a165e f663d36
+Author: Théo Jacquin <>
+Date:   Sat Mar 24 19:45:47 2018 +0100
+
+    Merge branch 'master' of https://github.com/ToJack/SportDevProject
+
+commit 38a165ef33b9d18b516b8e5762a07b7be50281c3
+Author: Théo Jacquin <>
+Date:   Sat Mar 24 19:45:45 2018 +0100
+
+    affichage des objets co
+
+src/Controller/AccountsController.php
+src/Template/Accounts/objets_connectes.ctp
+src/View/Helper/DevicesHelper.php
+
+commit f663d36a0065defd0e890dfad4f5965a78c4c535
+Author: Adrien_Kourganoff <adridri@kourganoff.com>
+Date:   Sat Mar 24 18:21:14 2018 +0100
+
+    Correction erreur flash et api
+
+src/Controller/AppController.php
+src/Template/Layout/default.ctp
+
+commit a9b2634c24700987ceeec1d6fd4e67610f0a5b2a
+Author: Adrien_Kourganoff <adridri@kourganoff.com>
+Date:   Sat Mar 24 18:14:23 2018 +0100
+
+    Changement footer, correction mentionsLegales
+
+src/Controller/AccountsController.php
+src/Controller/AppController.php
+src/Template/Accounts/mentions_legales.ctp
+src/Template/Layout/default.ctp
+webroot/css/perso.css
+
+commit 857680d96c4fa386c7bd063085945083def6e1be
+Merge: 1517354 6074147
+Author: Théo Jacquin <>
+Date:   Sat Mar 24 16:28:15 2018 +0100
+
+    Merge branch 'master' of https://github.com/ToJack/SportDevProject
+
+commit 1517354b98334145bb4c6511458d2972d719f670
+Author: Théo Jacquin <>
+Date:   Sat Mar 24 16:28:07 2018 +0100
+
+    rectification default.ctp connexion->login
+
+src/Template/Layout/default.ctp
+
+commit 3c45cd931f7728a98684aab11b73976b26d1a98b
+Merge: d0be3fe cada044
+Author: Théo Jacquin <>
+Date:   Sat Mar 24 16:27:30 2018 +0100
+
+    Merge branch 'master' of https://github.com/ToJack/SportDevProject
+
+commit 60741478b26dbce7fbebd602158cf22e67b3f6cd
+Merge: 5b22daa 3c45cd9
+Author: Adrien_Kourganoff <adridri@kourganoff.com>
+Date:   Sat Mar 24 16:27:07 2018 +0100
+
+    Merge branch 'master' of https://github.com/ToJack/SportDevProject
+
+commit 5b22daae4d93900e966ae1a6f00be07b3adc74a9
+Author: Adrien_Kourganoff <adridri@kourganoff.com>
+Date:   Sat Mar 24 16:26:55 2018 +0100
+
+    Changements avec user pour mon compte et seances
+
+src/Controller/AccountsController.php
+src/Template/Accounts/accueil.ctp
+webroot/img/PhotoProfil/b31b9232-9c10-4b4c-b003-62ad0f3250be.png
+
+commit d0be3fe6e61709aabda35743e88c25816b1c2d47
+Author: Théo Jacquin <>
+Date:   Sat Mar 24 16:25:13 2018 +0100
+
+    regroupement login et register
+
+src/Controller/AccountsController.php
+src/Template/Accounts/Equipe.ctp
+src/Template/Accounts/connexion.ctp
+src/Template/Accounts/login.ctp
+src/Template/Accounts/register.ctp
+src/Template/Layout/default.ctp
+webroot/css/perso.css
+
+commit cada04414e8f01458f4face090c29dda8ba69747
+Merge: 887b591 da63dc4
+Author: Adrien_Kourganoff <adridri@kourganoff.com>
+Date:   Sat Mar 24 15:57:30 2018 +0100
+
+    Merge branch 'master' of https://github.com/ToJack/SportDevProject
+
+commit 887b591f30f68112081b9765fb081906e054ab28
+Author: Adrien_Kourganoff <adridri@kourganoff.com>
+Date:   Sat Mar 24 15:57:24 2018 +0100
+
+    Changement navbar selon co ou pas
+
+src/Controller/AccountsController.php
+src/Template/Layout/default.ctp
+
+commit da63dc4fb098ee5be951211cab748aca9e88cbeb
+Author: brahimakh <akherraz.brahim75@gmail.com>
+Date:   Sat Mar 24 14:49:35 2018 +0100
+
+    changement de class
+
+webroot/css/perso.css
+
+commit 210c60ce9b7b49b43cf652aa599101c02a305493
+Merge: 7b61904 7ce67f6
+Author: brahimakh <akherraz.brahim75@gmail.com>
+Date:   Sat Mar 24 14:48:55 2018 +0100
+
+    modif photo
+
+commit 7b619042192f4e47102a63a58328314347f51853
+Author: brahimakh <akherraz.brahim75@gmail.com>
+Date:   Sat Mar 24 14:47:24 2018 +0100
+
+    modif photo et rangement
+
+src/Template/Accounts/Equipe.ctp
+src/Template/Accounts/accueil.ctp
+webroot/css/perso.css
+
+commit 7ce67f6fe30c393b4305244295749c6f27391526
+Merge: 107cc62 b9482af
+Author: Adrien_Kourganoff <adridri@kourganoff.com>
+Date:   Sat Mar 24 14:43:06 2018 +0100
+
+    Merge branch 'master' of https://github.com/ToJack/SportDevProject
+
+commit 107cc6290e16b012ef90ea797192db79bf195317
+Author: Adrien_Kourganoff <adridri@kourganoff.com>
+Date:   Sat Mar 24 14:42:28 2018 +0100
+
+    amelioration css
+
+src/Controller/AppController.php
+src/Template/Accounts/Contact.ctp
+src/Template/Accounts/FAQ.ctp
+src/Template/Accounts/competitions.ctp
+src/Template/Accounts/mon_compte.ctp
+src/Template/Accounts/seances.ctp
+src/Template/Accounts/single_competition.ctp
+webroot/css/perso.css
+
+commit b9482af00d1e03590d0672ecb62bba6e79b9ed99
+Merge: f3753d3 ffd85a8
+Author: Théo Jacquin <>
+Date:   Sat Mar 24 13:02:57 2018 +0100
+
+    Merge branch 'master' of https://github.com/ToJack/SportDevProject
+
+commit f3753d3faddc531e6c94f37c673e41b37da494ce
+Author: Théo Jacquin <>
+Date:   Sat Mar 24 13:01:37 2018 +0100
+
+    formulaire seance / css
+
+src/Template/Accounts/objets_connectes.ctp
+src/View/Helper/AuthHelper.php
+src/View/Helper/DevicesHelper.php
+webroot/css/perso.css
+
+commit ffd85a8190adb8d586afd1118e787205d6174816
+Author: brahimakh <akherraz.brahim75@gmail.com>
+Date:   Sat Mar 24 12:18:21 2018 +0100
+
+    modif pour adrien
+
+webroot/css/perso.css
+
+commit f476eba0d309476c2d15b56661b907591fb49976
+Merge: 1d8157a afac355
+Author: brahimakh <akherraz.brahim75@gmail.com>
+Date:   Sat Mar 24 12:16:41 2018 +0100
+
+    Merge branch 'master' of https://github.com/ToJack/SportDevProject
+
+commit 1d8157aaa8c6a87685cc33fc0a18851959e43682
+Author: brahimakh <akherraz.brahim75@gmail.com>
+Date:   Sat Mar 24 12:16:27 2018 +0100
+
+    modif pour adrien
+
+src/Template/Accounts/Equipe.ctp
+webroot/css/perso.css
+
+commit afac3550bfff79c804a4729fb9f469292343e50a
+Author: DESKTOP-6HNIM9S\Victor <vbonifacio50@gmail.com>
+Date:   Sat Mar 24 11:46:08 2018 +0100
+
+    Ajout tri par score pour classement
+
+src/Controller/AccountsController.php
+
+commit b97d6ee7a14a67cbb45cebaa340c8652adf6ef28
+Author: DESKTOP-6HNIM9S\Victor <vbonifacio50@gmail.com>
+Date:   Sat Mar 24 11:04:23 2018 +0100
+
+    Correction du merge du controller (classement)
+
+src/Controller/AccountsController.php
+
+commit 7c6d8e7a01498334cae8719deb57a2fc12914b35
+Merge: 60062d2 bba11c3
+Author: Théo Jacquin <>
+Date:   Sat Mar 24 10:53:02 2018 +0100
+
+    Merge branch 'master' of https://github.com/ToJack/SportDevProject
+
+commit 60062d2f89980d27809d74f3bb59d244f1529746
+Author: Théo Jacquin <>
+Date:   Sat Mar 24 10:52:58 2018 +0100
+
+    redirect register
+
+src/Controller/AccountsController.php
+src/Template/Accounts/register.ctp
+
+commit bba11c3634176d51eaf21f141d89788631768429
+Merge: 3b014d7 d60c61a
+Author: Adrien_Kourganoff <adridri@kourganoff.com>
+Date:   Sat Mar 24 10:28:34 2018 +0100
+
+    Merge branch 'master' of https://github.com/ToJack/SportDevProject
+
+commit 3b014d768e574f7d31f52a0ca16fa5bc2236cd43
+Author: Adrien_Kourganoff <adridri@kourganoff.com>
+Date:   Sat Mar 24 10:28:29 2018 +0100
+
+    Ajout image + correction bug bordure
+
+webroot/img/BackgroundMargin/26.jpg
+webroot/img/BackgroundMargin/27.jpg
+webroot/img/BackgroundMargin/28.jpg
+webroot/img/BackgroundMargin/29.jpg
+webroot/img/BackgroundMargin/30.jpg
+webroot/img/BackgroundMargin/31.jpg
+webroot/img/BackgroundMargin/32.jpg
+webroot/img/BackgroundMargin/33.jpg
+webroot/img/BackgroundMargin/34.jpg
+webroot/img/BackgroundMargin/35.jpg
+webroot/img/BackgroundMargin/36.jpg
+webroot/img/BackgroundMargin/37.jpg
+webroot/img/BackgroundMargin/38.jpg
+webroot/img/BackgroundMargin/39.jpg
+webroot/img/BackgroundMargin/40.jpg
+webroot/img/BackgroundMargin/41.jpg
+webroot/img/BackgroundMargin/42.jpg
+webroot/img/BackgroundMargin/43.jpg
+webroot/img/BackgroundMargin/44.jpg
+webroot/img/chris-barbalis-450412-unsplash.jpg
+webroot/img/chris-barbalis-560297-unsplash.jpg
+webroot/img/craig-whitehead-441731-unsplash.jpg
+webroot/img/maria-fernanda-gonzalez-461523-unsplash.jpg
+webroot/img/munkhsaran-otgonbayar-554708-unsplash(1).jpg
+webroot/img/phife-557420-unsplash.jpg
+webroot/js/fonctions.js
+
+commit d60c61a9eb550faa36d9fb86d26c9ada9c66db2c
+Author: brahimakh <akherraz.brahim75@gmail.com>
+Date:   Sat Mar 24 04:35:34 2018 +0100
+
+    equipe a modifier impérativement
+
+src/Template/Accounts/Contact.ctp
+src/Template/Accounts/Equipe.ctp
+src/Template/Accounts/FAQ.ctp
+webroot/css/perso.css
+
+commit 7be29929ac444a9d66f23fc7c55d23db3fd172e9
+Author: Théo Jacquin <>
+Date:   Sat Mar 24 01:59:40 2018 +0100
+
+    Affichage page Objets Connectés
+
+src/Controller/AccountsController.php
+src/Template/Accounts/objets_connectes.ctp
+
+commit 64542d68e3a15c415d3cce0ca309d60351f7b224
+Author: Théo Jacquin <>
+Date:   Sat Mar 24 01:16:27 2018 +0100
+
+    deplacement User->Account
+
+src/Controller/AccountsController.php
+src/Controller/AppController.php
+src/Controller/UsersController.php
+src/Template/Accounts/connexion.ctp
+src/Template/Accounts/register.ctp
+src/Template/Users/login.ctp
+
+commit 145aacb05defe1236e6e2f4f90d0e84333244bc7
+Merge: c4da957 d918ae8
+Author: Théo Jacquin <>
+Date:   Sat Mar 24 01:05:16 2018 +0100
+
+    Merge branch 'master' of https://github.com/ToJack/SportDevProject
+
+commit c4da957c180df3426244f52388511b5c52892e68
+Author: Théo Jacquin <>
+Date:   Sat Mar 24 01:05:13 2018 +0100
+
+    starting devices page
+
+src/Controller/AccountsController.php
+src/Template/Accounts/objets_connectes.ctp
+
+commit 17869272fe7441f1df7f58d0d242ea11675dbc99
+Merge: 498dcbc d918ae8
+Author: Adrien_Kourganoff <adridri@kourganoff.com>
+Date:   Fri Mar 23 21:33:08 2018 +0100
+
+    Merge branch 'master' of https://github.com/ToJack/SportDevProject
+
+commit 498dcbc03ec29d511dff332fc63daa640ce63a74
+Author: Adrien_Kourganoff <adridri@kourganoff.com>
+Date:   Fri Mar 23 21:33:00 2018 +0100
+
+    Changement form
+
+src/Template/Accounts/single_competition.ctp
+
+commit d918ae86e5335245f5cc8557e39e87418b5bcb1f
+Merge: 1dbee6c f1bd1fa
+Author: brahimakh <akherraz.brahim75@gmail.com>
+Date:   Fri Mar 23 21:31:04 2018 +0100
+
+    Merge branch 'master' of https://github.com/ToJack/SportDevProject
+
+commit 1dbee6cb2ca7ace8f517f117e35e0e52034d624a
+Author: brahimakh <akherraz.brahim75@gmail.com>
+Date:   Fri Mar 23 21:30:58 2018 +0100
+
+    CSS done
+
+src/Template/Accounts/Equipe.ctp
+src/Template/Accounts/FAQ.ctp
+src/Template/Accounts/accueil.ctp
+webroot/css/perso.css
+
+commit f1bd1fa73420e90f446cda32831c8ce75cce3b47
+Author: Adrien_Kourganoff <adridri@kourganoff.com>
+Date:   Fri Mar 23 20:01:24 2018 +0100
+
+    Changement fonction bordure depuis toutes les pages
+
+src/Template/Layout/default.ctp
+webroot/js/fonctions.js
+
+commit 5f47cd1bcea97c8a758a7b8ccd5bcbd4478265d4
+Merge: 9625b7d c1decd0
+Author: Adrien_Kourganoff <adridri@kourganoff.com>
+Date:   Fri Mar 23 19:00:26 2018 +0100
+
+    Merge branch 'master' of https://github.com/ToJack/SportDevProject
+
+commit 9625b7d1996a22141509b2d92f4dfe4bec6ad2a1
+Author: Adrien_Kourganoff <adridri@kourganoff.com>
+Date:   Fri Mar 23 19:00:23 2018 +0100
+
+    Bug rectifié
+
+src/Template/Layout/default.ctp
+
+commit c1decd0c3eec1045442492fe33511cdb9e6679c1
+Author: brahimakh <akherraz.brahim75@gmail.com>
+Date:   Fri Mar 23 18:48:52 2018 +0100
+
+    modification de l'image de fonds
+
+webroot/css/perso.css
+
+commit 568814b2db0476bff908ce94f36301239a18f0cf
+Merge: 247c2ba 79e5669
+Author: brahimakh <akherraz.brahim75@gmail.com>
+Date:   Fri Mar 23 18:42:09 2018 +0100
+
+    css + image de fond
+
+commit 247c2ba18c1c7a4d6538b446b6052fcde8ce76a6
+Author: brahimakh <akherraz.brahim75@gmail.com>
+Date:   Fri Mar 23 18:35:58 2018 +0100
+
+    image de fond + CSS
+
+src/Template/Accounts/FAQ.ctp
+src/Template/Accounts/accueil.ctp
+webroot/css/perso.css
+webroot/img/chris-barbalis-450412-unsplash.jpg
+webroot/img/chris-barbalis-560297-unsplash.jpg
+webroot/img/craig-whitehead-441731-unsplash.jpg
+webroot/img/emile-victor-portenart-108608-unsplash.jpg
+webroot/img/maria-fernanda-gonzalez-461523-unsplash.jpg
+webroot/img/munkhsaran-otgonbayar-554708-unsplash(1).jpg
+webroot/img/phife-557420-unsplash.jpg
+
+commit 79e5669ff0b550489fad77be92ae6e4967056de2
+Merge: 87f52d5 2ef3d4f
+Author: Adrien_Kourganoff <adridri@kourganoff.com>
+Date:   Fri Mar 23 18:30:33 2018 +0100
+
+    Merge branch 'master' of https://github.com/ToJack/SportDevProject
+
+commit 87f52d55118d88039038ebd1caf7f6e6d471574e
+Author: Adrien_Kourganoff <adridri@kourganoff.com>
+Date:   Fri Mar 23 18:30:29 2018 +0100
+
+    Petite option stylée sur les cotes
+
+src/Template/Layout/default.ctp
+webroot/css/perso.css
+webroot/img/BackgroundMargin/1.jpg
+webroot/img/BackgroundMargin/10.jpg
+webroot/img/BackgroundMargin/11.jpg
+webroot/img/BackgroundMargin/12.jpg
+webroot/img/BackgroundMargin/13.jpg
+webroot/img/BackgroundMargin/14.jpg
+webroot/img/BackgroundMargin/15.jpg
+webroot/img/BackgroundMargin/16.jpg
+webroot/img/BackgroundMargin/17.jpg
+webroot/img/BackgroundMargin/18.jpg
+webroot/img/BackgroundMargin/19.jpg
+webroot/img/BackgroundMargin/2.jpg
+webroot/img/BackgroundMargin/20.jpg
+webroot/img/BackgroundMargin/21.jpg
+webroot/img/BackgroundMargin/22.jpg
+webroot/img/BackgroundMargin/23.jpg
+webroot/img/BackgroundMargin/24.jpg
+webroot/img/BackgroundMargin/25.jpg
+webroot/img/BackgroundMargin/3.jpg
+webroot/img/BackgroundMargin/4.jpg
+webroot/img/BackgroundMargin/5.jpg
+webroot/img/BackgroundMargin/6.jpg
+webroot/img/BackgroundMargin/7.jpg
+webroot/img/BackgroundMargin/8.jpg
+webroot/img/BackgroundMargin/9.jpg
+webroot/js/fonctions.js
+
+commit 2ef3d4fbfd4b3281a6f91e24c9c16d8a79de0442
+Author: DESKTOP-6HNIM9S\Victor <vbonifacio50@gmail.com>
+Date:   Fri Mar 23 16:32:19 2018 +0100
+
+    Controller pour Classement Done
+
+src/Controller/AccountsController.php
+
+commit bbacb2ed50b3e16e7641d9e7a24c6c256b558632
+Author: DESKTOP-6HNIM9S\Victor <vbonifacio50@gmail.com>
+Date:   Fri Mar 23 16:27:13 2018 +0100
+
+    View pour Classement Done
+
+src/Template/Accounts/classements.ctp
+
+commit ab7632d2f84c8fd1f8414cdefb4f55b986285dc9
+Author: Théo Jacquin <>
+Date:   Fri Mar 23 16:09:29 2018 +0100
+
+    save
+
+src/Controller/AccountsController.php
+
+commit 30004d9986acba887261dff9b85b1ee7a34ddaa1
+Merge: cb76b1a 6845ff9
+Author: Théo Jacquin <>
+Date:   Fri Mar 23 16:09:05 2018 +0100
+
+    Merge branch 'master' of https://github.com/ToJack/SportDevProject
+
+commit cb76b1a98d32d02796d322e5ddac66d539ab63f8
+Author: Théo Jacquin <>
+Date:   Fri Mar 23 16:08:20 2018 +0100
+
+    Login done
+    Logout done
+    système de verification des id done
+    blindage email done
+
+src/Controller/AccountsController.php
+src/Controller/AppController.php
+src/Controller/UsersController.php
+src/Template/Accounts/accueil.ctp
+src/Template/Accounts/connexion.ctp
+src/Template/Users/login.ctp
+
+commit 6845ff94021e24e8fd1a1e3b095ba21c65971819
+Merge: 00d637c de09341
+Author: Adrien_Kourganoff <adridri@kourganoff.com>
+Date:   Fri Mar 23 15:33:50 2018 +0100
+
+    Merge branch 'master' of https://github.com/ToJack/SportDevProject
+
+commit 00d637c855a806c5fc6901acdb826ca9e29dd9e4
+Author: Adrien_Kourganoff <adridri@kourganoff.com>
+Date:   Fri Mar 23 15:33:45 2018 +0100
+
+    Suppression fichier inutile + APIs opérationelles
+
+src/Controller/AccountsController.php
+src/Controller/ApiController.php
+src/Controller/TrucController.php
+src/Template/Layout/default.ctp
+src/Template/Truc/machin.ctp
+src/Template/Truc/register.ctp
+
+commit de093417f8ac19de8a05bc73bc55e158ce54d2cd
+Author: Théo Jacquin <>
+Date:   Fri Mar 23 13:40:31 2018 +0100
+
+    register done
+
+src/Controller/AppController.php
+src/Controller/UsersController.php
+src/Template/Users/login.ctp
+src/Template/Users/register.ctp
+
+commit 52a75bac49b5253fca5d58d80ae745ecb3207726
+Author: brahimakh <akherraz.brahim75@gmail.com>
+Date:   Thu Mar 22 23:51:22 2018 +0100
+
+    test css
+
+webroot/css/perso.css
+
+commit 40c041aa7edd52bb7ec00d51eca437d001a38640
+Author: brahimakh <akherraz.brahim75@gmail.com>
+Date:   Thu Mar 22 23:50:18 2018 +0100
+
+    test css 1
+
+src/Template/Accounts/Contact.ctp
+webroot/css/perso.css
+
+commit 6282559ac95c23db55d0930e31412959413b38b5
+Author: brahimakh <akherraz.brahim75@gmail.com>
+Date:   Thu Mar 22 23:12:19 2018 +0100
+
+    faq done mention legale done
+
+src/Template/Accounts/Contact.ctp
+src/Template/Accounts/FAQ.ctp
+src/Template/Accounts/mentionslegale.ctp
+
+commit 8b137fd0f16bf7822cb6903827030fdb3bae977e
+Author: brahimakh <akherraz.brahim75@gmail.com>
+Date:   Thu Mar 22 18:40:45 2018 +0100
+
+    contact done
+
+src/Template/Accounts/Contact.ctp
+
+commit f0d8845d6ef3bdea664135f9e71816a1368aa091
+Author: brahimakh <akherraz.brahim75@gmail.com>
+Date:   Thu Mar 22 17:57:39 2018 +0100
+
+    tutoriel et mentions légale done
+
+src/Template/Accounts/FAQ.ctp
+
+commit 058e569e03538200219de468ed8052da96acc930
+Author: brahimakh <akherraz.brahim75@gmail.com>
+Date:   Thu Mar 22 17:56:24 2018 +0100
+
+    mention légale done
+
+src/Template/Accounts/FAQ.ctp
+
+commit 798445a7b638c8819528719b0c762195eb84af22
+Author: Adrien_Kourganoff <adridri@kourganoff.com>
+Date:   Thu Mar 22 17:37:44 2018 +0100
+
+    Footer
+
+src/Template/Accounts/competitions.ctp
+src/Template/Layout/default.ctp
+webroot/css/perso.css
+
+commit 9f8094eeba334e3b36e69fda08b4849db046a060
+Merge: 0ac4125 e3a9f1a
+Author: Adrien_Kourganoff <adridri@kourganoff.com>
+Date:   Thu Mar 22 16:05:56 2018 +0100
+
+    Merge branch 'master' of https://github.com/ToJack/SportDevProject
+
+commit 0ac412525feb3c3ab968d853bae6057c0c3efa96
+Author: Adrien_Kourganoff <adridri@kourganoff.com>
+Date:   Thu Mar 22 16:05:50 2018 +0100
+
+    Page compétitions et sous-compétitions opérationnelles
+
+src/Controller/AccountsController.php
+src/Template/Accounts/single_competition.ctp
+src/Template/Layout/default.ctp
+
+commit e3a9f1a8e0a015d5827e1e79ee247946d4056959
+Author: brahimakh <akherraz.brahim75@gmail.com>
+Date:   Wed Mar 21 18:20:00 2018 +0100
+
+    tuto
+
+src/Template/Accounts/FAQ.ctp
+
+commit bc7e2c19a044b47c42081ae4d7e2fc7445ad0769
+Author: brahimakh <akherraz.brahim75@gmail.com>
+Date:   Wed Mar 21 16:14:25 2018 +0100
+
+    faq done2
+
+src/Template/Accounts/FAQ.ctp
+
+commit 21da3dc877d6a556a9cb46e34846ac17e8dea5e6
+Author: brahimakh <akherraz.brahim75@gmail.com>
+Date:   Wed Mar 21 16:12:47 2018 +0100
+
+    faq done
+
+src/Template/Accounts/FAQ.ctp
+
+commit ca792612938b89d4261b66450a1305542ca3513b
+Merge: b1881e7 04ac1f8
+Author: Adrien_Kourganoff <adridri@kourganoff.com>
+Date:   Wed Mar 21 15:59:33 2018 +0100
+
+    Merge branch 'master' of https://github.com/ToJack/SportDevProject
+
+commit b1881e7bd9ecd05394314fc2c0aafb1e3ff0e38c
+Author: Adrien_Kourganoff <adridri@kourganoff.com>
+Date:   Wed Mar 21 15:57:12 2018 +0100
+
+    Ajout photo sur mon compte, page competition et sous-competition debut
+
+src/Controller/AccountsController.php
+src/Template/Accounts/competitions.ctp
+src/Template/Accounts/mon_compte.ctp
+src/Template/Accounts/single_competition.ctp
+webroot/img/PhotoProfil/56eb38b4-04b0-4667-ba54-0796b38f37ff.jpg
+webroot/js/fonctions.js
+
+commit 04ac1f860142863a42fbf54dface51731d7efc94
+Author: Théo Jacquin <>
+Date:   Wed Mar 21 15:51:18 2018 +0100
+
+    tout est autorisé
+
+src/Controller/AppController.php
+
+commit 56cc34c92675f7ee6a02ab9545d820f01ae4d431
+Author: Théo Jacquin <>
+Date:   Tue Mar 20 22:19:05 2018 +0100
+
+    Add user
+
+src/Controller/AppController.php
+src/Controller/UsersController.php
+src/Template/Users/add.ctp
+
+commit 34fb0eadc92a1bcfe003578de8fc992493a72f97
+Author: brahimakh <akherraz.brahim75@gmail.com>
+Date:   Tue Mar 20 18:11:21 2018 +0100
+
+    image
+
+src/Template/Accounts/Equipe.ctp
+src/Template/Accounts/accueil.ctp
+webroot/img/27503734_572865666401986_7365393055436296195_o.jpg
+webroot/img/28166425_10211288328304590_9095659842445286378_n.jpg
+webroot/img/29425948_10213375991686966_5708281801496068096_n.png
+webroot/img/29496293_1888747567824445_4360127035121598464_n.jpg
+webroot/img/franchementtabuses.png
+
+commit c6b39fdf678837160a61da3e339f2e73d4c7793a
+Merge: dbc2350 2aff415
+Author: Théo Jacquin <>
+Date:   Tue Mar 20 16:46:24 2018 +0100
+
+    Merge branch 'master' of https://github.com/ToJack/SportDevProject
+
+commit dbc2350354109c43520e5d237425de194cee4149
+Author: Théo Jacquin <>
+Date:   Tue Mar 20 16:46:14 2018 +0100
+
+    Creation userscontroller et template/users
+
+src/Controller/AccountsController.php
+src/Controller/AppController.php
+src/Controller/UsersController.php
+src/Template/Accounts/connexion.ctp
+src/Template/Users/login.ctp
+
+commit 2aff4156e40a9515c00aa6119e992b6744828c01
+Merge: cb94d5c 8172703
+Author: brahimakh <akherraz.brahim75@gmail.com>
+Date:   Tue Mar 20 16:41:31 2018 +0100
+
+    Merge branch 'master' of https://github.com/ToJack/SportDevProject
+
+commit cb94d5c5151ae875778c343921dde7d624597df7
+Author: brahimakh <akherraz.brahim75@gmail.com>
+Date:   Tue Mar 20 16:41:24 2018 +0100
+
+    rajout de page statique
+
+src/Controller/AccountsController.php
+src/Template/Accounts/Contact.ctp
+src/Template/Accounts/mention_legal.ctp
+src/Template/Accounts/mode_demploi.ctp
+src/Template/Accounts/tutoriel.ctp
+src/Template/Layout/default.ctp
+
+commit 8172703eb5c1db2196075154a6385fa4e9f71099
+Merge: dce4857 d986859
+Author: Adrien_Kourganoff <adridri@kourganoff.com>
+Date:   Tue Mar 20 15:35:08 2018 +0100
+
+    Merge branch 'master' of https://github.com/ToJack/SportDevProject
+
+commit dce48579199bf8a2c7e55e32b600f3579e9dba68
+Author: Adrien_Kourganoff <adridri@kourganoff.com>
+Date:   Tue Mar 20 15:35:02 2018 +0100
+
+    Changement moncompte ajout photo
+
+config/routes.php
+src/Controller/AccountsController.php
+src/Template/Accounts/mon_compte.ctp
+webroot/img/PhotoProfil/56eb38b4-04b0-4667-ba54-0796b38f37ff.jpg
+webroot/img/PhotoProfil/default.jpg
+
+commit d9868594381d2333ae961a29916f3372c2a233d9
+Author: brahimakh <akherraz.brahim75@gmail.com>
+Date:   Tue Mar 20 15:13:05 2018 +0100
+
+    ajout de page
+
+src/Template/Accounts/Contact.ctp
+src/Template/Accounts/Equipe.ctp
+src/Template/Accounts/FAQ.ctp
+src/Template/Accounts/accueil.ctp
+src/Template/Accounts/mention_legal.ctp
+src/Template/Accounts/mode_demploi.ctp
+src/Template/Accounts/tutoriel.ctp
+
+commit 30a5b11b63e6c592eb5b30788a46efa7e4d3ccef
+Author: brahimakh <akherraz.brahim75@gmail.com>
+Date:   Tue Mar 20 14:36:55 2018 +0100
+
+    centrage de carte
+
+src/Template/Accounts/accueil.ctp
+
+commit ecef646da0ec789b6af7fb5176dd9ae0f3c135dd
+Author: Théo Jacquin <>
+Date:   Tue Mar 20 14:05:09 2018 +0100
+
+    comment function connexion parce que bug
+
+src/Controller/AccountsController.php
+
+commit 07819009376a6dab8bef6f0de9952e390c54c2d0
+Merge: 5dc4690 f9276ff
+Author: Théo Jacquin <>
+Date:   Tue Mar 20 13:55:35 2018 +0100
+
+    Merge branch 'master' of https://github.com/ToJack/SportDevProject
+
+commit 5dc46908d03d1710903ed866afbe0b761b7992f8
+Author: Théo Jacquin <>
+Date:   Tue Mar 20 13:50:51 2018 +0100
+
+    test function connexion
+
+src/Controller/AccountsController.php
+src/Template/Accounts/connexion.ctp
+
+commit f9276fff9e214c0eacae7482bd8927a4fd196b07
+Author: vicbo <vbonifacio50@gmail.com>
+Date:   Tue Mar 20 13:04:55 2018 +0100
+
+    Dev View pour page Classement
+
+src/Template/Accounts/classements.ctp
+
+commit 6189067392c6392e0f0b291dc130d495b63520e3
+Author: vicbo <vbonifacio50@gmail.com>
+Date:   Tue Mar 20 13:03:42 2018 +0100
+
+    Dev Controller pour page Classement
+
+src/Controller/AccountsController.php
+
+commit 42d9beb8c3c9ce7af6272c9d33b55a6533bfd974
+Author: brahimakh <akherraz.brahim75@gmail.com>
+Date:   Sun Mar 18 14:52:12 2018 +0100
+
+    accueil finis, manque le css
+
+src/Template/Accounts/accueil.ctp
+
+commit bb90e18869d17f866a5bff882a27f386f731aa9e
+Merge: 8ee8788 3d16083
+Author: Adrien_Kourganoff <adridri@kourganoff.com>
+Date:   Sun Mar 18 14:10:45 2018 +0100
+
+    Merge branch 'master' of https://github.com/ToJack/SportDevProject
+
+commit 8ee87887f09a81f80b8dee746f8ff0516b92f416
+Author: Adrien_Kourganoff <adridri@kourganoff.com>
+Date:   Sun Mar 18 14:08:45 2018 +0100
+
+    ...
+
+src/Template/Accounts/accueil.ctp
+
+commit 3d16083d94091615a61f254068e6ffdeb7f87680
+Author: brahimakh <akherraz.brahim75@gmail.com>
+Date:   Sun Mar 18 14:08:42 2018 +0100
+
+    image a mettre
+
+src/Template/Accounts/accueil.ctp
+
+commit 7c7e2e02f29872a2488ebf30994add7f9b0a62fd
+Merge: 60a2579 29edb67
+Author: Adrien_Kourganoff <adridri@kourganoff.com>
+Date:   Sun Mar 18 14:08:07 2018 +0100
+
+    ...
+
+commit 60a2579fed7c61e7d33ac1699f87b89862eb217b
+Author: Adrien_Kourganoff <adridri@kourganoff.com>
+Date:   Sun Mar 18 14:05:56 2018 +0100
+
+    Voila
+
+src/Template/Accounts/accueil.ctp
+webroot/img/franchementtabuses.png
+
+commit 29edb6792965a6b872f440728b5273610ea316e0
+Author: brahimakh <akherraz.brahim75@gmail.com>
+Date:   Sun Mar 18 13:57:07 2018 +0100
+
+    image a rajouter
+
+src/Template/Accounts/accueil.ctp
+webroot/img/brahimfrance1.png
+
+commit 9065b7847a815dd21682435168a5041367d731d2
+Author: Adrien_Kourganoff <adridri@kourganoff.com>
+Date:   Sat Mar 17 13:25:13 2018 +0100
+
+    Correction ajout de relevé bug avec le tableau et changement champs location en décimal
+
+src/Template/Accounts/seances.ctp
+
+commit 3133201d6738d5503d380fab16e51d41727efd21
+Merge: a4fd2c8 d78484e
+Author: Théo Jacquin <>
+Date:   Sat Mar 17 11:38:46 2018 +0100
+
+    Merge branch 'master' of https://github.com/ToJack/SportDevProject
+
+commit a4fd2c8e98ea4052ba0c5113338e8221b1041f9d
+Author: Théo Jacquin <>
+Date:   Sat Mar 17 11:38:20 2018 +0100
+
+    labels
+
+src/Controller/AccountsController.php
+src/Template/Accounts/connexion.ctp
+
+commit d78484edfd2b308cf4994ae66396212bcbfca176
+Merge: d94dceb 882971e
+Author: Adrien_Kourganoff <adridri@kourganoff.com>
+Date:   Fri Mar 16 22:07:10 2018 +0100
+
+    Merge branch 'master' of https://github.com/ToJack/SportDevProject
+
+commit d94dceba2d4ae11ac97705d134e8dce8dfca27cb
+Author: Adrien_Kourganoff <adridri@kourganoff.com>
+Date:   Fri Mar 16 22:07:01 2018 +0100
+
+    Ajout des relevés aux séances
+
+src/Controller/AccountsController.php
+src/Template/Accounts/seances.ctp
+src/Template/Layout/default.ctp
+webroot/js/basic_script.js
+webroot/js/fonctions.js
+
+commit 882971e092dae43c36afac514106d8d5f0c40a37
+Author: brahimakh <akherraz.brahim75@gmail.com>
+Date:   Fri Mar 16 14:53:37 2018 +0100
+
+    v2 accueil
+
+src/Template/Accounts/accueil.ctp
+
+commit c069758140a413b7213250243032057eec9b5bca
+Merge: 46866e4 4a9afc6
+Author: brahimakh <akherraz.brahim75@gmail.com>
+Date:   Thu Mar 15 18:27:44 2018 +0100
+
+    Merge branch 'master' of https://github.com/ToJack/SportDevProject
+
+commit 46866e479a8ed3bd425707b9ceacaeee88825dec
+Author: brahimakh <akherraz.brahim75@gmail.com>
+Date:   Thu Mar 15 18:27:06 2018 +0100
+
+    version 1 avec les noms
+
+src/Template/Accounts/accueil.ctp
+
+commit 4a9afc63fcd2717e654aa424999dc84533c722a3
+Author: Adrien_Kourganoff <adridri@kourganoff.com>
+Date:   Tue Mar 13 22:34:04 2018 +0100
+
+    Correction faute d'orthographe séances, changement total de séances.ctp et relation avec BDD, navbar fixed et implémentation jQuery.js
+
+src/Controller/AccountsController.php
+src/Template/Accounts/sceances.ctp
+src/Template/Accounts/seances.ctp
+src/Template/Layout/default.ctp
+webroot/js/basic_script.js
+webroot/js/jquery-3.3.1.min.js
+
+commit c72de898017a5ca4e9405dd18cb667221f393279
+Author: Adrien_Kourganoff <adridri@kourganoff.com>
+Date:   Tue Mar 13 00:07:28 2018 +0100
+
+    Changement sceances.ctp, Controller sceances, affichage icone et titre
+
+src/Controller/AccountsController.php
+src/Template/Accounts/sceances.ctp
+src/Template/Layout/default.ctp
+webroot/favicon.ico
+
+commit 8c99b02ba7dcd1683c65171ba291dad27b36ed65
+Author: Adrien_Kourganoff <adridri@kourganoff.com>
+Date:   Mon Mar 12 17:00:27 2018 +0100
+
+    Corrction bug GIT
+
+src/Controller/AccountsController.php
+
+commit 76d259a9553cd02a3dfcaa9fc5f4e8ea93f57227
+Merge: 71df950 acb4368
+Author: brahimakh <akherraz.brahim75@gmail.com>
+Date:   Mon Mar 12 16:54:01 2018 +0100
+
+    Merge branch 'master' of https://github.com/ToJack/SportDevProject
+
+commit 71df950d985e0baf74077411941728f484de61c5
+Author: brahimakh <akherraz.brahim75@gmail.com>
+Date:   Mon Mar 12 16:53:10 2018 +0100
+
+    version qui marche en dure
+
+src/Controller/AccountsController.php
+
+commit acb43684b0185e6034300fef76e5eb589dce9fd3
+Author: Adrien_Kourganoff <adridri@kourganoff.com>
+Date:   Mon Mar 12 16:30:39 2018 +0100
+
+    Bootstrap only et header corrigé
+
+src/Template/Accounts/sceances.ctp
+src/Template/Layout/default.ctp
+
+commit 23cf4bf2f3d8acf3395eb0ad005645d0715e404e
+Author: brahimakh <akherraz.brahim75@gmail.com>
+Date:   Mon Mar 12 15:37:25 2018 +0100
+
+    essai de mon compte 1
+
+src/Controller/AccountsController.php
+
+commit ff35aa1f04426b7c787c34854ca0cb6ac53c71eb
+Merge: 0f3237f 136c1cf
+Author: brahimakh <akherraz.brahim75@gmail.com>
+Date:   Mon Mar 12 15:23:36 2018 +0100
+
+    Merge branch 'master' of https://github.com/ToJack/SportDevProject
+
+commit 0f3237f393ce4d6dd0ef4483ef91ce81d5f145bd
+Author: brahimakh <akherraz.brahim75@gmail.com>
+Date:   Mon Mar 12 14:27:52 2018 +0100
+
+    toute la BDD
+
+src/Controller/AccountsController.php
+
+commit 136c1cf7a6d70e5f46715133ee5a28cf345e5bc8
+Author: Adrien_Kourganoff <adridri@kourganoff.com>
+Date:   Mon Mar 5 20:01:08 2018 +0100
+
+    Ajout Bootstrap - changement bar de nav sous Bootstrap (Problèmes avec la police d'ecriture à régler)
+
+src/Controller/AccountsController.php
+src/Template/Accounts/sceances.ctp
+src/Template/Layout/default.ctp
+webroot/css/bootstrap-theme.css
+webroot/css/bootstrap-theme.min.css
+webroot/css/bootstrap.css
+webroot/css/bootstrap.min.css
+webroot/fonts/glyphicons-halflings-regular.eot
+webroot/fonts/glyphicons-halflings-regular.svg
+webroot/fonts/glyphicons-halflings-regular.ttf
+webroot/fonts/glyphicons-halflings-regular.woff
+webroot/fonts/glyphicons-halflings-regular.woff2
+webroot/js/bootstrap.js
+webroot/js/bootstrap.min.js
+webroot/js/empty
+webroot/js/npm.js
+
+commit ea5a7c07320c4b9e61a098fe7fc7f347dbdd2fbc
+Merge: ccf3436 0a859d5
+Author: Adrien_Kourganoff <adridri@kourganoff.com>
+Date:   Mon Mar 5 18:24:36 2018 +0100
+
+    Merge branch 'master' of https://github.com/ToJack/SportDevProject
+
+commit ccf3436d30d48f6fc948103a77c45176b2809573
+Author: Adrien_Kourganoff <adridri@kourganoff.com>
+Date:   Mon Mar 5 18:21:52 2018 +0100
+
+    SCEANCES - Affichages scéances
+
+src/Controller/AccountsController.php
+src/Template/Accounts/sceances.ctp
+
+commit 0a859d5cbdba0ef2c0223da14283375ef69bb5d6
+Merge: 141fbeb 7fbc662
+Author: Théo Jacquin <>
+Date:   Mon Mar 5 18:17:03 2018 +0100
+
+    Merge branch 'master' of https://github.com/ToJack/SportDevProject
+
+commit 141fbeb578f3973f75dbbb24c9abe17a87101be3
+Author: Théo Jacquin <>
+Date:   Mon Mar 5 18:14:29 2018 +0100
+
+    Page connexion et Accounts controller :
+    Remarque : vérifier cohérence des input du form d'inscription
+
+src/Controller/AccountsController.php
+src/Template/Accounts/connexion.ctp
+
+commit 7fbc662394224d41ea4d2d19df69d3383227dad7
+Author: brahimakh <akherraz.brahim75@gmail.com>
+Date:   Mon Mar 5 16:42:12 2018 +0100
+
+    controlleur modification
+
+src/Controller/AccountsController.php
+src/Template/Accounts/mon_compte.ctp
+
+commit f070932cf511ff5338cfc0637568c73e09eb1b31
+Author: Théo Jacquin <>
+Date:   Mon Mar 5 16:12:13 2018 +0100
+
+    l'aide de j
+
+src/Controller/AccountsController.php
+src/Template/Accounts/connexion.ctp
+src/Template/Accounts/mon_compte.ctp
+
+commit f299cf0a52ebeb04dc3c210b87ac2ad3e5b14a2a
+Author: brahimakh <akherraz.brahim75@gmail.com>
+Date:   Tue Feb 20 14:23:06 2018 +0100
+
+    derniere version html
+
+src/Template/Accounts/mon_compte.ctp
+
+commit 1ab54b71a3138461efdd04afded01a18c4fd6adc
+Author: brahimakh <akherraz.brahim75@gmail.com>
+Date:   Tue Feb 20 13:52:18 2018 +0100
+
+    sans recuperation
+
+src/Template/Accounts/mon_compte.ctp
+
+commit 4e0b93f1bcc072c55aaac18ca958efbd0e08eaf6
+Author: brahimakh <akherraz.brahim75@gmail.com>
+Date:   Tue Feb 20 13:51:48 2018 +0100
+
+    Nom, prenom sans la recuperation de données
+
+src/Template/Accounts/mon_compte.ctp
+
+commit cec8ec0dc5b42812ce6b9bd083868a6dc70a1f5c
+Author: Théo Jacquin <>
+Date:   Mon Feb 12 12:48:07 2018 +0100
+
+    erreur trucController "new" L26
+
+src/Controller/TrucController.php
+
+commit d771a41b193f51ff590bdf33c84f58f48d175566
+Author: vicbo <vbonifacio50@gmail.com>
+Date:   Mon Feb 12 12:45:31 2018 +0100
+
+    Début de dev sur Classement
+
+src/Controller/AccountsController.php
+src/Template/Accounts/classements.ctp
+
+commit 22280b8919aaf6026a6621dd1dccfe86a56a739e
+Author: Adrien_Kourganoff <adridri@kourganoff.com>
+Date:   Mon Feb 12 11:48:22 2018 +0100
+
+    Bon nom de dossier (Merci Théo)
+
+src/Controller/AccountsController.php
+src/Template/Accounts/accueil.ctp
+src/Template/Accounts/classements.ctp
+src/Template/Accounts/connexion.ctp
+src/Template/Accounts/mon_compte.ctp
+src/Template/Accounts/objets_connectes.ctp
+src/Template/Accounts/sceances.ctp
+
+commit 97b25091cffb0dac19240e2e90bff11240468a74
+Author: Adrien_Kourganoff <adridri@kourganoff.com>
+Date:   Mon Feb 12 11:06:43 2018 +0100
+
+    Test git
+
+src/Template/Layout/default.ctp
+
+commit 2a2d83b53a60f235be038537f64339b02917d1f1
+Author: Adrien_Kourganoff <adridri@kourganoff.com>
+Date:   Mon Feb 12 10:32:35 2018 +0100
+
+    Premier test avec les pages de base
+
+src/Controller/SportdevprojectController.php
+src/Controller/TrucController.php
+src/Template/Layout/default.ctp
+src/Template/Sportdevproject/accueil.ctp
+src/Template/Sportdevproject/classements.ctp
+src/Template/Sportdevproject/connexion.ctp
+src/Template/Sportdevproject/mon_compte.ctp
+src/Template/Sportdevproject/objets_connectes.ctp
+src/Template/Sportdevproject/sceances.ctp
+src/Template/Truc/machin.ctp
+src/Template/Truc/register.ctp
+
+commit 7d85bcf79a6989744df0e8ab84ffcec7f1cfd301
+Author: Théo Jacquin <>
+Date:   Mon Feb 5 11:38:45 2018 +0100
+
+    FirstCommitA
+
+.editorconfig
+.gitattributes
+.github/ISSUE_TEMPLATE.md
+.github/PULL_REQUEST_TEMPLATE.md
+.gitignore
+.htaccess
+.travis.yml
+README.md
+bin/cake
+bin/cake.bat
+bin/cake.php
+composer.json
+composer.lock
+config/.env.default
+config/app.default.php
+config/bootstrap.php
+config/bootstrap_cli.php
+config/paths.php
+config/requirements.php
+config/routes.php
+config/schema/i18n.sql
+config/schema/sessions.sql
+index.php
+phpunit.xml.dist
+plugins/empty
+src/Application.php
+src/Console/Installer.php
+src/Controller/AppController.php
+src/Controller/Component/empty
+src/Controller/ErrorController.php
+src/Controller/PagesController.php
+src/Controller/TrucController.php
+src/Model/Behavior/empty
+src/Model/Entity/empty
+src/Model/Table/empty
+src/Shell/ConsoleShell.php
+src/Template/Element/Flash/default.ctp
+src/Template/Element/Flash/error.ctp
+src/Template/Element/Flash/success.ctp
+src/Template/Email/html/default.ctp
+src/Template/Email/text/default.ctp
+src/Template/Error/error400.ctp
+src/Template/Error/error500.ctp
+src/Template/Layout/Email/html/default.ctp
+src/Template/Layout/Email/text/default.ctp
+src/Template/Layout/ajax.ctp
+src/Template/Layout/default.ctp
+src/Template/Layout/error.ctp
+src/Template/Layout/rss/default.ctp
+src/Template/Pages/home.ctp
+src/Template/Truc/machin.ctp
+src/View/AjaxView.php
+src/View/AppView.php
+src/View/Helper/empty
+tests/Fixture/empty
+tests/TestCase/ApplicationTest.php
+tests/TestCase/Controller/Component/empty
+tests/TestCase/Controller/PagesControllerTest.php
+tests/TestCase/Model/Behavior/empty
+tests/TestCase/View/Helper/empty
+tests/bootstrap.php
+webroot/.htaccess
+webroot/css/base.css
+webroot/css/cake.css
+webroot/css/home.css
+webroot/favicon.ico
+webroot/font/cakedingbats-webfont.eot
+webroot/font/cakedingbats-webfont.svg
+webroot/font/cakedingbats-webfont.ttf
+webroot/font/cakedingbats-webfont.woff
+webroot/font/cakedingbats-webfont.woff2
+webroot/img/cake-logo.png
+webroot/img/cake.icon.png
+webroot/img/cake.logo.svg
+webroot/img/cake.power.gif
+webroot/index.php
+webroot/js/empty
