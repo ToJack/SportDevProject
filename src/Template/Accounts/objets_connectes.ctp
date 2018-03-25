@@ -3,7 +3,7 @@
 </section>
 <div class='col-xs-12'>
 <?php
-  if($check!=0){
+  if(count($check)>0){
     echo "<h2>Vos Objets Connectés</h2>
     <table class='table'>
       <tr>
