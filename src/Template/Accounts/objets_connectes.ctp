@@ -33,9 +33,19 @@
         }
       }
       echo "</table>";
+      echo $this->Form->create('AddObjet',array('inputDefaults' => array('div' => 'form-group','wrapInput' => false,'class' => 'form-control'))),
+        $this->Form->input("serial", ['label' => 'Serial : ', 'class'=>"form-control"]),
+        $this->Form->input("description", ['label' => 'Description : ', 'class'=>"form-control"]),
+        $this->Form->submit("Ajouter", array('name' => 'AddDevice', 'class'=>"btn btn-primary")),
+        $this->Form->end();
   }
   else{
     echo "<h2>Aucuns Objets Connectés sur votre compte</h2>";
+    echo $this->Form->create('AddObjet',array('inputDefaults' => array('div' => 'form-group','wrapInput' => false,'class' => 'form-control'))),
+      $this->Form->input("serial", ['label' => 'Serial : ', 'class'=>"form-control"]),
+      $this->Form->input("description", ['label' => 'Description : ', 'class'=>"form-control"]),
+      $this->Form->submit("Ajouter", array('name' => 'AddDevice', 'class'=>"btn btn-primary")),
+      $this->Form->end();
   }
 ?>
 </div>
