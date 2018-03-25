@@ -1,5 +1,7 @@
-<h1>Mes Objets Connectés</h1>
-
+<section class="col-xs-4 col-xs-offset-4 titre">
+  <h1 class='text-center'>Mes Objets Connectés</h1>
+</section>
+<div class='col-xs-12'>
 <?php
   if($check!=0){
     echo "<h2>Vos Objets Connectés</h2>
@@ -7,11 +9,10 @@
       <tr>
         <th>Numéro de série</th>
         <th>Description</th>
-        <th>Vérifier</th>
-        <th>Ajouter</th>
-        <th>Supprimer</th>
-      </tr>",
-      $this->Form->create();
+        <th>Vérifié</th>
+        <th></th>
+        <th></th>
+      </tr>";
       foreach($trustedDevices as $tDevices){
         $option=array('X'=>'Untrusted','O'=>'Trusted');
         $attributes=array('legend'=>false);
@@ -20,23 +21,21 @@
           echo "<tr>
             <td>".$tDevices->serial."</td>
             <td>".$tDevices->description."</td>
-            <td>"."non"."</td>";
-          echo "<td>".$this->Form->radio('trusted', $option, $attributes)."</td></tr>";
+            <td>".$this->Html->Link("Valider", ["controller"=>"Accounts", "action"=>"valider/".$tDevices->id])."</td>
+            <td>".$this->Html->Link("Supprimer", ["controller"=>"Accounts", "action"=>"supprimer/".$tDevices->id])."</td></tr>";
         }
         else{
           echo "<tr>
             <td>".$tDevices->serial."</td>
             <td>".$tDevices->description."</td>
-            <td>"."oui"."</td>
-            <td>".
-            $this->Form->radio('trusted', $option, $attributes)."</td></tr>";
+            <td><i class='glyphicon glyphicon-ok-sign'></i></td>
+            <td>".$this->Html->Link("Supprimer", ["controller"=>"Accounts", "action"=>"supprimer/".$tDevices->id])."</td></tr>";
         }
       }
-      echo $this->Form->submit("Valider les modifications",array('name'=> 'ModTrust')),
-           $this->Form->end();
       echo "</table>";
   }
   else{
     echo "<h2>Aucuns Objets Connectés sur votre compte</h2>";
   }
 ?>
+</div>

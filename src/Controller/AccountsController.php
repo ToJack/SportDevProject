@@ -249,7 +249,9 @@ class AccountsController extends AppController
             //blindage de l'email
             $check = $this->Members->find()->where(["email =" => $email_inscription])->toArray();
             if (count($check) > 0) {
-            } //envoie à la bdd
+              $this->Flash->error(__("Cet email possède déjà un compte."));
+            }
+            //envoie à la bdd
             else {
                 $newMember->email = $email_inscription;
                 $hashedpassword = (new DefaultPasswordHasher)->hash($password_inscription);
@@ -314,9 +316,18 @@ class AccountsController extends AppController
         $trustedDevices = $this->Devices->find()->where(['member_id' => $memberId]);
 
         $this->set('trustedDevices', $trustedDevices->toArray());
-        /*if (count($check) > 0) {
-            //$deviceSerial=$this->Devices->find()->where(["serial"]);
-        }*/
+    }
+    public function valider($objetId){
+      $this->loadModel("Devices");
+      if($this->Devices->validate($objetId)){
+        return $this->redirect(['controller'=>'Accounts', 'action'=>'objetsConnectes']);
+      }
+    }
+    public function supprimer($objetId){
+      $this->loadModel("Devices");
+      if($this->Devices->deleteObjet($objetId)){
+        return $this->redirect(['controller'=>'Accounts', 'action'=>'objetsConnectes']);
+      }
     }
 
     public function seances()
