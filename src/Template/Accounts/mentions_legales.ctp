@@ -2,7 +2,7 @@
  <h2 class='text-center'>Mentions légales</h2>
 </section>
 
-<section class=' col-xs-12 mentionb'>
+<section class=' col-xs-12 faqb'>
 <div class='margin-auto'>
   <h2 class='text-center'>1. Mentions légales</h2>
  <p>Conformément à l'article 6 de la loi n° 2004-575 du 21 juin 2004 pour la confiance dans l'économie numérique modifié par l’article 1er de la Loi n°2016-444 du 13 avril 2016, il est précisé aux utilisateurs du site appsport.com l'identité des différents intervenants dans le cadre de sa réalisation et de son suivi :
@@ -12,7 +12,7 @@
 </div>
 </section>
 
-<section class='col-xs-12 mentionw'>
+<section class='col-xs-12 faqw'>
   <div class='margin-auto'>
   <h2 class='text-center'>2. Conditions générales d’utilisation</h2>
 
@@ -22,7 +22,7 @@
   </div>
 </section>
 
-<section class='col-xs-12 mentionb'>
+<section class='col-xs-12 faqb'>
   <div class='margin-auto'>
   <h2 class='text-center'> 3. Description des services fournis </h2>
 <p>Le site appsport.com a pour objet de fournir des informations concernant l’ensemble des activités de sa société Appsport et de son réseau de licenciés de marque et de succursales « Appsport» .
@@ -31,7 +31,7 @@ Toutes les informations indiquées sur le site appsport.com sont données à tit
   </div>
 </section>
 
-<section class='col-xs-12 mentionw'>
+<section class='col-xs-12 faqw'>
   <div class='margin-auto'>
   <h2 class='text-center'>4. Propriété intellectuelle et contrefaçons </h2>
 <p>La Société Appsport est propriétaire des droits de propriété intellectuelle ou détient les droits d’usage sur tous les éléments accessibles sur le site, notamment les textes, images, graphismes, logo, icônes, sons, logiciels.
@@ -40,21 +40,21 @@ Toute exploitation non autorisée du site ou de l’un des éléments qu’il co
 </div>
 </section>
 
-<section class='col-xs-12 mentionb'>
+<section class='col-xs-12 faqb'>
   <div class='margin-auto'>
   <h2 class='text-center'>5. Limitations de responsabilité</h2>
 <p>  Lorsqu’il est permis aux utilisateurs de déposer du contenu sur ce site, la Société Appsport se réserve le droit de supprimer, sans mise en demeure préalable, tout contenu déposé qui contreviendrait à la législation applicable en France, en particulier aux dispositions relatives à la protection des données. Le cas échéant, la Société Appsport’. se réserve également la possibilité de mettre en cause la responsabilité civile et/ou pénale de l’utilisateur, notamment en cas de message à caractère raciste, injurieux, diffamant, ou pornographique, quel que soit le support utilisé (texte, photographie…). </p>
 </div>
 </section>
 
-<section class='col-xs-12 mentionw'>
+<section class='col-xs-12 faqw'>
   <div class='margin-auto'>
   <h2 class='text-center'> 6. Gestion des données personnelles </h2>
   <p>Les données personnelles sont notamment protégées au titre de la loi n° 78-87 du 6 janvier 1978, la loi n° 2004-801 du 6 août 2004, l'article L. 226-13 du Code pénal et la Directive Européenne du 24 octobre 1995. </p>
   </div>
 </section>
 
-<section class='col-xs-12 mentionb'>
+<section class='col-xs-12 faqb'>
   <div class='margin-auto'>
   <h2 class='text-center'> 7. Liens hypertextes, cookies et géolocalisation </h2>
 <p> La navigation sur le site appsport.com est susceptible de provoquer l’installation de cookie(s) sur l’ordinateur de l’utilisateur. Un cookie est un fichier de petite taille, qui ne permet pas l’identification de l’utilisateur, mais qui enregistre des informations relatives à la navigation d’un ordinateur sur un site. Les données ainsi obtenues visent à faciliter la navigation ultérieure sur le site, et ont également vocation à permettre diverses mesures de fréquentation.
@@ -63,7 +63,7 @@ Toute exploitation non autorisée du site ou de l’un des éléments qu’il co
 </div>
 </section>
 
-<section class='col-xs-12 mentionw'>
+<section class='col-xs-12 faqw'>
   <div class='margin-auto'>
   <h2 class='text-center'>8. Hébergement de contenus fournis par des tiers</h2>
  <p> Certaines sections de ce site et notamment les pages des clubs sont des espaces gérés librement par chaque licencié indépendant exploitant le Club concerné. Les franchisés publient également sur ce site des promotions, informations, publicités et autres avis liés à leurs exploitations et leur zone de chalandise.

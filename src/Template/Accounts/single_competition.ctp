@@ -61,11 +61,13 @@ echo "<div class='col-xs-12'>
   echo "<h2>Classement</h2>
 
   <table class='table'>
-    <tr>
-      <th>Rang</th>
-      <th>Joueur</th>
-      <th>Points</th>
-    </tr>";
+    <thead>
+      <tr>
+        <th>Rang</th>
+        <th>Joueur</th>
+        <th>Points</th>
+      </tr>
+    </thead>";
     $rang=1;
     foreach($classements as $classement){
       //affichage
