@@ -313,7 +313,7 @@ class AccountsController extends AppController
 //Fonctions pour singleCompetition
     public function ScoreMatch($id, $joueur)
     {
-        $condition = $this->Logs->find()->where(["workout_id =" => $id, 'OR' => ["log_type" => "Points", "log_type" => "points"]]);
+        $condition = $this->Logs->find()->where(["workout_id =" => $id, 'OR' => ["log_type" => "Points", "log_type" => "points"]])->order(['date'=>'DESC']);
         if ($condition->toArray() != null) {
             $score = "J" . $joueur . "(" . $condition->first()->log_value . ")";
         } else {
@@ -328,9 +328,12 @@ class AccountsController extends AppController
         if (($score != "J1(-)") && ($condition->toArray() != null)) {
             $statut = "Match Terminé";
         } else {
-            $matchDate = $this->Workouts->find()->where(["id =" => $id])->first()->date;
-            if($actual_time>$matchDate)$statut = "Match a venir";
-            if($actual_time<$matchDate)$statut = "Match en Cours";
+            $seancesFuturs = $this->Workouts->find()->where(["id =" => $id])->where(["date >" => $actual_time]);
+            $seancesActuelles = $this->Workouts->find()->where(["id =" => $id])->where(["date <" => $actual_time])->andWhere(["end_date >" => $actual_time]);
+            $seancesPassees = $this->Workouts->find()->where(["id =" => $id])->where(["date <" => $actual_time])->andWhere(["end_date <" => $actual_time]);
+            if($seancesActuelles->toArray())$statut = "Match en Cours";
+            if($seancesPassees->toArray())$statut = "Entrer les scores";
+            if($seancesFuturs->toArray())$statut = "Match a venir";
         }
         return $statut;
     }
