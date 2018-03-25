@@ -44,7 +44,7 @@
         </div>";
 }
 else {
-  echo "<h2>Aucune compétitions</h2>";
+  echo "<h2>Aucune compétition</h2>";
 }
 ?>
 <!---Formulaires--->

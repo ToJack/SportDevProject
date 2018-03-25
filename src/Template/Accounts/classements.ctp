@@ -4,37 +4,36 @@
 <div class='col-xs-12'>
 <?php
 $i=0;
-if($sport==null)echo "Aucun match de tournoi n'a eu lieu";
-else{
-  while($i<18)
+$vide=1;
+while($i<18)
+{
+  if($sport[$i]!=null)
   {
-    if($sport[$i]!=null)
-    {
-      echo "
-      <h2>".$listSport[$i]."</h2>
-      <table class='table'>
-        <thead>
-          <tr>
-            <th>Rang</th>
-            <th>Joueur</th>
-            <th>Points</th>
-          </tr>
-        </thead>";
-      $rang=1;
-      foreach($sport[$i] as $membre){
-        //affichage
-        echo "<tr>
-          <td>".$rang."</td>
-          <td>".$membre[0]."</td>
-          <td>".$membre[1]."</td>";
-        echo "</tr>";
-        $rang++;
-      }
+    echo "
+    <h2>".$listSport[$i]."</h2>
+    <table class='table'>
+      <thead>
+        <tr>
+          <th>Rang</th>
+          <th>Joueur</th>
+          <th>Points</th>
+        </tr>
+      </thead>";
+    $rang=1;
+    foreach($sport[$i] as $membre){
+      //affichage
+      echo "<tr>
+        <td>".$rang."</td>
+        <td>".$membre[0]."</td>
+        <td>".$membre[1]."</td>";
+      echo "</tr>";
+      $rang++;
     }
-    $i++;
+    $vide=0;
   }
+  $i++;
 }
-
 echo "</table>";
+if($vide==1)echo "<h2 class='text-center'>Aucun match de compétition n'a eu lieu</h2>";
 ?>
 </div>

@@ -25,13 +25,13 @@ body {
 .footer {
     position: absolute;
     bottom: 0;
-    min-height: 110px;
+    min-height: 130px;
     background: #D4A59A;
 
   }
 
 .margeFooter{
-  min-height: 125px;
+  min-height: 145px;
 }
 .titre-footer{
   font-weight: bold;
@@ -84,7 +84,7 @@ body {
 .photoProfil{
   border-radius: 5px;
   height:150px;
-  max-width: 200px; 
+  max-width: 200px;
 }
 
 .margin-auto{
