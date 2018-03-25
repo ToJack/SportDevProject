@@ -162,6 +162,28 @@ class AccountsController extends AppController
         $trustedDevices = $this->Devices->find()->where(['member_id' => $memberId]);
 
         $this->set('trustedDevices', $trustedDevices->toArray());
+        if (isset($this->request->data["AddDevice"])) {
+            $devices = $this->Devices->find();
+            $newDevice = $this->Devices->newEntity();
+            //attribution des valeurs
+            $serial = $this->request->data("serial");
+            $description = $this->request->data("description");
+
+            //blindage du serial
+            $checkSerial = $this->Devices->find()->where(["serial =" => $serial])->toArray();
+            if (count($checkSerial) > 0) {
+              $this->Flash->error(__("Cet objet est déjà relié à un compte"));
+            }
+            //envoie à la bdd
+            else {
+                $newDevice->member_id = $memberId;
+                $newDevice->serial = $serial;
+                $newDevice->description = $description;
+                $newDevice->trusted = 0;
+                $this->Devices->save($newDevice);
+                return $this->redirect(['Controller' => 'Accounts', 'action' => 'objetsConnectes']);
+            }
+        }
     }
     public function valider($objetId){
       $this->loadModel("Devices");
