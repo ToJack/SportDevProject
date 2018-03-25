@@ -264,7 +264,7 @@ class AccountsController extends AppController
             //envoie à la bdd
             $newLog->member_id = $this->Auth->user('id');
             $newLog->workout_id = $idSeance;
-            $newLog->device_id = "33333";
+            $newLog->device_id = "0";
             $newLog->date = $actual_time;
             $newLog->location_latitude = $latitude;
             $newLog->location_logitude = $longitude;
@@ -422,14 +422,14 @@ class AccountsController extends AppController
             $newMatch->end_date = $dateFin;
             $newMatch->location_name = $lieu;
             $newMatch->description = " ";
-            $newMatch->sport = $listSport[$thisContests->id];
+            $newMatch->sport = $thisContests->type;
             $newMatch->contest_id = $id_contest;
 
             $newMatch2->date = $dateTamp;
             $newMatch2->end_date = $dateFin;
             $newMatch2->location_name = $lieu;
             $newMatch2->description = " ";
-            $newMatch2->sport = $listSport[$thisContests->id];
+            $newMatch2->sport = $thisContests->type;
             $newMatch2->contest_id = $id_contest;
             //envoie à la bdd joueur 1
             $newMatch->member_id = $J1Id->id;

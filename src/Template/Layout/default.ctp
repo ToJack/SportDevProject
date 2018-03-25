@@ -84,7 +84,7 @@
     <div class="container-fluid text-center">
         <div class="row">
             <!--First column-->
-            <div class="col-xs-8 border-right">
+            <div class="col-xs-8 ">
                 <h5 class="text-uppercase titre-footer">APP Sport</h5>
                 <p class='text-footer'>Ce site à été crée dans le cadre d'un projet de 4ème année de la majeure OCRES à
                     l'ECE
@@ -93,7 +93,7 @@
                 <p class='text-footer'>Options : CE</p>
             </div>
             <!--Second column-->
-            <div class="col-xs-4">
+            <div class="col-xs-4 border-left">
                 <h5 class="text-uppercase titre-footer">Liens</h5>
                 <ul class="list-unstyled text-footer">
                     <li><?= $this->html->link("Contact", ['controller' => 'Accounts', 'action' => 'contact']) ?></li>
