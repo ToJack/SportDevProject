@@ -6,17 +6,17 @@ html {
 body {
   padding-top: 39px;
 }
-@media (max-width: 1062px) {
+@media (max-width: 893px) {
   body {
     padding-top: 89px;
   }
-  @media (max-width: 952px) {
+  @media (max-width: 783px) {
     body {
       padding-top: 139px;
     }
     @media (max-width: 767px) {
       body {
-        padding-top: 462px;
+        padding-top: 346px;
       }
     }
   }
@@ -81,14 +81,16 @@ body {
   margin-bottom: 30px;
 }
 
+.photoProfil{
+  border-radius: 5px;
+  height:150px;
+  max-width: 200px; 
+}
+
 .margin-auto{
 margin:auto;
 }
-.mentionb, .mentionw{
-  min-height:190px;
-  display:flex;
-  flex-direction: column;
-}
+
 .faqb, .faqw{
   min-height:190px;
   display:flex;
@@ -100,27 +102,9 @@ margin:auto;
   box-shadow: 5px 5px 13px #555;
   border-radius:5px;
 }
-.mentionb{
-  background: #5F6791;
-  color: #ffffff;
-  box-shadow: 5px 5px 13px #555;
-  border-radius:5px;
-}
 
-.pageaccueil, .ap{
-  text-align: center;
-}
 
-.rep {
-  text-align: right;
-}
-.ai img{
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-
- .contenu {
+ .displayTextPhotoDev {
    position: relative;
    max-width: 70%;
  }
@@ -138,17 +122,17 @@ margin:auto;
   left: 0;
   right: 0;
   height:50%;
-  width: 50%;
+  width: 75%;
   opacity: 0;
   transition: .5s ease;
   background-color: #5F6791;
  }
 
- .contenu:hover .couche {
-  opacity: 1;
+ .displayTextPhotoDev:hover .couche {
+  opacity: 0.8;
  }
 
- .texte {
+ .textePhotoDev {
   color: white;
   font-size: 20px;
   position: absolute;

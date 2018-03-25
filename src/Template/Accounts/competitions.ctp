@@ -9,11 +9,13 @@
   echo "
     <div class='col-xs-12'>
       <table class='table'>
-        <tr>
-          <th>Nom</th>
-          <th>Sport</th>
-          <th>Description</th>
-        </tr>";
+        <thead>
+          <tr>
+            <th>Nom</th>
+            <th>Sport</th>
+            <th>Description</th>
+          </tr>
+        </thead>";
 
         foreach($contests as $contest){
           //affichage
@@ -48,13 +50,13 @@ else {
 <!---Formulaires--->
 
 <?php
-echo "<div class='col-xs-12'>",
+echo "<div class='col-xs-6 col-xs-offset-3'>",
           "<h2>Ajouter une compétition</h2>",
-             $this->Form->create(),
-             $date=$this->Form->control('name', ['type' => 'text',"label"=>"Nom :",'required' => true  ]),
-             $this->Form->control('sport', ['type' => 'select'  ,"options"=>$listSport,'empty' => 'Choisissez',"label"=>"Sport : ",'required' => true] ),
-             $this->Form->control('description', ['type' => 'textarea',"label"=>"Description : ", 'required'=> true]),
-             $this->Form->submit("Ajouter compétition",array('name' => 'AddContest')),
+             $this->Form->create('competition', array('inputDefaults' => array('div' => 'form-group','wrapInput' => false,'class' => 'form-control'),'class' => 'well')),
+             $date=$this->Form->control('name', ['type' => 'text',"label"=>"Nom :",'required' => true , 'class'=>"form-control" ]),
+             $this->Form->control('sport', ['type' => 'select'  ,"options"=>$listSport,'empty' => 'Choisissez',"label"=>"Sport : ",'required' => true, 'class'=>"form-control"] ),
+             $this->Form->control('description', ['type' => 'textarea',"label"=>"Description : ", 'required'=> true, 'class'=>"form-control"]),
+             $this->Form->submit("Ajouter compétition",array('name' => 'AddContest','class'=>"btn btn-primary")),
              $this->Form->end(),
         "</div>";
 
