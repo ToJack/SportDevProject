@@ -1,9 +1,10 @@
+<section class='col-xs-4 col-xs-offset-4 titre'>
+  <h1 class='text-center'><?=$name_contest?></h1>
+</section>
+<div class='col-xs-12'>
+
 <?php if($matchs!=null)
 {
-  echo "  <section class='col-xs-4 col-xs-offset-4 titre'>
-    <h1 class='text-center'>".$name_contest."</h1>
-  </section>
-  <div class='col-xs-12'>";
   echo "<h2>Listes des matchs</h2>
 
   <table class='table'>
@@ -33,6 +34,7 @@
       echo "</tr>";
     }
 }
+else{echo "<h2 class='text-center'>Aucun match n'a eu lieu pour ce tournoi</h2>";}
 if($matchs!=null)echo "</table> Pour ajouter un score à un match ajouter un relevé 'Points' à la séance"?>
 
 
@@ -83,3 +85,4 @@ echo "<div class='col-xs-12'>
 if($classements!=null)echo "</table>";
 
 if($matchs!=null) echo '</div>';?>
+</div>

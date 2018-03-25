@@ -96,12 +96,12 @@
             <div class="col-xs-4">
                 <h5 class="text-uppercase titre-footer">Liens</h5>
                 <ul class="list-unstyled text-footer">
-                    <li <?= ($this->request->params['action'] == "contact" ? 'class="active"' : '') ?>><?= $this->html->link("Contact", ['controller' => 'Accounts', 'action' => 'contact']) ?></li>
-                    <li <?= ($this->request->params['action'] == "equipe" ? 'class="active"' : '') ?>><?= $this->html->link("Equipe", ['controller' => 'Accounts', 'action' => 'equipe']) ?></li>
-                    <li <?= ($this->request->params['action'] == "faq" ? 'class="active"' : '') ?>><?= $this->html->link("FAQ", ['controller' => 'Accounts', 'action' => 'faq']) ?></li>
-                    <li <?= ($this->request->params['action'] == "mentionsLegales" ? 'class="active"' : '') ?>><?= $this->html->link("Mentions légales", ['controller' => 'Accounts', 'action' => 'mentionsLegales']) ?></li>
-                    <li <?= ($this->request->params['action'] == "version" ? 'class="active"' : '') ?>><?= $this->html->link("Version", ['controller' => 'Accounts', 'action' => 'version']) ?></li>
-
+                    <li><?= $this->html->link("Contact", ['controller' => 'Accounts', 'action' => 'contact']) ?></li>
+                    <li><?= $this->html->link("Equipe", ['controller' => 'Accounts', 'action' => 'equipe']) ?></li>
+                    <li><?= $this->html->link("FAQ", ['controller' => 'Accounts', 'action' => 'faq']) ?></li>
+                    <li><?= $this->html->link("Mentions légales", ['controller' => 'Accounts', 'action' => 'mentionsLegales']) ?></li>
+                    <li><?= $this->html->link("Versioning","/versions.log") ?></li>
+                    <li><?= $this->Html->link('Site online', 'http://www.rescord.fr/SportDevProject' )?></li>
                 </ul>
             </div>
         </div>
