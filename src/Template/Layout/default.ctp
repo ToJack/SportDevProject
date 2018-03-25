@@ -101,7 +101,7 @@
                     <li><?= $this->html->link("FAQ", ['controller' => 'Accounts', 'action' => 'faq']) ?></li>
                     <li><?= $this->html->link("Mentions légales", ['controller' => 'Accounts', 'action' => 'mentionsLegales']) ?></li>
                     <li><?= $this->html->link("Versioning","/versions.log") ?></li>
-                    <li><?= $this->Html->link('Site online', 'http://www.rescord.fr/SportDevProject' )?></li>
+                    <li><?= $this->Html->link('Site online', 'http://rescord.fr/SportDevProject' )?></li>
                 </ul>
             </div>
         </div>
