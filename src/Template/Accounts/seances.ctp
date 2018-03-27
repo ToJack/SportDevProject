@@ -1,11 +1,11 @@
-<section class="col-xs-4 col-xs-offset-4 titre">
+--<section class="col-xs-4 col-xs-offset-4 titre">
   <h1 class='text-center'>Mes séances</h1>
 </section>
 <div class='col-xs-12'>
 
 <?php if($seancesFuturs==null && $seancesPassees==null && $seancesActuelles==null) echo "<h2>Aucune séance</h2>"?>
 
-<!---Premier tableau--->
+<!--Premier tableau-->
 <?php if($seancesActuelles!=null)echo "<h2>Séances en cours</h2>
 
 <table class='table'>
@@ -57,13 +57,13 @@
 
 if($seancesActuelles!=null)echo "</table>"?>
 
-<!---Formulaires--->
+<!--Formulaires-->
 
 <?php
 echo "<div class='col-xs-12'>
-        <div class='col-xs-12 col-sm-6'>",
+        <div class='col-xs-12 col-sm-6 well'>",
           "<h2>Ajouter une séance</h2>",
-             $this->Form->create('seance', array('inputDefaults' => array('div' => 'form-group','wrapInput' => false,'class' => 'form-control'),'class' => 'well')),
+             $this->Form->create(),
              $date=$this->Form->control('date', ['type' => 'date','minYear'=>$actual_time->year,"label"=>"Date :",'required' => true  ]),
              $this->Form->control('heure', ['type' => 'time',"label"=>"Heure : ",'default'=>$actual_time->hour.":".$actual_time->minute,'required' => true]),
              $this->Form->control('duree', ['type' => 'number','min'=>0,'max'=>1439,'default'=>'60',"label"=>"Durée (en min) : ",'required' => true, 'class'=>"form-control"]),
@@ -76,13 +76,13 @@ echo "<div class='col-xs-12'>
 
 
 //Ajouter Relevé
-        "<div id='FormReleve' class='col-xs-12 col-sm-6' style='display:none;'>
+        "<div id='FormReleve' class='col-xs-12 col-sm-6 well' style='display:none;'>
             <h2>Ajouter un relevé à une séance</h2>",
             "<div id='seanceReleve'></div>",
-            $this->Form->create('Releve', array('inputDefaults' => array('div' => 'form-group','wrapInput' => false,'class' => 'form-control'),'class' => 'well')),
+            $this->Form->create(),
             $this->Form->control('workoutId', ['type' => 'number','style' => 'display:none',"id"=>'idSeance','label'=>false, 'class'=>"form-control"]),
-            $this->Form->control('latitude', ['type' => 'decimal',"label"=>"Latitude : ",'required' => true, 'class'=>"form-control"]),
-            $this->Form->control('longitude', ['type' => 'decimal',"label"=>"Longitude : ",'required' => true, 'class'=>"form-control"]),
+            $this->Form->control('latitude', ['type' => 'number', 'step' => 'any',"label"=>"Latitude : ",'required' => true, 'class'=>"form-control"]),
+            $this->Form->control('longitude', ['type' => 'number', 'step' => 'any',"label"=>"Longitude : ",'required' => true, 'class'=>"form-control"]),
             $this->Form->control('releve', ['type' => 'text',"label"=>"Relevé : ",'required' => true, 'class'=>"form-control"]),
             $this->Form->control('value', ['type' => 'number',"label"=>"Valeur : ",'required' => true, 'class'=>"form-control"]),
             $this->Form->submit("Ajouter relevé",array('name' => 'AddReleve','class'=>"btn btn-primary")),
@@ -91,7 +91,7 @@ echo "<div class='col-xs-12'>
     "</div>";
 ?>
 
-<!---Deuxieme tableau--->
+<!--Deuxieme tableau-->
 
 <?php if($seancesFuturs!=null)
 {
@@ -126,7 +126,7 @@ echo "<div class='col-xs-12'>
   echo "</table>";
 }?>
 
-<!---Troisième tableau--->
+<!--Troisième tableau-->
 
 <?php if($seancesPassees!=null)echo "<h2>Séances passées</h2>
 

@@ -50,9 +50,9 @@ else {
 <!--Formulaires-->
 
 <?php
-echo "<div class='col-xs-6 col-xs-offset-3'>",
+echo "<div class='col-xs-6 col-xs-offset-3 well'>",
           "<h2>Ajouter une compétition</h2>",
-             $this->Form->create('competition' , array('div' => 'form-group', 'wrapInput' => false,'class' => 'form-control well')),
+             $this->Form->create(),
              $date=$this->Form->control('name', ['type' => 'text',"label"=>"Nom :",'required' => true , 'class'=>"form-control" ]),
              $this->Form->control('sport', ['type' => 'select'  ,"options"=>$listSport,'empty' => 'Choisissez',"label"=>"Sport : ",'required' => true, 'class'=>"form-control"] ),
              $this->Form->control('description', ['type' => 'textarea',"label"=>"Description : ", 'required'=> true, 'class'=>"form-control"]),

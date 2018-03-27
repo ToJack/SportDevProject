@@ -5,7 +5,7 @@
   <div class='col-xs-8 col-xs-offset-2 well'>
     <?php
     echo "<div class='col-xs-5 text-center'>";
-      echo $this->Html->image($adressePhoto, array('alt' => 'photo de profil', 'height'=>'150px', 'class'=>"photoProfil"));
+      echo $this->Html->image($adressePhoto, array('alt' => 'photo de profil', 'height'=>'150', 'class'=>"photoProfil"));
     echo "</div>";
     echo "<div class='col-xs-7'>";
       foreach($membres as $member){
