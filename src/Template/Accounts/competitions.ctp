@@ -20,7 +20,7 @@
         foreach($contests as $contest){
           //affichage
           echo "<tr>
-            <td>".$this->html->link($contest->name,['controller' => 'Accounts','action' => 'singleCompetition/'.$contest->id])."</td>
+            <td>".$this->Html->link($contest->name,['controller' => 'Accounts','action' => 'singleCompetition/'.$contest->id])."</td>
             <td>".$contest->type."</td>
             <td>".$contest->description."</td>
           </tr>

@@ -49,21 +49,21 @@
         </div>
         <ul class="nav navbar-nav">
             <!---accueil --->
-            <li <?= ($this->request->params['action'] == "accueil" ? 'class="active"' : '') ?>><?= $this->html->link("Accueil", ['controller' => 'Accounts', 'action' => 'Accueil']) ?> </li>
+            <li <?= ($this->request->params['action'] == "accueil" ? 'class="active"' : '') ?>><?= $this->Html->link("Accueil", ['controller' => 'Accounts', 'action' => 'Accueil']) ?> </li>
             <!---connexion --->
-            <?php if (!$authUser) echo "<li " . ($this->request->params['action'] == "login" ? 'class="active"' : '') . ">" . $this->html->link("Connexion", ['controller' => 'Accounts', 'action' => 'login']) . " </li>"; ?>
+            <?php if (!$authUser) echo "<li " . ($this->request->params['action'] == "login" ? 'class="active"' : '') . ">" . $this->Html->link("Connexion", ['controller' => 'Accounts', 'action' => 'login']) . " </li>"; ?>
             <!---classements --->
-            <li <?= ($this->request->params['action'] == "classements" ? 'class="active"' : '') ?>><?= $this->html->link("Classements", ['controller' => 'Accounts', 'action' => 'Classements']) ?></li>
+            <li <?= ($this->request->params['action'] == "classements" ? 'class="active"' : '') ?>><?= $this->Html->link("Classements", ['controller' => 'Accounts', 'action' => 'Classements']) ?></li>
             <!---competitions --->
-            <?php if ($authUser) echo "<li " . ($this->request->params['action'] == "competitions" ? 'class="active"' : '') . ">" . $this->html->link("Compétitions", ['controller' => 'Accounts', 'action' => 'competitions']) . " </li>"; ?>
+            <?php if ($authUser) echo "<li " . ($this->request->params['action'] == "competitions" ? 'class="active"' : '') . ">" . $this->Html->link("Compétitions", ['controller' => 'Accounts', 'action' => 'competitions']) . " </li>"; ?>
             <!---Mon compte --->
-            <?php if ($authUser) echo "<li " . ($this->request->params['action'] == "monCompte" ? 'class="active"' : '') . ">" . $this->html->link("Mon compte", ['controller' => 'Accounts', 'action' => 'MonCompte']) . " </li>"; ?>
+            <?php if ($authUser) echo "<li " . ($this->request->params['action'] == "monCompte" ? 'class="active"' : '') . ">" . $this->Html->link("Mon compte", ['controller' => 'Accounts', 'action' => 'MonCompte']) . " </li>"; ?>
             <!---Mes objets co --->
-            <?php if ($authUser) echo "<li " . ($this->request->params['action'] == "objetsConnectes" ? 'class="active"' : '') . ">" . $this->html->link("Mes objets connectés", ['controller' => 'Accounts', 'action' => 'ObjetsConnectes']) . " </li>"; ?>
+            <?php if ($authUser) echo "<li " . ($this->request->params['action'] == "objetsConnectes" ? 'class="active"' : '') . ">" . $this->Html->link("Mes objets connectés", ['controller' => 'Accounts', 'action' => 'ObjetsConnectes']) . " </li>"; ?>
             <!---Mes seances --->
-            <?php if ($authUser) echo "<li " . ($this->request->params['action'] == "seances" ? 'class="active"' : '') . ">" . $this->html->link("Séances", ['controller' => 'Accounts', 'action' => 'seances']) . " </li>"; ?>
+            <?php if ($authUser) echo "<li " . ($this->request->params['action'] == "seances" ? 'class="active"' : '') . ">" . $this->Html->link("Séances", ['controller' => 'Accounts', 'action' => 'seances']) . " </li>"; ?>
             <!---Déconnexion --->
-            <?php if ($authUser) echo "<li class='pull-right'>" . $this->html->link("Déconnexion", ['controller' => 'Accounts', 'action' => 'logout']) . " </li>"; ?>
+            <?php if ($authUser) echo "<li class='pull-right'>" . $this->Html->link("Déconnexion", ['controller' => 'Accounts', 'action' => 'logout']) . " </li>"; ?>
     </div>
 </nav>
 
@@ -96,11 +96,11 @@
             <div class="col-xs-4 border-left">
                 <h5 class="text-uppercase titre-footer">Liens</h5>
                 <ul class="list-unstyled text-footer">
-                    <li><?= $this->html->link("Contact", ['controller' => 'Accounts', 'action' => 'contact']) ?></li>
-                    <li><?= $this->html->link("Equipe", ['controller' => 'Accounts', 'action' => 'equipe']) ?></li>
-                    <li><?= $this->html->link("FAQ", ['controller' => 'Accounts', 'action' => 'faq']) ?></li>
-                    <li><?= $this->html->link("Mentions légales", ['controller' => 'Accounts', 'action' => 'mentionsLegales']) ?></li>
-                    <li><?= $this->html->link("Versioning","/versions.log") ?></li>
+                    <li><?= $this->Html->link("Contact", ['controller' => 'Accounts', 'action' => 'contact']) ?></li>
+                    <li><?= $this->Html->link("Equipe", ['controller' => 'Accounts', 'action' => 'equipe']) ?></li>
+                    <li><?= $this->Html->link("FAQ", ['controller' => 'Accounts', 'action' => 'faq']) ?></li>
+                    <li><?= $this->Html->link("Mentions légales", ['controller' => 'Accounts', 'action' => 'mentionsLegales']) ?></li>
+                    <li><?= $this->Html->link("Versioning","/versions.log") ?></li>
                     <li><?= $this->Html->link('Site online', 'http://rescord.fr/SportDevProject' )?></li>
                 </ul>
             </div>
