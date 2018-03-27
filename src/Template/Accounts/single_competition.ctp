@@ -30,8 +30,7 @@
         <td>".$match[4]."</td>
         <td>".$match[5]."</td>
         <td>".$match[6]."</td>
-        <td>"."</td>";
-      echo "</tr>";
+        </tr>";
     }
 }
 else{echo "<h2 class='text-center'>Aucun match n'a eu lieu pour ce tournoi</h2>";}
@@ -42,9 +41,9 @@ if($matchs!=null)echo "</table> Pour ajouter un score à un match ajouter un rel
 
 <?php
 echo "<div class='col-xs-12'>
-        <div class='col-xs-12 col-sm-6 col-sm-offset-3'>
+        <div class='col-xs-12 col-sm-6 col-sm-offset-3 well'>
           <h2>Ajouter un match</h2>",
-             $this->Form->create('match', array('inputDefaults' => array('div' => 'form-group','wrapInput' => false,'class' => 'form-control'),'class' => 'well')),
+             $this->Form->create(),
              $this->Form->control('J1',['type' => 'select',"label"=>"Joueur 1 : ","options"=>$ListMembre,'empty' => 'Choisissez','required' => true, 'class'=>"form-control"]),
              $this->Form->control('J2',['type' => 'select',"label"=>"Joueur 2 : ","options"=>$ListMembre,'empty' => 'Choisissez','required' => true, 'class'=>"form-control"]),
              $this->Form->control('date', ['type' => 'date','minYear'=>$actual_time->year,"label"=>"Date :",'required' => true , 'class'=>"form-control"]),
@@ -76,13 +75,11 @@ echo "<div class='col-xs-12'>
       echo "<tr>
         <td>".$rang."</td>
         <td>".$classement[0]."</td>
-        <td>".$classement[1]."</td>
-        <td>"."</td>";
+        <td>".$classement[1]."</td>";
       echo "</tr>";
       $rang++;
     }
 }
 if($classements!=null)echo "</table>";
-
-if($matchs!=null) echo '</div>';?>
+?>
 </div>

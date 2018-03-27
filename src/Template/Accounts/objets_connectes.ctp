@@ -11,7 +11,6 @@
         <th>Description</th>
         <th>Vérifié</th>
         <th></th>
-        <th></th>
       </tr>";
       foreach($trustedDevices as $tDevices){
         $option=array('X'=>'Untrusted','O'=>'Trusted');
