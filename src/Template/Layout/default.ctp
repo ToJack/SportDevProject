@@ -71,7 +71,7 @@
 <div id="imgMarginLeft" class="col-xs-1 col-sm-2 affix"></div>
 <div class="col-xs-1 col-sm-2"></div>
 <div id="waitForMarginContenu" class="container clearfix col-xs-10 col-sm-8">
-    <?= $this->Flash->render() ?>
+    <h3><?= $this->Flash->render() ?></h3>
     <?= $this->fetch('content') ?>
 </div>
 <div id="imgMarginRight" class="col-xs-1 col-sm-2 affix"></div>
