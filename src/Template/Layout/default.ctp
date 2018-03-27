@@ -48,21 +48,21 @@
             <a class="navbar-brand">App Sport</a>
         </div>
         <ul class="nav navbar-nav">
-            <!---accueil --->
+            <!--accueil -->
             <li <?= ($this->request->params['action'] == "accueil" ? 'class="active"' : '') ?>><?= $this->Html->link("Accueil", ['controller' => 'Accounts', 'action' => 'Accueil']) ?> </li>
-            <!---connexion --->
+            <!--connexion -->
             <?php if (!$authUser) echo "<li " . ($this->request->params['action'] == "login" ? 'class="active"' : '') . ">" . $this->Html->link("Connexion", ['controller' => 'Accounts', 'action' => 'login']) . " </li>"; ?>
-            <!---classements --->
+            <!--classements -->
             <li <?= ($this->request->params['action'] == "classements" ? 'class="active"' : '') ?>><?= $this->Html->link("Classements", ['controller' => 'Accounts', 'action' => 'Classements']) ?></li>
-            <!---competitions --->
+            <!--competitions -->
             <?php if ($authUser) echo "<li " . ($this->request->params['action'] == "competitions" ? 'class="active"' : '') . ">" . $this->Html->link("Compétitions", ['controller' => 'Accounts', 'action' => 'competitions']) . " </li>"; ?>
-            <!---Mon compte --->
+            <!--Mon compte -->
             <?php if ($authUser) echo "<li " . ($this->request->params['action'] == "monCompte" ? 'class="active"' : '') . ">" . $this->Html->link("Mon compte", ['controller' => 'Accounts', 'action' => 'MonCompte']) . " </li>"; ?>
-            <!---Mes objets co --->
+            <!--Mes objets co -->
             <?php if ($authUser) echo "<li " . ($this->request->params['action'] == "objetsConnectes" ? 'class="active"' : '') . ">" . $this->Html->link("Mes objets connectés", ['controller' => 'Accounts', 'action' => 'ObjetsConnectes']) . " </li>"; ?>
-            <!---Mes seances --->
+            <!--Mes seances -->
             <?php if ($authUser) echo "<li " . ($this->request->params['action'] == "seances" ? 'class="active"' : '') . ">" . $this->Html->link("Séances", ['controller' => 'Accounts', 'action' => 'seances']) . " </li>"; ?>
-            <!---Déconnexion --->
+            <!--Déconnexion -->
             <?php if ($authUser) echo "<li class='pull-right'>" . $this->Html->link("Déconnexion", ['controller' => 'Accounts', 'action' => 'logout']) . " </li>"; ?>
     </div>
 </nav>
