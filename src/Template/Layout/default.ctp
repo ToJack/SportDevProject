@@ -17,8 +17,7 @@
 <html>
 <head>
     <?= $this->Html->charset() ?>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="utf-8">
     <title>
         <?= $this->request->params['action'] ?>
     </title>
@@ -43,7 +42,7 @@
 <body onload=<?= "\"changeImg('" . $adresse . "')\"" ?>>
 <!---navbar fixed--->
 <nav class="navbar navbar-inverse navbar-fixed-top">
-    <div clas="container-fluid">
+    <div class="container-fluid">
         <div class="navbar-header">
             <a class="navbar-brand">App Sport</a>
         </div>
@@ -64,6 +63,7 @@
             <?php if ($authUser) echo "<li " . ($this->request->params['action'] == "seances" ? 'class="active"' : '') . ">" . $this->Html->link("Séances", ['controller' => 'Accounts', 'action' => 'seances']) . " </li>"; ?>
             <!--Déconnexion -->
             <?php if ($authUser) echo "<li class='pull-right'>" . $this->Html->link("Déconnexion", ['controller' => 'Accounts', 'action' => 'logout']) . " </li>"; ?>
+        </ul>
     </div>
 </nav>
 
@@ -71,7 +71,7 @@
 <div id="imgMarginLeft" class="col-xs-1 col-sm-2 affix"></div>
 <div class="col-xs-1 col-sm-2"></div>
 <div id="waitForMarginContenu" class="container clearfix col-xs-10 col-sm-8">
-    <h3><?= $this->Flash->render() ?></h3>
+    <?= $this->Flash->render() ?>
     <?= $this->fetch('content') ?>
 </div>
 <div id="imgMarginRight" class="col-xs-1 col-sm-2 affix"></div>
