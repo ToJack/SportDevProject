@@ -17,7 +17,7 @@
 <html>
 <head>
     <?= $this->Html->charset() ?>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>
         <?= $this->request->params['action'] ?>
     </title>
@@ -40,7 +40,7 @@
     ?>
 </head>
 <body onload=<?= "\"changeImg('" . $adresse . "')\"" ?>>
-<!---navbar fixed--->
+<!--navbar fixed-->
 <nav class="navbar navbar-inverse navbar-fixed-top">
     <div class="container-fluid">
         <div class="navbar-header">
