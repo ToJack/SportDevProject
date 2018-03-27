@@ -15,7 +15,7 @@ function changeImg(webroot)	{
     var url =webroot+'img/BackgroundMargin/';
 			var newImgNumber =Math.floor(Math.random()*44)+1;
 			document.getElementById('imgMarginLeft').style.backgroundImage = 'url("'+url+newImgNumber+'.jpg")';
-    document.getElementById('imgMarginRight').style.backgroundImage = 'url("'+url+newImgNumber+'")';
+    document.getElementById('imgMarginRight').style.backgroundImage = 'url("'+url+newImgNumber+'.jpg")';
     document.getElementById('waitForMarginContenu').style.display = 'block';
     document.getElementById('waitForMarginFooter').style.display = 'block';
 }
